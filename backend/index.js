@@ -1,7 +1,6 @@
 var app = require('express')();
 var db = require('./database/index.js');
 var user = require('./user/index.js');
-var device = require('./device/index.js');
 var producer = require('./producer/index.js');
 var recordmodel = require('./database/models.js');
 var jwt = require('express-jwt');
@@ -176,7 +175,6 @@ app.post('/api/login', function(req, res) {
 
 
 app.use(user);
-app.use(device);
 app.use(producer);
 
 app.listen(3000, function () {
