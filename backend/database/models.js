@@ -102,21 +102,226 @@ var Building_Energy_Anual = mongoose.model('building_energy_anual', {
     Year : Double
 });
 
-/*
-PANELS
- */
-
-/* MongoDB Panel_Visitors_Month' model */
-var Panel_Visitors_Month = mongoose.model('panel_visitors_month', {
+var Building = mongoose.model('building', {
+    ID : Double,
     Name : String,
-    Panel_ID : Double,
-    Visitors : Double,
+    Description : String,
+    Date_Build : String,
+    Location : String
+});
+
+var Building_Security = mongoose.model('building_security', {
+    ID : Double,
+    Building_ID : Double,
+    Type_Incident : String,
+    Description : String,
+    Analyzed : Double,
+    Date : String
+});
+
+var Interested_Persons_Buildings_Week = mongoose.model('interested_persons_buildings_week', {
+    ID : Double,
+    Building_ID : Double,
+    Selected_Panel_ID : Double,
+    Traffic_Area : Double,
+    Number_Tickets : Double,
+    Week : Double,
     Month : Double,
     Year : Double
 });
 
+var Interested_Persons_Buildings_Month = mongoose.model('interested_persons_buildings_month', {
+    ID : Double,
+    Building_ID : Double,
+    Selected_Panel_ID : Double,
+    Traffic_Area : Double,
+    Number_Tickets : Double,
+    Month : Double,
+    Year : Double
+});
+
+var Interested_Persons_Buildings_Year = mongoose.model('interested_persons_buildings_year', {
+    ID : Double,
+    Building_ID : Double,
+    Selected_Panel_ID : Double,
+    Traffic_Area : Double,
+    Number_Tickets : Double,
+    Year : Double
+});
+
+var Data_Regist_Building_Month = mongoose.model('data_regist_building_month', {
+    ID : Double,
+    Building_ID : Double,
+    Data_Type_ID : Double,
+    Value : Double,
+    Month : Double,
+    Year : Double
+});
+
+var Data_Regist_Building_Year = mongoose.model('data_regist_building_year', {
+    ID : Double,
+    Building_ID : Double,
+    Data_Type_ID : Double,
+    Value : Double,
+    Year : Double
+});
+
+var Building_Daily_Persons = mongoose.model('building_daily_persons', {
+    ID : Double,
+    Building_ID : Double,
+    Data_Type_ID : Double,
+    Value : Double,
+    Day : Double,
+    Week : Double,
+    Month : Double,
+    Year : Double
+});
+
+var Building_Week_Persons = mongoose.model('building_week_persons', {
+    ID : Double,
+    Building_ID : Double,
+    Value : Double,
+    Week : Double,
+    Month : Double,
+    Year : Double
+});
+
+var Data_Regist_Building_Month = mongoose.model('building_month_persons', {
+    ID : Double,
+    Building_ID : Double,
+    Value : Double,
+    Month : Double,
+    Year : Double
+});
+
+var Data_Regist_Building_Year = mongoose.model('building_year_persons', {
+    ID : Double,
+    Building_ID : Double,
+    Value : Double,
+    Year : Double
+});
+
+var Data_Regist_Building = mongoose.model('building_month_persons', {
+    ID : Double,
+    Building_ID : Double,
+    Value : Double,
+    Date : String
+});
+
+/*
+AREAS
+ */
+
+var Area = mongoose.model('area', {
+    ID: Double,
+    Area_Name: String,
+    Description: String
+});
+
+var Area = mongoose.model('area', {
+    ID: Double,
+    Area_Name: String,
+    Description: String
+});
+
+var Area_Visitors_Week = mongoose.model('area_visitors_week', {
+    ID: Double,
+    Area_ID: Double,
+    Description: String,
+    Percent_Person_Area: Double,
+    Week: Double,
+    Month: Double,
+    Year: Double
+});
+
+var Area_Visitors_Month = mongoose.model('area_visitors_month', {
+    ID: Double,
+    Area_ID: Double,
+    Description: String,
+    Percent_Person_Area: Double,
+    Month: Double,
+    Year: Double
+});
+
+var Area_Visitors_Year = mongoose.model('area_visitors_year', {
+    ID: Double,
+    Area_ID: Double,
+    Description: String,
+    Percent_Person_Area: Double,
+    Year: Double
+});
+
+var Area_Traffic_Week = mongoose.model('area_traffic_week', {
+    ID: Double,
+    Area1_ID: Double,
+    Area2_ID: Double,
+    Flow_Persons: Double,
+    Week: Double,
+    Month: Double,
+    Year: Double
+});
+
+var Area_Traffic_Month = mongoose.model('area_traffic_month', {
+    ID: Double,
+    Area1_ID: Double,
+    Area2_ID: Double,
+    Flow_Persons: Double,
+    Month: Double,
+    Year: Double
+});
+
+var Area_Traffic_Year = mongoose.model('area_traffic_year', {
+    ID: Double,
+    Area1_ID: Double,
+    Area2_ID: Double,
+    Flow_Persons: Double,
+    Year: Double
+});
+
+var Area_Security = mongoose.model('area_security', {
+    ID : Double,
+    Area_ID : Double,
+    Type_Incident : String,
+    Description : String,
+    Analyzed : Double,
+    Date : String
+});
+
+/*
+AREAS AND BUILDINGS
+ */
+
+var Top_Visits = mongoose.model('top_visits', {
+    ID: Double,
+    Top: Double,
+    Building_ID: Double,
+    Area_ID: Double
+});
+
+var Level_Occupation = mongoose.model('level_occupation', {
+    ID: Double,
+    Building_ID: Double,
+    Area_ID: Double,
+    Occupation: Double,
+    Date : String
+});
+
+var Level_Occupation_Schedule = mongoose.model('level_occupation_schedule', {
+    ID: Double,
+    Building_ID: Double,
+    Area_ID: Double,
+    Occupation: Double,
+    Schedule : String,
+    Date : String
+});
+
+/*
+PANELS
+ */
+
 /* MongoDB Panel' model */
 var Panel = mongoose.model('panel', {
+    ID : Double,
     Name : String,
     Description : String,
     Location : String
@@ -128,6 +333,15 @@ var Panel_Visitors_Week = mongoose.model('panel_visitors_week', {
     Panel_ID : Double,
     Visitors : Double,
     Week : Double,
+    Month : Double,
+    Year : Double
+});
+
+/* MongoDB Panel_Visitors_Month' model */
+var Panel_Visitors_Month = mongoose.model('panel_visitors_month', {
+    Name : String,
+    Panel_ID : Double,
+    Visitors : Double,
     Month : Double,
     Year : Double
 });
@@ -173,6 +387,31 @@ var Data_Regist_Mobile_Year = mongoose.model('data_regist_mobile_year', {
     Panel_ID : Double,
     Value : Double,
     Year : Double
+});
+
+var Data_Regist_Mobile = mongoose.model('data_regist_mobile', {
+    Data_Type : Double,
+    Panel_ID : Double,
+    Value : Double,
+    Date : String
+});
+
+/*
+GATES
+ */
+
+var Gate = mongoose.model('gate', {
+    ID : Double,
+    Name : String,
+    Description : String
+});
+
+var Vehicle_Affluence = mongoose.model('vehicle_affluence', {
+    ID: Double,
+    Gate_ID: Double,
+    Schedule: String,
+    Flow_Cars: Double,
+    Date: String
 });
 
 module.exports.State = State;

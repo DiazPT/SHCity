@@ -65,25 +65,7 @@ app.post('/api/user/register', function (req, res) {
                     }
 
                 });
-                //moment.locale('pt'); //PT
-                var newActivity = new models.User_history({
-                    username: req.body.username,
-                    activity: 'Registered on the website',
-                    time: moment().locale('pt').format('l') + '    ' + moment().locale('pt').format('LT'),
-                });
 
-                newActivity.save(function (err) {
-                    if (err) {
-                        console.error("Error on saving activity");
-                        console.error(err); // log error to Terminal
-
-                    } else {
-                        console.log("History updated");
-                        //recordCreated(newRecord);
-
-                    }
-
-                });
 
                 //res.redirect('/viewRecords');
                 //redirects client to request the /viewRecords url
@@ -97,88 +79,40 @@ app.post('/api/user/register', function (req, res) {
 });
 
 
-/* Consults user's history */
-app.post('/api/user/history', function (req, res) {
+/* Logs a user in */
+app.post('/api/user/login', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
-    console.log('[User API] TO DO: Consult user\'s history.');
-    var all_devices = [];
-    models.Producer.findOne({username: req.body.username, token: req.body.token}, function (err, Prod) {
-        if (err) {
-            res.json({
-                message: 'Invalid session'
-            })
-        } else {
-            if (Prod === null) {
-                console.log("nao da");
-                res.json({
-                    message: 'Invalid session'
-                })
-            }
-            else {
-                var p = 0;
-                models.User_history.find({}, function (err, users) {
+    console.log('[Monitoring API] TO DO: Log a user in.');
+    recordmodel.User.findOne({username: req.body.username, password: req.body.password}, function (err, Producer) {
+        if (Producer == null) {
+            res.send({message: 'Username or Password wrong'});
 
-                    users.forEach(function (user) {
-                        if (user.username === req.body.value_user) {
-                            all_devices.push({
-                                id: p,
-                                username: user.username,
-                                activity: user.activity,
-                                time: user.time
-                            })
-                            p++;
-                        }
-
-                    });
-
-
-                });
-                setTimeout(function () {
-                    res.json({
-                        message: 'ok',
-                        history: all_devices,
-                        number_rows: p,
-                    });
-                }, 50);
-
-            }
         }
 
+        else {
+            var token = jsonwebtoken.sign({
+                username: req.body.username,
+                role: 2,
+            }, config.token.secret, { // get secret from config
+                expiresIn: config.token.expired // expires in 1 day
+            })
 
+            res.json({
+                token: token,
+                message: 'Login producer'
+            })
+
+
+        }
     });
 });
 
 app.post('/api/user/logout', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[User API] User\'s logout.');
-                console.log("aquiiii");
-                var newActivity = new models.User_history({
-                    username: req.body.username,
-                    activity: 'Logout from the website',
-                    time: moment().locale('pt').format('l') + '    ' + moment().locale('pt').format('LT'),
-                });
-
-                newActivity.save(function (err) {
-                    if (err) {
-                        console.error("Error on saving activity");
-                        console.error(err); // log error to Terminal
-
-                    } else {
-                        console.log("History updated");
-                        //recordCreated(newRecord);
-
-                    }
-
-                });
-
-                res.json({
-                    message: 'ok',
-                });
-
-
-
-
-
+    res.json({
+        message: 'ok',
+    });
 
 
 });
