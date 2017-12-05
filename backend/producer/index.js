@@ -27,7 +27,7 @@ function token_true(name, token_received) {
 app.post('/api/producer/login', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Monitoring API] TO DO: Log a user/producer in.');
-    recordmodel.Producer.findOne({username: req.body.username, password: req.body.password}, function (err, Producer) {
+    recordmodel.Producer.findOne({Username: req.body.username, Password: req.body.password}, function (err, Producer) {
         if (Producer == null) {
             res.send({message: 'Username or Password wrong'});
 
@@ -46,6 +46,20 @@ app.post('/api/producer/login', function (req, res) {
                 message: 'Login producer'
             })
 
+            recordmodel.Producer.findOne({Username: req.body.username}, function(err, contact) {
+
+                contact.Token = token;
+                contact.save(function(err) {
+                    if(!err) {
+                        console.log("contact " + contact.Username + " created at " + contact.Date_Registered + " updated");
+                    }
+                    else {
+                        console.log("Error: could not save contact " + contact.Username);
+                    }
+                });
+
+            });
+
 
         }
     });
@@ -56,7 +70,7 @@ app.post('/api/producer/login', function (req, res) {
 app.post('/api/producer/register', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Producer API] Register a new producer.');
-    models.Producer.findOne({username: req.body.username}, function (err, Producer) {
+    models.Producer.findOne({Username: req.body.username}, function (err, Producer) {
 
 
         if (err) {

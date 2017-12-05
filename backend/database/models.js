@@ -63,6 +63,13 @@ var Producer = mongoose.model('producers', {
 BUILDINGS
  */
 
+var Building = mongoose.model('building', {
+    Name : String,
+    Description : String,
+    Date_Build : String,
+    Location : String
+});
+
 /* MongoDB Building_Energy_Monthly' model */
 var Building_Energy_Monthly = mongoose.model('building_energy_monthly', {
     Building_ID : Double,
@@ -102,16 +109,7 @@ var Building_Energy_Anual = mongoose.model('building_energy_anual', {
     Year : Double
 });
 
-var Building = mongoose.model('building', {
-    ID : Double,
-    Name : String,
-    Description : String,
-    Date_Build : String,
-    Location : String
-});
-
 var Building_Security = mongoose.model('building_security', {
-    ID : Double,
     Building_ID : Double,
     Type_Incident : String,
     Description : String,
@@ -120,7 +118,6 @@ var Building_Security = mongoose.model('building_security', {
 });
 
 var Interested_Persons_Buildings_Week = mongoose.model('interested_persons_buildings_week', {
-    ID : Double,
     Building_ID : Double,
     Selected_Panel_ID : Double,
     Traffic_Area : Double,
@@ -131,7 +128,6 @@ var Interested_Persons_Buildings_Week = mongoose.model('interested_persons_build
 });
 
 var Interested_Persons_Buildings_Month = mongoose.model('interested_persons_buildings_month', {
-    ID : Double,
     Building_ID : Double,
     Selected_Panel_ID : Double,
     Traffic_Area : Double,
@@ -141,7 +137,6 @@ var Interested_Persons_Buildings_Month = mongoose.model('interested_persons_buil
 });
 
 var Interested_Persons_Buildings_Year = mongoose.model('interested_persons_buildings_year', {
-    ID : Double,
     Building_ID : Double,
     Selected_Panel_ID : Double,
     Traffic_Area : Double,
@@ -150,7 +145,6 @@ var Interested_Persons_Buildings_Year = mongoose.model('interested_persons_build
 });
 
 var Data_Regist_Building_Month = mongoose.model('data_regist_building_month', {
-    ID : Double,
     Building_ID : Double,
     Data_Type_ID : Double,
     Value : Double,
@@ -159,17 +153,21 @@ var Data_Regist_Building_Month = mongoose.model('data_regist_building_month', {
 });
 
 var Data_Regist_Building_Year = mongoose.model('data_regist_building_year', {
-    ID : Double,
     Building_ID : Double,
     Data_Type_ID : Double,
     Value : Double,
     Year : Double
 });
 
-var Building_Daily_Persons = mongoose.model('building_daily_persons', {
-    ID : Double,
+var Data_Regist_Building = mongoose.model('data_regist_building', {
     Building_ID : Double,
     Data_Type_ID : Double,
+    Value : Double,
+    Date : String
+});
+
+var Building_Daily_Persons = mongoose.model('building_daily_persons', {
+    Building_ID : Double,
     Value : Double,
     Day : Double,
     Week : Double,
@@ -178,7 +176,6 @@ var Building_Daily_Persons = mongoose.model('building_daily_persons', {
 });
 
 var Building_Week_Persons = mongoose.model('building_week_persons', {
-    ID : Double,
     Building_ID : Double,
     Value : Double,
     Week : Double,
@@ -186,46 +183,33 @@ var Building_Week_Persons = mongoose.model('building_week_persons', {
     Year : Double
 });
 
-var Data_Regist_Building_Month = mongoose.model('building_month_persons', {
-    ID : Double,
+
+var Building_Month_Persons = mongoose.model('building_month_persons', {
     Building_ID : Double,
     Value : Double,
     Month : Double,
     Year : Double
 });
 
-var Data_Regist_Building_Year = mongoose.model('building_year_persons', {
-    ID : Double,
+
+var Building_Year_Persons = mongoose.model('building_year_persons', {
     Building_ID : Double,
     Value : Double,
     Year : Double
 });
 
-var Data_Regist_Building = mongoose.model('building_month_persons', {
-    ID : Double,
-    Building_ID : Double,
-    Value : Double,
-    Date : String
-});
 
 /*
 AREAS
  */
 
 var Area = mongoose.model('area', {
-    ID: Double,
     Area_Name: String,
     Description: String
 });
 
-var Area = mongoose.model('area', {
-    ID: Double,
-    Area_Name: String,
-    Description: String
-});
 
 var Area_Visitors_Week = mongoose.model('area_visitors_week', {
-    ID: Double,
     Area_ID: Double,
     Description: String,
     Percent_Person_Area: Double,
@@ -235,7 +219,6 @@ var Area_Visitors_Week = mongoose.model('area_visitors_week', {
 });
 
 var Area_Visitors_Month = mongoose.model('area_visitors_month', {
-    ID: Double,
     Area_ID: Double,
     Description: String,
     Percent_Person_Area: Double,
@@ -244,7 +227,6 @@ var Area_Visitors_Month = mongoose.model('area_visitors_month', {
 });
 
 var Area_Visitors_Year = mongoose.model('area_visitors_year', {
-    ID: Double,
     Area_ID: Double,
     Description: String,
     Percent_Person_Area: Double,
@@ -252,7 +234,6 @@ var Area_Visitors_Year = mongoose.model('area_visitors_year', {
 });
 
 var Area_Traffic_Week = mongoose.model('area_traffic_week', {
-    ID: Double,
     Area1_ID: Double,
     Area2_ID: Double,
     Flow_Persons: Double,
@@ -262,7 +243,6 @@ var Area_Traffic_Week = mongoose.model('area_traffic_week', {
 });
 
 var Area_Traffic_Month = mongoose.model('area_traffic_month', {
-    ID: Double,
     Area1_ID: Double,
     Area2_ID: Double,
     Flow_Persons: Double,
@@ -271,7 +251,6 @@ var Area_Traffic_Month = mongoose.model('area_traffic_month', {
 });
 
 var Area_Traffic_Year = mongoose.model('area_traffic_year', {
-    ID: Double,
     Area1_ID: Double,
     Area2_ID: Double,
     Flow_Persons: Double,
@@ -279,7 +258,6 @@ var Area_Traffic_Year = mongoose.model('area_traffic_year', {
 });
 
 var Area_Security = mongoose.model('area_security', {
-    ID : Double,
     Area_ID : Double,
     Type_Incident : String,
     Description : String,
@@ -292,14 +270,12 @@ AREAS AND BUILDINGS
  */
 
 var Top_Visits = mongoose.model('top_visits', {
-    ID: Double,
     Top: Double,
     Building_ID: Double,
     Area_ID: Double
 });
 
 var Level_Occupation = mongoose.model('level_occupation', {
-    ID: Double,
     Building_ID: Double,
     Area_ID: Double,
     Occupation: Double,
@@ -307,7 +283,6 @@ var Level_Occupation = mongoose.model('level_occupation', {
 });
 
 var Level_Occupation_Schedule = mongoose.model('level_occupation_schedule', {
-    ID: Double,
     Building_ID: Double,
     Area_ID: Double,
     Occupation: Double,
@@ -321,7 +296,6 @@ PANELS
 
 /* MongoDB Panel' model */
 var Panel = mongoose.model('panel', {
-    ID : Double,
     Name : String,
     Description : String,
     Location : String
@@ -329,7 +303,6 @@ var Panel = mongoose.model('panel', {
 
 /* MongoDB Panel_Visitors_Week' model */
 var Panel_Visitors_Week = mongoose.model('panel_visitors_week', {
-    Name : String,
     Panel_ID : Double,
     Visitors : Double,
     Week : Double,
@@ -339,7 +312,6 @@ var Panel_Visitors_Week = mongoose.model('panel_visitors_week', {
 
 /* MongoDB Panel_Visitors_Month' model */
 var Panel_Visitors_Month = mongoose.model('panel_visitors_month', {
-    Name : String,
     Panel_ID : Double,
     Visitors : Double,
     Month : Double,
@@ -348,7 +320,6 @@ var Panel_Visitors_Month = mongoose.model('panel_visitors_month', {
 
 /* MongoDB Panel_Visitors_Year' model */
 var Panel_Visitors_Year = mongoose.model('panel_visitors_year', {
-    Name : String,
     Panel_ID : Double,
     Visitors : Double,
     Year : Double
@@ -374,8 +345,8 @@ var Data_Type = mongoose.model('data_type', {
 
 /* MongoDB Data_Regist_Mobile_Month' model */
 var Data_Regist_Mobile_Month = mongoose.model('data_regist_mobile_month', {
-    Data_Type : Double,
-    Panel_ID : Double,
+    Data_Type_ID : Double,
+    Mobile_Node_ID : Double,
     Value : Double,
     Month : Double,
     Year : Double
@@ -383,15 +354,15 @@ var Data_Regist_Mobile_Month = mongoose.model('data_regist_mobile_month', {
 
 /* MongoDB Data_Regist_Mobile_Year' model */
 var Data_Regist_Mobile_Year = mongoose.model('data_regist_mobile_year', {
-    Data_Type : Double,
-    Panel_ID : Double,
+    Data_Type_ID : Double,
+    Mobile_Node_ID : Double,
     Value : Double,
     Year : Double
 });
 
 var Data_Regist_Mobile = mongoose.model('data_regist_mobile', {
-    Data_Type : Double,
-    Panel_ID : Double,
+    Data_Type_ID : Double,
+    Mobile_Node_ID : Double,
     Value : Double,
     Date : String
 });
@@ -401,13 +372,11 @@ GATES
  */
 
 var Gate = mongoose.model('gate', {
-    ID : Double,
     Name : String,
     Description : String
 });
 
 var Vehicle_Affluence = mongoose.model('vehicle_affluence', {
-    ID: Double,
     Gate_ID: Double,
     Schedule: String,
     Flow_Cars: Double,
@@ -418,4 +387,42 @@ module.exports.State = State;
 module.exports.SystemError = SystemError;
 module.exports.User = User;
 module.exports.Producer = Producer;
+module.exports.Building_Energy_Monthly = Building_Energy_Monthly;
+module.exports.History = History;
+module.exports.Manager = Manager;
+module.exports.Building_Energy_Anual = Building_Energy_Anual;
+module.exports.Building = Building;
+module.exports.Building_Security = Building_Security;
+module.exports.Interested_Persons_Buildings_Week = Interested_Persons_Buildings_Week;
+module.exports.Interested_Persons_Buildings_Month = Interested_Persons_Buildings_Month;
+module.exports.Interested_Persons_Buildings_Year = Interested_Persons_Buildings_Year;
+module.exports.Data_Regist_Building_Month = Data_Regist_Building_Month;
+module.exports.Data_Regist_Building_Year = Data_Regist_Building_Year;
+module.exports.Data_Regist_Building = Data_Regist_Building;
+module.exports.Building_Daily_Persons = Building_Daily_Persons;
+module.exports.Building_Week_Persons = Building_Week_Persons;
+module.exports.Building_Month_Persons = Building_Month_Persons;
+module.exports.Building_Year_Persons = Building_Year_Persons;
+module.exports.Area = Area;
+module.exports.Area_Visitors_Week = Area_Visitors_Week;
+module.exports.Area_Visitors_Month = Area_Visitors_Month;
+module.exports.Area_Visitors_Year = Area_Visitors_Year;
+module.exports.Area_Traffic_Week = Area_Traffic_Week;
+module.exports.Area_Traffic_Month = Area_Traffic_Month;
+module.exports.Area_Traffic_Year = Area_Traffic_Year;
+module.exports.Area_Security = Area_Security;
+module.exports.Top_Visits = Top_Visits;
+module.exports.Level_Occupation = Level_Occupation;
+module.exports.Level_Occupation_Schedule = Level_Occupation_Schedule;
+module.exports.Panel = Panel;
+module.exports.Panel_Visitors_Week = Panel_Visitors_Week;
+module.exports.Panel_Visitors_Month = Panel_Visitors_Month;
+module.exports.Panel_Visitors_Year = Panel_Visitors_Year
+module.exports.Mobile_Node = Mobile_Node;
+module.exports.Data_Type = Data_Type;
+module.exports.Data_Regist_Mobile_Month = Data_Regist_Mobile_Month;
+module.exports.Data_Regist_Mobile_Year = Data_Regist_Mobile_Year;
+module.exports.Data_Regist_Mobile = Data_Regist_Mobile;
+module.exports.Gate = Gate;
+module.exports.Vehicle_Affluence = Vehicle_Affluence;
 module.exports.mongoose = mongoose;
