@@ -24,7 +24,7 @@ app.use(require('body-parser').urlencoded({
 app.use(user);
 app.use(producer);
 
-app.listen(3000, function () {
+app.listen(80, function () {
   console.log('[Monitoring API] Ready.');
 });
 
