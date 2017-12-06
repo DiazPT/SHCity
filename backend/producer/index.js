@@ -87,7 +87,7 @@ app.post('/api/producer/register', function (req, res) {
 
             if (Producer == null) {
 
-                if(req.body.name!=null && req.body.name!=null && req.body.name!=null && req.body.name!=null){
+                if(req.body.name!=null && req.body.email!=null && req.body.username!=null && req.body.password!=null){
                     var newRecord = new models.Producer({
                         Name: req.body.name,
                         Description: req.body.description,
