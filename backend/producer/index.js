@@ -86,51 +86,58 @@ app.post('/api/producer/register', function (req, res) {
             })
 
             if (Producer == null) {
-                var newRecord = new models.Producer({
-                    Name: req.body.name,
-                    Description: req.body.description,
-                    Email: req.body.email,
-                    Username: req.body.username,
-                    Password: req.body.password,
-                    date_registered: moment().locale('pt').format('l') + '    ' + moment().locale('pt').format('LT'),
-                    token: token,
-                });
+
+                if(req.body.name!=null && req.body.name!=null && req.body.name!=null && req.body.name!=null){
+                    var newRecord = new models.Producer({
+                        Name: req.body.name,
+                        Description: req.body.description,
+                        Email: req.body.email,
+                        Username: req.body.username,
+                        Password: req.body.password,
+                        date_registered: moment().locale('pt').format('l') + '    ' + moment().locale('pt').format('LT'),
+                        token: token,
+                    });
 
 
-                newRecord.save(function (err) {
-                    if (err) {
-                        console.error("Error on saving new record");
-                        console.error(err); // log error to Terminal
-                        res.send({message: 'Error 404'});
-                    } else {
-                        console.log("Created a new record!");
-                        //recordCreated(newRecord);
-                        res.send({message: 'Producer register'});
-                    }
+                    newRecord.save(function (err) {
+                        if (err) {
+                            console.error("Error on saving new record");
+                            console.error(err); // log error to Terminal
+                            res.send({message: 'Error 404'});
+                        } else {
+                            console.log("Created a new record!");
+                            //recordCreated(newRecord);
+                            res.send({message: 'Producer register'});
+                        }
 
-                });
-                //moment.locale('pt'); //PT
-                /*var newActivity = new models.User_history({
-                 username : req.body.username,
-                 activity : 'Registered on the website',
-                 time : moment().locale('pt').format('l')+ '    ' + moment().locale('pt').format('LT'),
-                 });
+                    });
+                    //moment.locale('pt'); //PT
+                    /*var newActivity = new models.User_history({
+                     username : req.body.username,
+                     activity : 'Registered on the website',
+                     time : moment().locale('pt').format('l')+ '    ' + moment().locale('pt').format('LT'),
+                     });
 
-                 newActivity.save(function(err){
-                 if (err) {
-                 console.error("Error on saving activity");
-                 console.error(err); // log error to Terminal
+                     newActivity.save(function(err){
+                     if (err) {
+                     console.error("Error on saving activity");
+                     console.error(err); // log error to Terminal
 
-                 } else {
-                 console.log("History updated");
-                 //recordCreated(newRecord);
+                     } else {
+                     console.log("History updated");
+                     //recordCreated(newRecord);
 
-                 }
+                     }
 
-                 });*/
+                     });*/
 
-                //res.redirect('/viewRecords');
-                //redirects client to request the /viewRecords url
+                    //res.redirect('/viewRecords');
+                    //redirects client to request the /viewRecords url
+                }
+
+                else{
+                    res.send({message: 'Problem regist'});
+                }
             } else {
                 res.send({message: 'Problem regist'});
                 //res.redirect('/viewMessage');
