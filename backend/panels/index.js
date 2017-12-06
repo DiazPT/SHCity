@@ -6,6 +6,9 @@ var config = require('../config');
 var jsonwebtoken = require('jsonwebtoken');
 var async = require('async');
 
+
+console.log('[Panel API] Ready.');
+
 app.post('/api/panel/add', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Panel API] Create Panel.');

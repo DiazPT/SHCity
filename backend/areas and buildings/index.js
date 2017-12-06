@@ -6,6 +6,10 @@ var config = require('../config');
 var jsonwebtoken = require('jsonwebtoken');
 var async = require('async');
 
+
+console.log('[Area and Building API] Ready.');
+
+
 app.post('/api/areas_and_buildings/top_visits/add', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Area and Building API] Add Top.');

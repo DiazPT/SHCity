@@ -1,5 +1,5 @@
 module.exports = {
-  port: 3000,
+  port: 80,
   role: {
     admin: 2,
     normal: 1

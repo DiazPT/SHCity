@@ -6,6 +6,9 @@ var config = require('../config');
 var jsonwebtoken = require('jsonwebtoken');
 var async = require('async');
 
+
+console.log('[Data Type API] Ready.');
+
 app.post('/api/data_type/add', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Data Type API] Create Data Type.');

@@ -6,6 +6,9 @@ var config = require('../config');
 var jsonwebtoken = require('jsonwebtoken');
 var async = require('async');
 
+
+console.log('[Gate API] Ready.');
+
 app.post('/api/gate/add', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Gate API] Create Gate.');

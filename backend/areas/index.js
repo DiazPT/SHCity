@@ -6,6 +6,7 @@ var config = require('../config');
 var jsonwebtoken = require('jsonwebtoken');
 var async = require('async');
 
+console.log('[Area API] Ready.');
 
 /* Logs a area creation */
 app.post('/api/area/add', function (req, res) {

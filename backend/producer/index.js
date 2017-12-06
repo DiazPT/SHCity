@@ -27,7 +27,7 @@ function token_true(name, token_received) {
 app.post('/api/producer/login', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Monitoring API] TO DO: Log a user/producer in.');
-    recordmodel.Producer.findOne({Username: req.body.username, Password: req.body.password}, function (err, Producer) {
+    models.Producer.findOne({Username: req.body.username, Password: req.body.password}, function (err, Producer) {
         if (Producer == null) {
             res.send({message: 'Username or Password wrong'});
 

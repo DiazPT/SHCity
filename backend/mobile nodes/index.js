@@ -6,6 +6,10 @@ var config = require('../config');
 var jsonwebtoken = require('jsonwebtoken');
 var async = require('async');
 
+
+
+console.log('[Mobile Node API] Ready.');
+
 app.post('/api/mobile_node/add', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Mobile Node API] Create Mobile Node.');

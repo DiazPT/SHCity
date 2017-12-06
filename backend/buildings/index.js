@@ -7,6 +7,8 @@ var jsonwebtoken = require('jsonwebtoken');
 var async = require('async');
 
 
+console.log('[Building API] Ready.');
+
 app.post('/api/building/add', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Building API] Create Building.');
