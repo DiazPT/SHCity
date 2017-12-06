@@ -15,7 +15,7 @@ var SystemError = mongoose.model('system_errors', {
 /* MongoDB History' model */
 var History = mongoose.model('history', {
     Name : String,
-    Producer_ID : ObjectId,
+    Producer_ID : String,
     Description : String,
     Date : String
 });
@@ -72,7 +72,7 @@ var Building = mongoose.model('building', {
 
 /* MongoDB Building_Energy_Monthly' model */
 var Building_Energy_Monthly = mongoose.model('building_energy_monthly', {
-    Building_ID : ObjectId,
+    Building_ID : String,
     Description : String,
     E_Consume : Number,
     E_Consume_Cost : Number,
@@ -110,7 +110,7 @@ var Building_Energy_Anual = mongoose.model('building_energy_anual', {
 });
 
 var Building_Security = mongoose.model('building_security', {
-    Building_ID : ObjectId,
+    Building_ID : String,
     Type_Incident : String,
     Description : String,
     Analyzed : Number,
@@ -118,7 +118,7 @@ var Building_Security = mongoose.model('building_security', {
 });
 
 var Interested_Persons_Buildings_Week = mongoose.model('interested_persons_buildings_week', {
-    Building_ID : ObjectId,
+    Building_ID : String,
     Selected_Panel_ID : Number,
     Traffic_Area : Number,
     Number_Tickets : Number,
@@ -128,8 +128,8 @@ var Interested_Persons_Buildings_Week = mongoose.model('interested_persons_build
 });
 
 var Interested_Persons_Buildings_Month = mongoose.model('interested_persons_buildings_month', {
-    Building_ID : ObjectId,
-    Selected_Panel_ID : ObjectId,
+    Building_ID : String,
+    Selected_Panel_ID : String,
     Traffic_Area : Number,
     Number_Tickets : Number,
     Month : Number,
@@ -137,37 +137,37 @@ var Interested_Persons_Buildings_Month = mongoose.model('interested_persons_buil
 });
 
 var Interested_Persons_Buildings_Year = mongoose.model('interested_persons_buildings_year', {
-    Building_ID : ObjectId,
-    Selected_Panel_ID : ObjectId,
+    Building_ID : String,
+    Selected_Panel_ID : String,
     Traffic_Area : Number,
     Number_Tickets : Number,
     Year : Number
 });
 
 var Data_Regist_Building_Month = mongoose.model('data_regist_building_month', {
-    Building_ID : ObjectId,
-    Data_Type_ID : ObjectId,
+    Building_ID : String,
+    Data_Type_ID : String,
     Value : Number,
     Month : Number,
     Year : Number
 });
 
 var Data_Regist_Building_Year = mongoose.model('data_regist_building_year', {
-    Building_ID : ObjectId,
-    Data_Type_ID : ObjectId,
+    Building_ID : String,
+    Data_Type_ID : String,
     Value : Number,
     Year : Number
 });
 
 var Data_Regist_Building = mongoose.model('data_regist_building', {
-    Building_ID : ObjectId,
-    Data_Type_ID : ObjectId,
+    Building_ID : String,
+    Data_Type_ID : String,
     Value : Number,
     Date : String
 });
 
 var Building_Daily_Persons = mongoose.model('building_daily_persons', {
-    Building_ID : ObjectId,
+    Building_ID : String,
     Value : Number,
     Day : Number,
     Week : Number,
@@ -176,7 +176,7 @@ var Building_Daily_Persons = mongoose.model('building_daily_persons', {
 });
 
 var Building_Week_Persons = mongoose.model('building_week_persons', {
-    Building_ID : ObjectId,
+    Building_ID : String,
     Value : Number,
     Week : Number,
     Month : Number,
@@ -185,7 +185,7 @@ var Building_Week_Persons = mongoose.model('building_week_persons', {
 
 
 var Building_Month_Persons = mongoose.model('building_month_persons', {
-    Building_ID : ObjectId,
+    Building_ID : String,
     Value : Number,
     Month : Number,
     Year : Number
@@ -193,7 +193,7 @@ var Building_Month_Persons = mongoose.model('building_month_persons', {
 
 
 var Building_Year_Persons = mongoose.model('building_year_persons', {
-    Building_ID : ObjectId,
+    Building_ID : String,
     Value : Number,
     Year : Number
 });
@@ -210,7 +210,7 @@ var Area = mongoose.model('area', {
 
 
 var Area_Visitors_Week = mongoose.model('area_visitors_week', {
-    Area_ID: ObjectId,
+    Area_ID: String,
     Description: String,
     Percent_Person_Area: Number,
     Week: Number,
@@ -219,7 +219,7 @@ var Area_Visitors_Week = mongoose.model('area_visitors_week', {
 });
 
 var Area_Visitors_Month = mongoose.model('area_visitors_month', {
-    Area_ID: ObjectId,
+    Area_ID: String,
     Description: String,
     Percent_Person_Area: Number,
     Month: Number,
@@ -227,15 +227,15 @@ var Area_Visitors_Month = mongoose.model('area_visitors_month', {
 });
 
 var Area_Visitors_Year = mongoose.model('area_visitors_year', {
-    Area_ID: ObjectId,
+    Area_ID: String,
     Description: String,
     Percent_Person_Area: Number,
     Year: Number
 });
 
 var Area_Traffic_Week = mongoose.model('area_traffic_week', {
-    Area1_ID: ObjectId,
-    Area2_ID: ObjectId,
+    Area1_ID: String,
+    Area2_ID: String,
     Flow_Persons: Number,
     Week: Number,
     Month: Number,
@@ -243,22 +243,22 @@ var Area_Traffic_Week = mongoose.model('area_traffic_week', {
 });
 
 var Area_Traffic_Month = mongoose.model('area_traffic_month', {
-    Area1_ID: ObjectId,
-    Area2_ID: ObjectId,
+    Area1_ID: String,
+    Area2_ID: String,
     Flow_Persons: Number,
     Month: Number,
     Year: Number
 });
 
 var Area_Traffic_Year = mongoose.model('area_traffic_year', {
-    Area1_ID: ObjectId,
-    Area2_ID: ObjectId,
+    Area1_ID: String,
+    Area2_ID: String,
     Flow_Persons: Number,
     Year: Number
 });
 
 var Area_Security = mongoose.model('area_security', {
-    Area_ID : ObjectId,
+    Area_ID : String,
     Type_Incident : String,
     Description : String,
     Analyzed : Number,
@@ -271,20 +271,20 @@ AREAS AND BUILDINGS
 
 var Top_Visits = mongoose.model('top_visits', {
     Top: Number,
-    Building_ID: ObjectId,
-    Area_ID: ObjectId
+    Building_ID: String,
+    Area_ID: String
 });
 
 var Level_Occupation = mongoose.model('level_occupation', {
-    Building_ID: ObjectId,
-    Area_ID: ObjectId,
+    Building_ID: String,
+    Area_ID: String,
     Occupation: Number,
     Date : String
 });
 
 var Level_Occupation_Schedule = mongoose.model('level_occupation_schedule', {
-    Building_ID: ObjectId,
-    Area_ID: ObjectId,
+    Building_ID: String,
+    Area_ID: String,
     Occupation: Number,
     Schedule : String,
     Date : String
@@ -303,7 +303,7 @@ var Panel = mongoose.model('panel', {
 
 /* MongoDB Panel_Visitors_Week' model */
 var Panel_Visitors_Week = mongoose.model('panel_visitors_week', {
-    Panel_ID : ObjectId,
+    Panel_ID : String,
     Visitors : Number,
     Week : Number,
     Month : Number,
@@ -312,7 +312,7 @@ var Panel_Visitors_Week = mongoose.model('panel_visitors_week', {
 
 /* MongoDB Panel_Visitors_Month' model */
 var Panel_Visitors_Month = mongoose.model('panel_visitors_month', {
-    Panel_ID : ObjectId,
+    Panel_ID : String,
     Visitors : Number,
     Month : Number,
     Year : Number
@@ -320,7 +320,7 @@ var Panel_Visitors_Month = mongoose.model('panel_visitors_month', {
 
 /* MongoDB Panel_Visitors_Year' model */
 var Panel_Visitors_Year = mongoose.model('panel_visitors_year', {
-    Panel_ID : ObjectId,
+    Panel_ID : String,
     Visitors : Number,
     Year : Number
 });
@@ -345,8 +345,8 @@ var Data_Type = mongoose.model('data_type', {
 
 /* MongoDB Data_Regist_Mobile_Month' model */
 var Data_Regist_Mobile_Month = mongoose.model('data_regist_mobile_month', {
-    Data_Type_ID : ObjectId,
-    Mobile_Node_ID : ObjectId,
+    Data_Type_ID : String,
+    Mobile_Node_ID : String,
     Value : Number,
     Month : Number,
     Year : Number
@@ -354,15 +354,15 @@ var Data_Regist_Mobile_Month = mongoose.model('data_regist_mobile_month', {
 
 /* MongoDB Data_Regist_Mobile_Year' model */
 var Data_Regist_Mobile_Year = mongoose.model('data_regist_mobile_year', {
-    Data_Type_ID : ObjectId,
-    Mobile_Node_ID : ObjectId,
+    Data_Type_ID : String,
+    Mobile_Node_ID : String,
     Value : Number,
     Year : Number
 });
 
 var Data_Regist_Mobile = mongoose.model('data_regist_mobile', {
-    Data_Type_ID : ObjectId,
-    Mobile_Node_ID : ObjectId,
+    Data_Type_ID : String,
+    Mobile_Node_ID : String,
     Value : Number,
     Date : String
 });
@@ -377,7 +377,7 @@ var Gate = mongoose.model('gate', {
 });
 
 var Vehicle_Affluence = mongoose.model('vehicle_affluence', {
-    Gate_ID: ObjectId,
+    Gate_ID: String,
     Schedule: String,
     Flow_Cars: Number,
     Date: String
