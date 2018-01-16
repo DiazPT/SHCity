@@ -103,6 +103,84 @@ app.post('/api/areas_and_buildings/top_visits/add', function (req, res) {
     });
 });
 
+app.get('/api/areas_and_buildings/level_occupation/get', function (req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
+    console.log('[Area and Building API] Add Occupation.');
+  
+            //Building = 0 Area = 1
+            if(req.get("type") == 1){
+                models.Area.findOne({Area_Name: req.get("building_name")}, function (err, area) {
+                        if (area == null) {
+                            console.log("Area does not exist");
+                            res.json({
+                                message: 'Area does not exist'
+                            })
+                        }
+                        else {
+                            
+				models.Level_Occupation.findOne({Area_ID: area._id}, function (err, occupation) {
+									if (occupation == null) {
+									console.log("Building does not exist");
+									res.json({
+                                    message: 'Building does not exist'
+                                })
+									}
+									else{
+										occupation_final = occupation.Occupation;
+										res.json({
+                                            message: occupation_final
+											
+                                        })
+								}
+								});
+
+                            
+
+                            
+                        }
+                    }
+                );
+            }
+            else{
+                if(req.get("type") == 0){
+                    models.Building.findOne({Name: req.body.building_name}, function (err, building) {
+                            if (building == null) {
+                                console.log("Building does not exist");
+                                res.json({
+                                    message: 'Building does not exist'
+                                })
+                            }
+                            else {
+                                models.Level_Occupation.findOne({Building_ID: building._id}, function (err, occupation) {
+									if (building == null) {
+									console.log("Building does not exist");
+									res.json({
+                                    message: 'Building does not exist'
+                                })
+									}
+									else{
+										occupation_final = occupation.Occupation;
+										res.json({
+                                            message: occupation_final
+											
+                                        })
+								}
+								});
+                                console.log(occupation);                    
+                            }
+                        }
+                    );
+                }
+                else{
+                    console.log("Type error");
+                    res.json({
+                        message: 'Type is not valid'
+                    })
+                }
+            }
+});
+
+
 
 app.post('/api/areas_and_buildings/level_occupation/add', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");

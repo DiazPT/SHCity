@@ -278,7 +278,7 @@ var Top_Visits = mongoose.model('top_visits', {
 var Level_Occupation = mongoose.model('level_occupation', {
     Building_ID: String,
     Area_ID: String,
-    Occupation: Number,
+    Occupation: String,
     Date : String
 });
 
