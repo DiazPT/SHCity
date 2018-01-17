@@ -1,0 +1,786 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: SHCity API
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /hello:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: hello_world
+    get:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: hello
+      parameters:
+        - name: name
+          in: query
+          description: The name of the person to whom to say hello
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /user/register:
+    x-swagger-router-controller: users
+    post:
+      summary: Creates a new user.
+      consumes:
+        - application/json
+      operationId: register   
+      parameters:
+        - in: body
+          name: user
+          description: The user to create.
+          schema:
+            $ref: "#/definitions/User"
+          required: true  
+      responses:
+        201:
+          description: Created
+        403:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /user/login:
+    x-swagger-router-controller: users
+    post:
+      summary: Login a new user.
+      consumes:
+        - application/json
+      operationId: login
+      parameters:
+        - in: body
+          name: user
+          description: The username to login.
+          schema:
+            $ref: "#/definitions/User_login"
+          required: true  
+      responses:
+        201:
+          description: Logged in
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/token"
+        403:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /producer/register:
+    x-swagger-router-controller: producers
+    post:
+      summary: Creates a new producer.
+      consumes:
+        - application/json
+      operationId: register_prod   
+      parameters:
+        - in: body
+          name: user
+          description: The producer to create.
+          schema:
+            $ref: "#/definitions/User"
+          required: true  
+      responses:
+        201:
+          description: Created
+        403:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /producer/login:
+    x-swagger-router-controller: producers
+    post:
+      summary: Login a new producer.
+      consumes:
+        - application/json
+      operationId: login_prod
+      parameters:
+        - in: body
+          name: user
+          description: The producer to login.
+          schema:
+            $ref: "#/definitions/User_login"
+          required: true  
+      responses:
+        201:
+          description: Logged in
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/token"
+        403:
+          description: Error login
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /areas/add:
+    x-swagger-router-controller: areas
+    post:
+      summary: Create a new Area.
+      consumes:
+        - application/json
+      operationId: area_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Area to create.
+          schema:
+            $ref: "#/definitions/Area"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"   
+  /areas/area_visitors_week_add:
+    x-swagger-router-controller: areas
+    post:
+      summary: Add week visitors.
+      consumes:
+        - application/json
+      operationId: area_visitors_week_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Area add the value.
+          schema:
+            $ref: "#/definitions/Area_visit_week"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"  
+  /areas/area_visitors_month_add:
+    x-swagger-router-controller: areas
+    post:
+      summary: Add month visitors.
+      consumes:
+        - application/json
+      operationId: area_visitors_month_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Area to add the value.
+          schema:
+            $ref: "#/definitions/Area_visit_month"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_visitors_year_add:
+    x-swagger-router-controller: areas
+    post:
+      summary: Add year visitors.
+      consumes:
+        - application/json
+      operationId: area_visitors_year_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Area to add the value.
+          schema:
+            $ref: "#/definitions/Area_visit_year"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"         
+  /areas/area_traffic_week_add: 
+    x-swagger-router-controller: areas
+    post:
+      summary: Add week traffic between Areas.
+      consumes:
+        - application/json
+      operationId: area_traffic_week_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Areas to add the value.
+          schema:
+            $ref: "#/definitions/Area_traffic_week"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"  
+  /areas/area_traffic_month_add: 
+    x-swagger-router-controller: areas
+    post:
+      summary: Add month traffic between Areas.
+      consumes:
+        - application/json
+      operationId: area_traffic_month_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Areas to add the value.
+          schema:
+            $ref: "#/definitions/Area_traffic_month"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_traffic_year_add: 
+    x-swagger-router-controller: areas
+    post:
+      summary: Add year traffic between Areas.
+      consumes:
+        - application/json
+      operationId: area_traffic_year_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Areas to add the value.
+          schema:
+            $ref: "#/definitions/Area_traffic_year"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_security_add: 
+    x-swagger-router-controller: areas
+    post:
+      summary: Add security events from an Area.
+      consumes:
+        - application/json
+      operationId: area_security_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Area to add the value.
+          schema:
+            $ref: "#/definitions/Area_security"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/add:
+    x-swagger-router-controller: buildings
+    post:
+      summary: Create a new Building.
+      consumes:
+        - application/json
+      operationId: building_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to create.
+          schema:
+            $ref: "#/definitions/Building"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"           
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  HelloWorldResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  token:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  User:
+      properties:
+        name:
+          type : string
+        description:
+          type : string
+        username:
+          type : string
+        password:
+          type : string
+        email:
+          type : string
+  User_login:
+      properties:
+        username:
+          type : string
+        password:
+          type : string
+  Area:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        description:
+          type : string
+  Area_visit_week:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        description:
+          type : string
+        percent_person_area:
+          type : string
+        week:
+          type : string 
+        month:
+          type : string
+        year:
+          type : string     
+  Area_visit_month:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        description:
+          type : string
+        percent_person_area:
+          type : string
+        month:
+          type : string
+        year:
+          type : string          
+  Area_visit_year:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        description:
+          type : string
+        percent_person_area:
+          type : string
+        year:
+          type : string          
+  Area_traffic_week:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name1:
+          type : string
+        area_name2:
+          type : string  
+        description:
+          type : string
+        flow_persons:
+          type : string
+        week:
+          type : string 
+        month:
+          type : string
+        year:
+          type : string
+  Area_traffic_month:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name1:
+          type : string
+        area_name2:
+          type : string  
+        description:
+          type : string
+        flow_persons:
+          type : string
+        month:
+          type : string
+        year:
+          type : string
+  Area_traffic_year:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name1:
+          type : string
+        area_name2:
+          type : string  
+        description:
+          type : string
+        flow_persons:
+          type : string
+        year:
+          type : string
+  Area_security:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        description:
+          type : string
+        type_incident:
+          type : string
+        analyzed:
+          type : string 
+        date:
+          type : string
+  Building:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        description:
+          type : string
+        date_build:
+          type : string
+        location:
+          type : string  
+  Building_energy_month:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        description:
+          type : string
+        consume:
+          type : string
+        consume_cost:
+          type : string
+        consume_heating:
+          type : string
+        consume_heating_cost:
+          type : string
+        consume_ilumination:
+          type : string
+        consume_ilumination_cost:
+          type : string
+        consume_ilumination_ext:
+          type : string
+        consume_ilumination_ext_cost:
+          type : string  
+        month:
+          type : string
+        year:
+          type : string
+  Building_energy_year:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        description:
+          type : string
+        consume:
+          type : string
+        consume_metro:
+          type : string
+        consume_person:
+          type : string  
+        consume_degree:
+          type : string
+        consume_cost:
+          type : string  
+        consume_heating:
+          type : string
+        consume_heating_metro:
+          type : string
+        consume_heating_person:
+          type : string  
+        consume_heating_degree:
+          type : string
+        consume_heating_cost:
+          type : string
+        consume_ilumination:
+          type : string
+        consume_ilumination_metro:
+          type : string
+        consume_ilumination_person:
+          type : string  
+        consume_ilumination_cost:
+          type : string
+        consume_ilumination_ext:
+          type : string  
+        consume_ilumination_ext_cost:
+          type : string
+        year:
+          type : string        
+  Building_security:
+      properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        description:
+          type : string
+        type_incident:
+          type : string
+        analyzed:
+          type : string 
+        date:
+          type : string        
+  Building_interested_persons_week:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        Selected_Panel_ID:
+          type : string  
+        Traffic_Area:
+          type : string
+        Number_Tickets:
+          type : string  
+        description:
+          type : string
+        week:
+          type : string 
+        month:
+          type : string
+        year:
+          type : string    
+  Building_interested_persons_month:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        Selected_Panel_ID:
+          type : string  
+        Traffic_Area:
+          type : string
+        Number_Tickets:
+          type : string  
+        description:
+          type : string
+        month:
+          type : string
+        year:
+          type : string            
+  Building_interested_persons_year:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        Selected_Panel_ID:
+          type : string  
+        Traffic_Area:
+          type : string
+        Number_Tickets:
+          type : string  
+        description:
+          type : string
+        year:
+          type : string            
+  Building_data_regist:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        data_type:
+          type : string  
+        Value:
+          type : string
+        Date:
+          type : string  
+  Building_data_regist_month:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        data_type:
+          type : string  
+        Value:
+          type : string
+        Month:
+          type : string  
+        Year:
+          type : string
+  Building_data_regist_year:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        data_type:
+          type : string  
+        Value:
+          type : string
+        Year:
+          type : string  
+  Building_daily_persons:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        Value:
+          type : string  
+        Day:
+          type : string
+        Week:
+          type : string  
+        Month:
+          type : string  
+        Year:
+          type : string 
+  Building_week_persons:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        Value:
+          type : string  
+        Week:
+          type : string  
+        Month:
+          type : string  
+        Year:
+          type : string     
+  Building_month_persons:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        Value:
+          type : string  
+        Month:
+          type : string  
+        Year:
+          type : string 
+  Building_year_persons:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        building_name:
+          type : string
+        Value:
+          type : string  
+        Year:
+          type : string          
