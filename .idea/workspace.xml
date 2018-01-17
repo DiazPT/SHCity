@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/database/models.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="136">
+              <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding>
                 <element signature="e#37#64#0" expanded="false" />
                 <element signature="e#102#142#0" expanded="false" />
@@ -33,8 +33,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/producer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1205">
-              <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="33" />
+            <state relative-caret-position="255">
+              <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="29" />
               <folding>
                 <element signature="n#!!block;n#token_true#0" expanded="false" />
                 <element signature="e#451#566#0" expanded="false" />
@@ -47,18 +47,122 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/areas/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="88" column="41" lean-forward="false" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+            <state relative-caret-position="459">
+              <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+              <folding>
+                <marker date="1512527832000" expanded="true" signature="4140:6018" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="4348:6014" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="4528:6007" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="4656:4860" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="4751:4837" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="4886:5964" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="4959:5274" ph="{&quot;Area_ID&quot;: area._id...}" />
+                <marker date="1512527832000" expanded="true" signature="5380:5940" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="5419:5606" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="5612:5913" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="5785:5882" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1512527832000" expanded="true" signature="6087:7912" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="6294:7908" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="6324:6460" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="6391:6449" ph="{&quot;message&quot;: 'Invalid session'...}" />
+                <marker date="1512527832000" expanded="true" signature="6474:7901" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="6562:7876" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="6602:6806" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="6697:6783" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="6832:7858" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="6904:7168" ph="{&quot;Area_ID&quot;: area._id...}" />
+                <marker date="1512527832000" expanded="true" signature="7274:7834" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="7313:7500" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="7506:7807" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="7679:7776" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1512527832000" expanded="true" signature="7981:10364" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8187:10360" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8217:8353" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8284:8342" ph="{&quot;message&quot;: 'Invalid session'...}" />
+                <marker date="1512527832000" expanded="true" signature="8367:10354" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8457:10342" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8494:8679" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8581:8660" ph="{&quot;message&quot;: 'Area1 does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="8701:10328" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8799:10308" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8844:9069" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="8947:9042" ph="{&quot;message&quot;: 'Area2 does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="9100:10286" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="9175:9541" ph="{&quot;Area1_ID&quot;: area1._id...}" />
+                <marker date="1512527832000" expanded="true" signature="9655:10258" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="9698:9897" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="9903:10228" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="10088:10193" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1512527832000" expanded="true" signature="10434:12757" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="10641:12753" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="10671:10807" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="10738:10796" ph="{&quot;message&quot;: 'Invalid session'...}" />
+                <marker date="1512527832000" expanded="true" signature="10813:12747" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="10903:12735" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="10940:11125" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="11027:11106" ph="{&quot;message&quot;: 'Area1 does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="11147:12721" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="11245:12701" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="11290:11515" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="11393:11488" ph="{&quot;message&quot;: 'Area2 does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="11546:12679" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="11621:11934" ph="{&quot;Area1_ID&quot;: area1._id...}" />
+                <marker date="1512527832000" expanded="true" signature="12048:12651" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="12091:12290" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="12296:12621" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="12481:12586" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1512527832000" expanded="true" signature="12825:15100" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13031:15096" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13061:13197" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13128:13186" ph="{&quot;message&quot;: 'Invalid session'...}" />
+                <marker date="1512527832000" expanded="true" signature="13211:15090" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13301:15078" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13338:13523" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13425:13504" ph="{&quot;message&quot;: 'Area1 does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="13545:15064" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13643:15044" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13688:13913" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="13791:13886" ph="{&quot;message&quot;: 'Area2 does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="13944:15022" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="14019:14277" ph="{&quot;Area1_ID&quot;: area1._id...}" />
+                <marker date="1512527832000" expanded="true" signature="14391:14994" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="14434:14633" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="14639:14964" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="14824:14929" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1512527832000" expanded="true" signature="15165:17030" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="15372:17026" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="15402:15538" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="15469:15527" ph="{&quot;message&quot;: 'Invalid session'...}" />
+                <marker date="1512527832000" expanded="true" signature="15552:17019" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="15640:16994" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="15680:15884" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="15775:15861" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+                <marker date="1512527832000" expanded="true" signature="15910:16976" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="15977:16286" ph="{&quot;Area_ID&quot;: area._id...}" />
+                <marker date="1512527832000" expanded="true" signature="16392:16952" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="16431:16618" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="16624:16925" ph="{...}" />
+                <marker date="1512527832000" expanded="true" signature="16797:16894" ph="{&quot;message&quot;: 'Object created'...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swagger.yaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/api/swagger/swagger.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/areas and buildings/index.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="102">
+              <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -67,19 +171,90 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/buildings/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="204">
+              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="43" />
+              <folding>
+                <element signature="e#4829#7937#0" expanded="false" />
+                <element signature="e#8010#9910#0" expanded="false" />
+                <element signature="e#9999#12688#0" expanded="false" />
+                <element signature="e#12778#15411#0" expanded="false" />
+                <element signature="e#15500#18071#0" expanded="false" />
+                <element signature="e#18153#20707#0" expanded="false" />
+                <element signature="e#20788#23281#0" expanded="false" />
+                <element signature="e#23357#25840#0" expanded="false" />
+                <element signature="e#25918#27851#0" expanded="false" />
+                <element signature="e#27928#29811#0" expanded="false" />
+                <element signature="e#29889#31716#0" expanded="false" />
+                <element signature="e#31793#33565#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/gates/index.js">
+        <entry file="file://$PROJECT_DIR$/backend/areas and buildings/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="2244">
+              <caret line="208" column="42" lean-forward="false" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
+              <folding>
+                <marker date="1515081694124" expanded="false" signature="4147:4149" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="6987:10818" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="7204:10814" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="7234:7370" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="7301:7359" ph="{&quot;message&quot;: 'Invalid session'...}" />
+                <marker date="1515081694124" expanded="true" signature="7384:10808" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="7456:8921" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="7548:8888" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="7592:7816" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="7695:7789" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+                <marker date="1515081694124" expanded="true" signature="7846:8866" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="7920:8120" ph="{&quot;Area_ID&quot;: area._id...}" />
+                <marker date="1515081694124" expanded="true" signature="8234:8838" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="8277:8476" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="8482:8807" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="8667:8772" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1515081694124" expanded="true" signature="8938:10798" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="8978:10590" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="9081:10549" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="9133:9385" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="9248:9354" ph="{&quot;message&quot;: 'Building does not exist'...}" />
+                <marker date="1515081694124" expanded="true" signature="9419:10523" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="9497:9721" ph="{&quot;Building_ID&quot;: building._id...}" />
+                <marker date="1515081694124" expanded="true" signature="9843:10491" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="9890:10101" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="10107:10456" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="10304:10417" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1515081694124" expanded="true" signature="10611:10784" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="10689:10765" ph="{&quot;message&quot;: 'Type is not valid'...}" />
+                <marker date="1515081694124" expanded="true" signature="10910:14878" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="11136:14874" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="11166:11302" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="11233:11291" ph="{&quot;message&quot;: 'Invalid session'...}" />
+                <marker date="1515081694124" expanded="true" signature="11316:14868" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="11388:12915" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="11480:12882" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="11524:11748" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="11627:11721" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+                <marker date="1515081694124" expanded="true" signature="11778:12860" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="11852:12114" ph="{&quot;Area_ID&quot;: area._id...}" />
+                <marker date="1515081694124" expanded="true" signature="12228:12832" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="12271:12470" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="12476:12801" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="12661:12766" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1515081694124" expanded="true" signature="12932:14858" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="12972:14650" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="13075:14609" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="13127:13379" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="13242:13348" ph="{&quot;message&quot;: 'Building does not exist'...}" />
+                <marker date="1515081694124" expanded="true" signature="13413:14583" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="13491:13781" ph="{&quot;Building_ID&quot;: building._id...}" />
+                <marker date="1515081694124" expanded="true" signature="13903:14551" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="13950:14161" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="14167:14516" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="14364:14477" ph="{&quot;message&quot;: 'Object created'...}" />
+                <marker date="1515081694124" expanded="true" signature="14671:14844" ph="{...}" />
+                <marker date="1515081694124" expanded="true" signature="14749:14825" ph="{&quot;message&quot;: 'Type is not valid'...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,18 +272,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/panels/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="1054">
               <caret line="62" column="40" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/data type/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -117,8 +282,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/user/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="1564">
+              <caret line="92" column="31" lean-forward="false" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -149,12 +314,14 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/backend/database/index.js" />
         <option value="$PROJECT_DIR$/backend/user/index.js" />
-        <option value="$PROJECT_DIR$/backend/package.json" />
         <option value="$PROJECT_DIR$/backend/producer/index.js" />
         <option value="$PROJECT_DIR$/backend/config.js" />
         <option value="$PROJECT_DIR$/backend/index.js" />
@@ -166,6 +333,8 @@
         <option value="$PROJECT_DIR$/backend/panels/index.js" />
         <option value="$PROJECT_DIR$/backend/areas/index.js" />
         <option value="$PROJECT_DIR$/backend/database/models.js" />
+        <option value="$PROJECT_DIR$/backend/package.json" />
+        <option value="$PROJECT_DIR$/backend/api/swagger/swagger.yaml" />
       </list>
     </option>
   </component>
@@ -200,7 +369,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,6 +380,19 @@
               <item name="SHCity" type="b2602c69:ProjectViewProjectNode" />
               <item name="SHCity" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SHCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SHCity" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SHCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SHCity" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="swagger" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SHCity" type="b2602c69:ProjectViewProjectNode" />
@@ -277,6 +458,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,15 +507,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38597000" />
+    <option name="totallyTimeSpent" value="39753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16325037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="false" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -341,13 +524,22 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16325037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,14 +555,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/producer/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
@@ -408,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -416,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -465,7 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -473,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -510,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -518,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -553,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -561,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -598,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -636,7 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,7 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,7 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,7 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,7 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,38 +874,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="867">
+          <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/user/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="1564">
+          <caret line="92" column="31" lean-forward="false" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/producer/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1205">
-          <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="33" />
+        <state relative-caret-position="255">
+          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="29" />
           <folding>
             <element signature="n#!!block;n#token_true#0" expanded="false" />
             <element signature="e#451#566#0" expanded="false" />
@@ -747,9 +907,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/areas and buildings/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="2244">
+          <caret line="208" column="42" lean-forward="false" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
+          <folding>
+            <marker date="1515081694124" expanded="false" signature="4147:4149" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="6987:10818" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="7204:10814" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="7234:7370" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="7301:7359" ph="{&quot;message&quot;: 'Invalid session'...}" />
+            <marker date="1515081694124" expanded="true" signature="7384:10808" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="7456:8921" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="7548:8888" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="7592:7816" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="7695:7789" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+            <marker date="1515081694124" expanded="true" signature="7846:8866" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="7920:8120" ph="{&quot;Area_ID&quot;: area._id...}" />
+            <marker date="1515081694124" expanded="true" signature="8234:8838" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="8277:8476" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="8482:8807" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="8667:8772" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1515081694124" expanded="true" signature="8938:10798" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="8978:10590" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="9081:10549" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="9133:9385" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="9248:9354" ph="{&quot;message&quot;: 'Building does not exist'...}" />
+            <marker date="1515081694124" expanded="true" signature="9419:10523" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="9497:9721" ph="{&quot;Building_ID&quot;: building._id...}" />
+            <marker date="1515081694124" expanded="true" signature="9843:10491" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="9890:10101" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="10107:10456" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="10304:10417" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1515081694124" expanded="true" signature="10611:10784" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="10689:10765" ph="{&quot;message&quot;: 'Type is not valid'...}" />
+            <marker date="1515081694124" expanded="true" signature="10910:14878" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="11136:14874" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="11166:11302" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="11233:11291" ph="{&quot;message&quot;: 'Invalid session'...}" />
+            <marker date="1515081694124" expanded="true" signature="11316:14868" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="11388:12915" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="11480:12882" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="11524:11748" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="11627:11721" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+            <marker date="1515081694124" expanded="true" signature="11778:12860" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="11852:12114" ph="{&quot;Area_ID&quot;: area._id...}" />
+            <marker date="1515081694124" expanded="true" signature="12228:12832" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="12271:12470" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="12476:12801" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="12661:12766" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1515081694124" expanded="true" signature="12932:14858" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="12972:14650" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="13075:14609" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="13127:13379" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="13242:13348" ph="{&quot;message&quot;: 'Building does not exist'...}" />
+            <marker date="1515081694124" expanded="true" signature="13413:14583" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="13491:13781" ph="{&quot;Building_ID&quot;: building._id...}" />
+            <marker date="1515081694124" expanded="true" signature="13903:14551" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="13950:14161" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="14167:14516" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="14364:14477" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1515081694124" expanded="true" signature="14671:14844" ph="{...}" />
+            <marker date="1515081694124" expanded="true" signature="14749:14825" ph="{&quot;message&quot;: 'Type is not valid'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -757,15 +975,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/buildings/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="204">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="e#4829#7937#0" expanded="false" />
+            <element signature="e#8010#9910#0" expanded="false" />
+            <element signature="e#9999#12688#0" expanded="false" />
+            <element signature="e#12778#15411#0" expanded="false" />
+            <element signature="e#15500#18071#0" expanded="false" />
+            <element signature="e#18153#20707#0" expanded="false" />
+            <element signature="e#20788#23281#0" expanded="false" />
+            <element signature="e#23357#25840#0" expanded="false" />
+            <element signature="e#25918#27851#0" expanded="false" />
+            <element signature="e#27928#29811#0" expanded="false" />
+            <element signature="e#29889#31716#0" expanded="false" />
+            <element signature="e#31793#33565#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -779,7 +1009,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/panels/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="1054">
           <caret line="62" column="40" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="40" />
           <folding />
         </state>
@@ -795,16 +1025,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/areas/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="88" column="41" lean-forward="false" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+          <folding>
+            <marker date="1512527832000" expanded="true" signature="4140:6018" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="4348:6014" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="4528:6007" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="4656:4860" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="4751:4837" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="4886:5964" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="4959:5274" ph="{&quot;Area_ID&quot;: area._id...}" />
+            <marker date="1512527832000" expanded="true" signature="5380:5940" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="5419:5606" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="5612:5913" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="5785:5882" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1512527832000" expanded="true" signature="6087:7912" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="6294:7908" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="6324:6460" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="6391:6449" ph="{&quot;message&quot;: 'Invalid session'...}" />
+            <marker date="1512527832000" expanded="true" signature="6474:7901" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="6562:7876" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="6602:6806" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="6697:6783" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="6832:7858" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="6904:7168" ph="{&quot;Area_ID&quot;: area._id...}" />
+            <marker date="1512527832000" expanded="true" signature="7274:7834" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="7313:7500" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="7506:7807" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="7679:7776" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1512527832000" expanded="true" signature="7981:10364" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8187:10360" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8217:8353" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8284:8342" ph="{&quot;message&quot;: 'Invalid session'...}" />
+            <marker date="1512527832000" expanded="true" signature="8367:10354" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8457:10342" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8494:8679" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8581:8660" ph="{&quot;message&quot;: 'Area1 does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="8701:10328" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8799:10308" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8844:9069" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="8947:9042" ph="{&quot;message&quot;: 'Area2 does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="9100:10286" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="9175:9541" ph="{&quot;Area1_ID&quot;: area1._id...}" />
+            <marker date="1512527832000" expanded="true" signature="9655:10258" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="9698:9897" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="9903:10228" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="10088:10193" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1512527832000" expanded="true" signature="10434:12757" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="10641:12753" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="10671:10807" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="10738:10796" ph="{&quot;message&quot;: 'Invalid session'...}" />
+            <marker date="1512527832000" expanded="true" signature="10813:12747" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="10903:12735" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="10940:11125" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="11027:11106" ph="{&quot;message&quot;: 'Area1 does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="11147:12721" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="11245:12701" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="11290:11515" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="11393:11488" ph="{&quot;message&quot;: 'Area2 does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="11546:12679" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="11621:11934" ph="{&quot;Area1_ID&quot;: area1._id...}" />
+            <marker date="1512527832000" expanded="true" signature="12048:12651" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="12091:12290" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="12296:12621" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="12481:12586" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1512527832000" expanded="true" signature="12825:15100" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13031:15096" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13061:13197" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13128:13186" ph="{&quot;message&quot;: 'Invalid session'...}" />
+            <marker date="1512527832000" expanded="true" signature="13211:15090" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13301:15078" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13338:13523" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13425:13504" ph="{&quot;message&quot;: 'Area1 does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="13545:15064" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13643:15044" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13688:13913" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="13791:13886" ph="{&quot;message&quot;: 'Area2 does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="13944:15022" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="14019:14277" ph="{&quot;Area1_ID&quot;: area1._id...}" />
+            <marker date="1512527832000" expanded="true" signature="14391:14994" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="14434:14633" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="14639:14964" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="14824:14929" ph="{&quot;message&quot;: 'Object created'...}" />
+            <marker date="1512527832000" expanded="true" signature="15165:17030" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="15372:17026" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="15402:15538" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="15469:15527" ph="{&quot;message&quot;: 'Invalid session'...}" />
+            <marker date="1512527832000" expanded="true" signature="15552:17019" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="15640:16994" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="15680:15884" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="15775:15861" ph="{&quot;message&quot;: 'Area does not exist'...}" />
+            <marker date="1512527832000" expanded="true" signature="15910:16976" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="15977:16286" ph="{&quot;Area_ID&quot;: area._id...}" />
+            <marker date="1512527832000" expanded="true" signature="16392:16952" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="16431:16618" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="16624:16925" ph="{...}" />
+            <marker date="1512527832000" expanded="true" signature="16797:16894" ph="{&quot;message&quot;: 'Object created'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/database/models.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="136">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding>
             <element signature="e#37#64#0" expanded="false" />
             <element signature="e#102#142#0" expanded="false" />
@@ -812,6 +1136,22 @@
             <element signature="e#233#280#0" expanded="false" />
             <element signature="e#284#312#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/swagger/swagger.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

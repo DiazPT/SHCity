@@ -4,7 +4,8 @@
   "description": "Monitoring System Backend API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "edit": "swagger_swagger_fileName=config/swagger.yaml"
   },
   "author": "Alexandre Moura Antunes Dias",
   "license": "ISC",
