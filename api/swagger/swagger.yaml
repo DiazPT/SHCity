@@ -373,7 +373,85 @@ paths:
         503:
           description: Error
           schema:
-            $ref: "#/definitions/HelloWorldResponse"           
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/building_energy_month_add:
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the energy values of a building in a month.
+      tags:
+              - buldings
+      consumes:
+        - application/json
+      operationId: building_energy_month_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add values.
+          schema:
+            $ref: "#/definitions/Building_energy_month"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/building_energy_year_add:
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the energy values of a building in a year.
+      tags:
+              - buldings
+      consumes:
+        - application/json
+      operationId: building_energy_year_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add values.
+          schema:
+            $ref: "#/definitions/Building_energy_year"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/building_security_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add security events from a Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: building_security_add
+      parameters:
+        - in: body
+          name: Area
+          description: The Area to add the value.
+          schema:
+            $ref: "#/definitions/Building_security"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"        
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions

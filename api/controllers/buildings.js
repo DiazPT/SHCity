@@ -87,9 +87,7 @@ function building_energy_month_add(req, res) {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Area does not exist");
-                        res.json({
-                            message: 'Area does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
                         var newRecord = new models.Building_Energy_Monthly({
@@ -144,12 +142,10 @@ function building_energy_year_add(req, res) {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Area does not exist");
-                        res.json({
-                            message: 'Area does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
-                        var newRecord = new models.Building_Energy_Monthly({
+                        var newRecord = new models.Building_Energy_Anual({
                             Building_ID: building._id,
                             Description: req.body.description,
                             E_Consume : req.body.consume,
