@@ -46,6 +46,8 @@ paths:
     x-swagger-router-controller: users
     post:
       summary: Creates a new user.
+      tags:
+              - user
       consumes:
         - application/json
       operationId: register   
@@ -67,6 +69,8 @@ paths:
     x-swagger-router-controller: users
     post:
       summary: Login a new user.
+      tags:
+              - user
       consumes:
         - application/json
       operationId: login
@@ -91,6 +95,8 @@ paths:
     x-swagger-router-controller: producers
     post:
       summary: Creates a new producer.
+      tags:
+              - producer
       consumes:
         - application/json
       operationId: register_prod   
@@ -112,6 +118,8 @@ paths:
     x-swagger-router-controller: producers
     post:
       summary: Login a new producer.
+      tags:
+              - producer
       consumes:
         - application/json
       operationId: login_prod
@@ -136,6 +144,8 @@ paths:
     x-swagger-router-controller: areas
     post:
       summary: Create a new Area.
+      tags:
+              - areas
       consumes:
         - application/json
       operationId: area_add
@@ -160,6 +170,8 @@ paths:
     x-swagger-router-controller: areas
     post:
       summary: Add week visitors.
+      tags:
+              - areas
       consumes:
         - application/json
       operationId: area_visitors_week_add
@@ -184,6 +196,8 @@ paths:
     x-swagger-router-controller: areas
     post:
       summary: Add month visitors.
+      tags:
+              - areas
       consumes:
         - application/json
       operationId: area_visitors_month_add
@@ -208,6 +222,8 @@ paths:
     x-swagger-router-controller: areas
     post:
       summary: Add year visitors.
+      tags:
+              - areas
       consumes:
         - application/json
       operationId: area_visitors_year_add
@@ -232,6 +248,8 @@ paths:
     x-swagger-router-controller: areas
     post:
       summary: Add week traffic between Areas.
+      tags:
+              - areas
       consumes:
         - application/json
       operationId: area_traffic_week_add
@@ -256,6 +274,8 @@ paths:
     x-swagger-router-controller: areas
     post:
       summary: Add month traffic between Areas.
+      tags:
+              - areas
       consumes:
         - application/json
       operationId: area_traffic_month_add
@@ -280,6 +300,8 @@ paths:
     x-swagger-router-controller: areas
     post:
       summary: Add year traffic between Areas.
+      tags:
+              - areas
       consumes:
         - application/json
       operationId: area_traffic_year_add
@@ -304,6 +326,8 @@ paths:
     x-swagger-router-controller: areas
     post:
       summary: Add security events from an Area.
+      tags:
+              - areas
       consumes:
         - application/json
       operationId: area_security_add
@@ -328,6 +352,8 @@ paths:
     x-swagger-router-controller: buildings
     post:
       summary: Create a new Building.
+      tags:
+              - buldings
       consumes:
         - application/json
       operationId: building_add
