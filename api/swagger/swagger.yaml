@@ -1050,6 +1050,37 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+            
+  /occupation/areas_and_buildings_level_occupation_get: 
+    x-swagger-router-controller: area_and_buildings
+    get:
+      summary: Get the occupation (Type 0 = Building; Type 1 = Area).
+      tags:
+              - occupation
+      consumes:
+        - application/json
+      operationId: areas_and_buildings_level_occupation_get
+      parameters:
+        - in: query
+          name: name
+          description: The building or area to receive the value.
+          required: true
+          type: string
+        - in: query
+          name: type
+          description: (Type 0 = Building; Type 1 = Area).
+          required: true
+          type: string   
+      responses:
+        200:
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
   /occupation/areas_and_buildings_level_occupation_schedule_add: 
     x-swagger-router-controller: area_and_buildings
     post:

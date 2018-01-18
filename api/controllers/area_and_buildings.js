@@ -9,7 +9,8 @@ console.log('[Area and Building API] Ready.');
 module.exports = {
     areas_and_buildings_top_visits_add: areas_and_buildings_top_visits_add,
     areas_and_buildings_level_occupation_add: areas_and_buildings_level_occupation_add,
-    areas_and_buildings_level_occupation_schedule_add: areas_and_buildings_level_occupation_schedule_add
+    areas_and_buildings_level_occupation_schedule_add: areas_and_buildings_level_occupation_schedule_add,
+    areas_and_buildings_level_occupation_get: areas_and_buildings_level_occupation_get
 };
 
 
@@ -106,10 +107,9 @@ function areas_and_buildings_top_visits_add(req, res) {
     });
 };
 
-/*
-app.get('/api/areas_and_buildings/level_occupation/get', function (req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
-    console.log('[Area and Building API] Add Occupation.');
+
+function areas_and_buildings_level_occupation_get(req, res) {
+    console.log('[Area and Building API] Get Occupation.');
 
     //Building = 0 Area = 1
     if(req.get("type") == 1){
@@ -182,12 +182,11 @@ app.get('/api/areas_and_buildings/level_occupation/get', function (req, res) {
             })
         }
     }
-});
-*/
+};
+
 
 
 function areas_and_buildings_level_occupation_add(req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
     console.log('[Area and Building API] Add Occupation.');
     models.Producer.findOne({Username: req.body.username, Token: req.body.token}, function (err, User) {
 
