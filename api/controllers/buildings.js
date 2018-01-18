@@ -267,9 +267,9 @@ function interested_persons_buildings_week_add(req, res) {
 
                         models.Panel.findOne({Name: req.body.panel_name}, function (err, panel) {
                             if (panel == null) {
-                                console.log("Building does not exist");
+                                console.log("Panel does not exist");
                                 res.json({
-                                    message: 'Building does not exist'
+                                    message: 'Panel does not exist'
                                 })
                             }
                             else {
@@ -586,9 +586,7 @@ function data_regist_building_add(req, res) {
                         models.Data_Type.findOne({Name: req.body.data_type}, function (err, data_type) {
                             if (data_type == null) {
                                 console.log("Data Type does not exist");
-                                res.json({
-                                    message: 'Data Type does not exist'
-                                })
+                                res.status(503).json("Data Type does not exist")
                             }
 
                             else {
@@ -645,7 +643,7 @@ function building_daily_persons_add(req, res) {
                     else {
                         var newRecord = new models.Building_Daily_Persons({
                             Building_ID: building._id,
-                            Value: req.body.type_incident,
+                            Value: req.body.value,
                             Day : req.body.day,
                             Week : req.body.week,
                             Month : req.body.month,
@@ -698,7 +696,7 @@ function building_week_persons_add(req, res) {
                     else {
                         var newRecord = new models.Building_Week_Persons({
                             Building_ID: building._id,
-                            Value: req.body.type_incident,
+                            Value: req.body.value,
                             Week : req.body.week,
                             Month : req.body.month,
                             Year : req.body.year

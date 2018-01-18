@@ -1,4 +1,4 @@
-var models = require('../../../hello-world/api/database/models.js');
+var models = require('./models.js');
 var debug = true;
 
 module.exports = {

@@ -3,7 +3,7 @@ info:
   version: "0.0.1"
   title: SHCity API
 # during dev, should point to your local machine
-host: localhost:10010
+host: localhost:80
 # basePath prefixes all resource paths 
 basePath: /
 # 
@@ -405,7 +405,7 @@ paths:
     post:
       summary: Add the energy values of a building in a year.
       tags:
-              - buldings
+              - buildings
       consumes:
         - application/json
       operationId: building_energy_year_add
@@ -437,8 +437,8 @@ paths:
       operationId: building_security_add
       parameters:
         - in: body
-          name: Area
-          description: The Area to add the value.
+          name: Building
+          description: The Building to add the value.
           schema:
             $ref: "#/definitions/Building_security"
           required: true
@@ -451,7 +451,631 @@ paths:
         503:
           description: Error
           schema:
-            $ref: "#/definitions/HelloWorldResponse"        
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/interested_persons_buildings_week_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the persons interested to visit a Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: interested_persons_buildings_week_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_interested_persons_week"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/interested_persons_buildings_month_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the persons interested to visit a Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: interested_persons_buildings_month_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_interested_persons_month"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/interested_persons_buildings_year_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the persons interested to visit a Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: interested_persons_buildings_year_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_interested_persons_year"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/data_regist_building_month_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add data and data type to a Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: data_regist_building_month_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_data_regist_month"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/data_regist_building_year_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add data and data type to a Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: data_regist_building_year_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_data_regist_year"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/data_regist_building_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add data and data type to a Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: data_regist_building_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_data_regist"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"  
+  /buildings/building_daily_persons_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the persons who visisted the Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: building_daily_persons_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_daily_persons"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse" 
+  /buildings/building_week_persons_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the persons who visisted the Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: building_week_persons_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_week_persons"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse" 
+  /buildings/building_month_persons_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the persons who visisted the Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: building_month_persons_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_month_persons"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"  
+  /buildings/building_year_persons_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add the persons who visisted the Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: building_year_persons_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_year_persons"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /data_type/add: 
+    x-swagger-router-controller: data_type
+    post:
+      summary: Add a data_type.
+      tags:
+              - data_type
+      consumes:
+        - application/json
+      operationId: data_type_add
+      parameters:
+        - in: body
+          name: Data_type
+          description: The Data_type to add.
+          schema:
+            $ref: "#/definitions/Data_type"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"  
+  /panels/add: 
+    x-swagger-router-controller: panels
+    post:
+      summary: Add a Panel.
+      tags:
+              - panels
+      consumes:
+        - application/json
+      operationId: panel_add
+      parameters:
+        - in: body
+          name: Panel
+          description: The Panel to add value.
+          schema:
+            $ref: "#/definitions/Panel"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"   
+  /panels/panel_visitors_week_add: 
+    x-swagger-router-controller: panels
+    post:
+      summary: Add a Panel value.
+      tags:
+              - panels
+      consumes:
+        - application/json
+      operationId: panel_panel_visitors_week_add
+      parameters:
+        - in: body
+          name: Panel
+          description: The Panel to add value.
+          schema:
+            $ref: "#/definitions/Panel_week"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse" 
+  /panels/panel_visitors_month_add: 
+    x-swagger-router-controller: panels
+    post:
+      summary: Add a Panel value.
+      tags:
+              - panels
+      consumes:
+        - application/json
+      operationId: panel_panel_visitors_month_add
+      parameters:
+        - in: body
+          name: Panel
+          description: The Panel to add value.
+          schema:
+            $ref: "#/definitions/Panel_month"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"  
+  /panels/panel_visitors_year_add: 
+    x-swagger-router-controller: panels
+    post:
+      summary: Add a Panel value.
+      tags:
+              - panels
+      consumes:
+        - application/json
+      operationId: panel_panel_visitors_year_add
+      parameters:
+        - in: body
+          name: Panel
+          description: The Panel to add value.
+          schema:
+            $ref: "#/definitions/Panel_year"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /gates/gate_add: 
+    x-swagger-router-controller: gates
+    post:
+      summary: Add a Gate.
+      tags:
+              - gates
+      consumes:
+        - application/json
+      operationId: gate_add
+      parameters:
+        - in: body
+          name: Gate
+          description: The Gate to create.
+          schema:
+            $ref: "#/definitions/Gate"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /gates/gate_vehicle_affluence_add: 
+    x-swagger-router-controller: gates
+    post:
+      summary: Add a Gate value.
+      tags:
+              - gates
+      consumes:
+        - application/json
+      operationId: gate_vehicle_affluence_add
+      parameters:
+        - in: body
+          name: Gate
+          description: The Gate to add value.
+          schema:
+            $ref: "#/definitions/Gate_affluence"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/mobile_node_add: 
+    x-swagger-router-controller: mobile_nodes
+    post:
+      summary: Add a Mobile_node.
+      tags:
+              - mobile_node
+      consumes:
+        - application/json
+      operationId: mobile_node_add
+      parameters:
+        - in: body
+          name: Mobile_node
+          description: The Mobile_node to create.
+          schema:
+            $ref: "#/definitions/Mobile_node"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/mobile_node_data_regist_mobile_month_add: 
+    x-swagger-router-controller: mobile_nodes
+    post:
+      summary: Add a Mobile_node value.
+      tags:
+              - mobile_node
+      consumes:
+        - application/json
+      operationId: mobile_node_data_regist_mobile_month_add
+      parameters:
+        - in: body
+          name: Mobile_node
+          description: The Mobile_node to add the value.
+          schema:
+            $ref: "#/definitions/Mobile_node_month"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/mobile_node_data_regist_mobile_year_add: 
+    x-swagger-router-controller: mobile_nodes
+    post:
+      summary: Add a Mobile_node value.
+      tags:
+              - mobile_node
+      consumes:
+        - application/json
+      operationId: mobile_node_data_regist_mobile_year_add
+      parameters:
+        - in: body
+          name: Mobile_node
+          description: The Mobile_node to add the value.
+          schema:
+            $ref: "#/definitions/Mobile_node_year"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/mobile_node_data_regist_mobile_add: 
+    x-swagger-router-controller: mobile_nodes
+    post:
+      summary: Add a Mobile_node value.
+      tags:
+              - mobile_node
+      consumes:
+        - application/json
+      operationId: mobile_node_data_regist_mobile_add
+      parameters:
+        - in: body
+          name: Mobile_node
+          description: The Mobile_node to add the value.
+          schema:
+            $ref: "#/definitions/Mobile_node_date"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /occupation/areas_and_buildings_top_visits_add: 
+    x-swagger-router-controller: area_and_buildings
+    post:
+      summary: Add the top on visits (Type 0 = Building; Type 1 = Area).
+      tags:
+              - occupation
+      consumes:
+        - application/json
+      operationId: areas_and_buildings_top_visits_add
+      parameters:
+        - in: body
+          name: Top_visits
+          description: The Top_visits to add.
+          schema:
+            $ref: "#/definitions/Top_visits"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /occupation/areas_and_buildings_level_occupation_add: 
+    x-swagger-router-controller: area_and_buildings
+    post:
+      summary: Add the occupation (Type 0 = Building; Type 1 = Area).
+      tags:
+              - occupation
+      consumes:
+        - application/json
+      operationId: areas_and_buildings_level_occupation_add
+      parameters:
+        - in: body
+          name: Occupation
+          description: The Occupation to add.
+          schema:
+            $ref: "#/definitions/Occupation"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /occupation/areas_and_buildings_level_occupation_schedule_add: 
+    x-swagger-router-controller: area_and_buildings
+    post:
+      summary: Add the occupation schedule (Type 0 = Building; Type 1 = Area).
+      tags:
+              - occupation
+      consumes:
+        - application/json
+      operationId: areas_and_buildings_level_occupation_schedule_add
+      parameters:
+        - in: body
+          name: Occupation
+          description: The Occupation to add.
+          schema:
+            $ref: "#/definitions/Occupation_schedule"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"          
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
@@ -732,11 +1356,11 @@ definitions:
           type : string
         building_name:
           type : string
-        Selected_Panel_ID:
+        panel_name:
           type : string  
-        Traffic_Area:
+        traffic:
           type : string
-        Number_Tickets:
+        tickets:
           type : string  
         description:
           type : string
@@ -754,11 +1378,11 @@ definitions:
           type : string
         building_name:
           type : string
-        Selected_Panel_ID:
+        panel_name:
           type : string  
-        Traffic_Area:
+        traffic:
           type : string
-        Number_Tickets:
+        tickets:
           type : string  
         description:
           type : string
@@ -774,11 +1398,11 @@ definitions:
           type : string
         building_name:
           type : string
-        Selected_Panel_ID:
+        panel_name:
           type : string  
-        Traffic_Area:
+        traffic:
           type : string
-        Number_Tickets:
+        tickets:
           type : string  
         description:
           type : string
@@ -794,9 +1418,9 @@ definitions:
           type : string
         data_type:
           type : string  
-        Value:
+        value:
           type : string
-        Date:
+        date:
           type : string  
   Building_data_regist_month:
     properties:
@@ -808,11 +1432,11 @@ definitions:
           type : string
         data_type:
           type : string  
-        Value:
+        value:
           type : string
-        Month:
+        month:
           type : string  
-        Year:
+        year:
           type : string
   Building_data_regist_year:
     properties:
@@ -824,9 +1448,9 @@ definitions:
           type : string
         data_type:
           type : string  
-        Value:
+        value:
           type : string
-        Year:
+        year:
           type : string  
   Building_daily_persons:
     properties:  
@@ -836,15 +1460,15 @@ definitions:
           type : string
         building_name:
           type : string
-        Value:
+        value:
           type : string  
-        Day:
+        day:
           type : string
-        Week:
+        week:
           type : string  
-        Month:
+        month:
           type : string  
-        Year:
+        year:
           type : string 
   Building_week_persons:
     properties:  
@@ -854,13 +1478,13 @@ definitions:
           type : string
         building_name:
           type : string
-        Value:
+        value:
           type : string  
-        Week:
+        week:
           type : string  
-        Month:
+        month:
           type : string  
-        Year:
+        year:
           type : string     
   Building_month_persons:
     properties:  
@@ -870,11 +1494,11 @@ definitions:
           type : string
         building_name:
           type : string
-        Value:
+        value:
           type : string  
-        Month:
+        month:
           type : string  
-        Year:
+        year:
           type : string 
   Building_year_persons:
     properties:  
@@ -884,7 +1508,203 @@ definitions:
           type : string
         building_name:
           type : string
-        Value:
+        value:
           type : string  
-        Year:
-          type : string          
+        year:
+          type : string
+  Data_type:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        data_type_name:
+          type : string
+        description:
+          type : string  
+        unit:
+          type : string
+  Panel:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        panel_name:
+          type : string
+        description:
+          type : string  
+        location:
+          type : string
+  Panel_week:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        panel_name:
+          type : string
+        description:
+          type : string  
+        visitors:
+          type : string
+        week:
+          type : string  
+        month:
+          type : string  
+        year:
+          type : string
+  Panel_month:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        panel_name:
+          type : string
+        description:
+          type : string  
+        visitors:
+          type : string
+        month:
+          type : string  
+        year:
+          type : string
+  Panel_year:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        panel_name:
+          type : string
+        description:
+          type : string  
+        visitors:
+          type : string
+        year:
+          type : string  
+  Gate:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        gate_name:
+          type : string
+        description:
+          type : string  
+  Gate_affluence:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        gate_name:
+          type : string
+        schedule:
+          type : string
+        flow_cars:
+          type : string
+        date:
+          type : string
+  Mobile_node:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        mobile_node_name:
+          type : string
+        description:
+          type : string 
+        location:
+          type : string 
+  Mobile_node_month:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        mobile_node_name:
+          type : string
+        data_type:
+          type : string 
+        value:
+          type : string
+        month:
+          type : string  
+        year:
+          type : string
+  Mobile_node_year:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        mobile_node_name:
+          type : string
+        data_type:
+          type : string 
+        value:
+          type : string
+        year:
+          type : string
+  Mobile_node_date:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        mobile_node_name:
+          type : string
+        data_type:
+          type : string 
+        value:
+          type : string
+        date:
+          type : string
+  Top_visits:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        top:
+          type : string 
+        building_name:
+          type : string
+        type:
+          type : string  
+  Occupation:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        occupation:
+          type : string 
+        building_name:
+          type : string
+        type:
+          type : string
+  Occupation_schedule:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        occupation:
+          type : string
+        schedule:
+          type : string  
+        building_name:
+          type : string
+        type:
+          type : string        

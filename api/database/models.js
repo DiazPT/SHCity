@@ -121,7 +121,7 @@ var Interested_Persons_Buildings_Week = mongoose.model('interested_persons_build
     Building_ID : String,
     Selected_Panel_ID : String,
     Traffic_Area : String,
-    String_Tickets : String,
+    Number_Tickets : String,
     Week : String,
     Month : String,
     Year : String
@@ -131,7 +131,7 @@ var Interested_Persons_Buildings_Month = mongoose.model('interested_persons_buil
     Building_ID : String,
     Selected_Panel_ID : String,
     Traffic_Area : String,
-    String_Tickets : String,
+    Number_Tickets : String,
     Month : String,
     Year : String
 });
@@ -140,7 +140,7 @@ var Interested_Persons_Buildings_Year = mongoose.model('interested_persons_build
     Building_ID : String,
     Selected_Panel_ID : String,
     Traffic_Area : String,
-    String_Tickets : String,
+    Number_Tickets : String,
     Year : String
 });
 
