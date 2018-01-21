@@ -29,9 +29,7 @@ function building_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
@@ -79,9 +77,7 @@ function building_energy_month_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
@@ -134,9 +130,7 @@ function building_energy_year_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
@@ -196,17 +190,13 @@ function building_security_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
-                        res.json({
-                            message: 'Building does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
                         var newRecord = new models.Building_Security({
@@ -248,17 +238,13 @@ function interested_persons_buildings_week_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
-                        res.json({
-                            message: 'Building does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
 
@@ -314,17 +300,13 @@ function interested_persons_buildings_month_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
-                        res.json({
-                            message: 'Building does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
 
@@ -334,9 +316,7 @@ function interested_persons_buildings_month_add(req, res) {
                         models.Panel.findOne({Name: req.body.panel_name}, function (err, panel) {
                             if (panel == null) {
                                 console.log("Building does not exist");
-                                res.json({
-                                    message: 'Building does not exist'
-                                })
+                                res.status(503).json("Building does not exist")
                             }
                             else {
                                 var newRecord = new models.Interested_Persons_Buildings_Month({
@@ -379,17 +359,13 @@ function interested_persons_buildings_year_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
-                        res.json({
-                            message: 'Building does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
 
@@ -399,9 +375,7 @@ function interested_persons_buildings_year_add(req, res) {
                         models.Panel.findOne({Name: req.body.panel_name}, function (err, panel) {
                             if (panel == null) {
                                 console.log("Building does not exist");
-                                res.json({
-                                    message: 'Building does not exist'
-                                })
+                                res.status(503).json("Building does not exist")
                             }
                             else {
                                 var newRecord = new models.Interested_Persons_Buildings_Year({
@@ -443,17 +417,13 @@ function data_regist_building_month_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Mobile Node does not exist");
-                        res.json({
-                            message: 'Mobile Node does not exist'
-                        })
+                        res.status(503).json("Mobile Node does not exist")
                     }
                     else {
 
@@ -461,9 +431,7 @@ function data_regist_building_month_add(req, res) {
                         models.Data_Type.findOne({Name: req.body.data_type}, function (err, data_type) {
                             if (data_type == null) {
                                 console.log("Data Type does not exist");
-                                res.json({
-                                    message: 'Data Type does not exist'
-                                })
+                                res.status(503).json("Data Type does not exist")
                             }
 
                             else {
@@ -506,17 +474,13 @@ function data_regist_building_year_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Mobile Node does not exist");
-                        res.json({
-                            message: 'Mobile Node does not exist'
-                        })
+                        res.status(503).json("Mobile Node does not exist")
                     }
                     else {
 
@@ -524,9 +488,7 @@ function data_regist_building_year_add(req, res) {
                         models.Data_Type.findOne({Name: req.body.data_type}, function (err, data_type) {
                             if (data_type == null) {
                                 console.log("Data Type does not exist");
-                                res.json({
-                                    message: 'Data Type does not exist'
-                                })
+                                res.status(503).json("Data Type does not exist")
                             }
 
                             else {
@@ -568,17 +530,13 @@ function data_regist_building_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Mobile Node does not exist");
-                        res.json({
-                            message: 'Mobile Node does not exist'
-                        })
+                        res.status(503).json("Mobile Node does not exist")
                     }
                     else {
 
@@ -628,17 +586,13 @@ function building_daily_persons_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
-                        res.json({
-                            message: 'Building does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
                         var newRecord = new models.Building_Daily_Persons({
@@ -681,17 +635,13 @@ function building_week_persons_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
-                        res.json({
-                            message: 'Building does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
                         var newRecord = new models.Building_Week_Persons({
@@ -734,17 +684,13 @@ function building_month_persons_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
-                        res.json({
-                            message: 'Building does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
                         var newRecord = new models.Building_Month_Persons({
@@ -785,17 +731,13 @@ function building_year_persons_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Building.findOne({Name: req.body.building_name}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
-                        res.json({
-                            message: 'Building does not exist'
-                        })
+                        res.status(503).json("Building does not exist")
                     }
                     else {
                         var newRecord = new models.Building_Year_Persons({

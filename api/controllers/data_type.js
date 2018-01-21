@@ -48,9 +48,7 @@ function data_type_add(req, res) {
                     }
                     else {
                         console.log("Data Type already registered");
-                        res.json({
-                            message: 'Object already created'
-                        })
+                        res.status(503).json("Object already created")
                     }
                 }
             );

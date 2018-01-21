@@ -19,7 +19,7 @@ function gate_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(503).json("Invalid session")
+            res.status(403).json("Invalid session");
         }
         else {
             //console.log(req.body.gate_name);
@@ -49,9 +49,7 @@ function gate_add(req, res) {
                     }
                     else {
                         console.log("Gate already registered");
-                        res.json({
-                            message: 'Object already created'
-                        })
+                        res.status(503).json("Object already created");
                     }
                 }
             );
@@ -67,9 +65,7 @@ function gate_vehicle_affluence_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session");
         }
         else {
             models.Gate.findOne({Name: req.body.gate_name}, function (err, gate) {

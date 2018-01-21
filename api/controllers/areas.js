@@ -26,7 +26,7 @@ function area_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(403).json("Invalid seassion");
+            res.status(403).json("Invalid session");
         }
         else {
             models.Area.findOne({Area_Name: req.body.area_name}, function (err, area) {
@@ -72,7 +72,7 @@ function area_visitors_week_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(403).json("Invalid seassion");
+            res.status(403).json("Invalid session");
         }
         else {
             models.Area.findOne({Area_Name: req.body.area_name}, function (err, area) {
@@ -120,7 +120,7 @@ function area_visitors_month_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(403).json("Invalid seassion");
+            res.status(403).json("Invalid session");
         }
         else {
             models.Area.findOne({Area_Name: req.body.area_name}, function (err, area) {
@@ -167,7 +167,7 @@ function area_visitors_year_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(403).json("Invalid seassion");
+            res.status(403).json("Invalid session");
         }
         else {
             models.Area.findOne({Area_Name: req.body.area_name}, function (err, area) {
@@ -214,7 +214,7 @@ function area_traffic_week_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(403).json("Invalid seassion");
+            res.status(403).json("Invalid session");
         }
         else {
             models.Area.findOne({Area_Name: req.body.area_name1}, function (err, area1) {
@@ -269,7 +269,7 @@ function area_traffic_month_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(403).json("Invalid seassion");
+            res.status(403).json("Invalid session");
         } else {
             models.Area.findOne({Area_Name: req.body.area_name1}, function (err, area1) {
                 if (area1 == null) {
@@ -322,7 +322,7 @@ function area_traffic_year_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(403).json("Invalid seassion");
+            res.status(403).json("Invalid session");
         }
         else {
             models.Area.findOne({Area_Name: req.body.area_name1}, function (err, area1) {
@@ -375,7 +375,7 @@ function area_security_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(403).json("Invalid seassion");
+            res.status(403).json("Invalid session");
         }
         else {
             models.Area.findOne({Area_Name: req.body.area_name}, function (err, area) {

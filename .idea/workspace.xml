@@ -17,28 +17,28 @@
       <file leaf-file-name="models.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/database/models.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3774">
-              <caret line="141" column="26" lean-forward="true" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
+            <state relative-caret-position="287">
+              <caret line="277" column="4" lean-forward="false" selection-start-line="277" selection-start-column="4" selection-end-line="277" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="populate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/database/populate.js">
+      <file leaf-file-name="area_and_buildings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/controllers/area_and_buildings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+            <state relative-caret-position="-606">
+              <caret line="265" column="51" lean-forward="false" selection-start-line="265" selection-start-column="51" selection-end-line="265" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="areas.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/controllers/areas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            <state relative-caret-position="23">
+              <caret line="377" column="50" lean-forward="false" selection-start-line="377" selection-start-column="50" selection-end-line="377" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="buildings.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/controllers/buildings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="406" column="55" lean-forward="true" selection-start-line="406" selection-start-column="55" selection-end-line="406" selection-end-column="55" />
+            <state relative-caret-position="-4292">
+              <caret line="479" column="37" lean-forward="false" selection-start-line="479" selection-start-column="37" selection-end-line="479" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -57,18 +57,8 @@
       <file leaf-file-name="data_type.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/controllers/data_type.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="panels.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/controllers/panels.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-578">
-              <caret line="14" column="2" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="2" />
+            <state relative-caret-position="646">
+              <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -77,8 +67,8 @@
       <file leaf-file-name="gates.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/controllers/gates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="2" />
+            <state relative-caret-position="828">
+              <caret line="67" column="52" lean-forward="false" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -87,684 +77,39 @@
       <file leaf-file-name="mobile_nodes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/controllers/mobile_nodes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
+            <state relative-caret-position="-232">
+              <caret line="178" column="55" lean-forward="true" selection-start-line="178" selection-start-column="55" selection-end-line="178" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="area_and_buildings.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/controllers/area_and_buildings.js">
+      <file leaf-file-name="panels.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/controllers/panels.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+            <state relative-caret-position="-1337">
+              <caret line="86" column="47" lean-forward="true" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swagger.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/swagger/swagger.yaml">
+      <file leaf-file-name="producers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/controllers/producers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-              <folding>
-                <marker date="1516290919185" expanded="true" signature="421:31947" ph="paths: &lt;42 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="30094:31893" ph="/occupati…hedule_add: &lt;2 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31143:31161" ph="area_and_buildings" />
-                <marker date="1516290919185" expanded="true" signature="31166:31893" ph="post: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31187:31250" ph="Add the o…1 = Area)." />
-                <marker date="1516290919185" expanded="true" signature="31257:31289" ph="tags: &lt;1 item&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31279:31289" ph="occupation" />
-                <marker date="1516290919185" expanded="true" signature="31296:31332" ph="consumes: &lt;1 item&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31316:31332" ph="application/json" />
-                <marker date="1516290919185" expanded="true" signature="31352:31401" ph="areas_and…hedule_add" />
-                <marker date="1516290919185" expanded="true" signature="31408:31608" ph="parameters: &lt;1 item&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31434:31438" ph="body" />
-                <marker date="1516290919185" expanded="true" signature="31455:31465" ph="Occupation" />
-                <marker date="1516290919185" expanded="true" signature="31489:31511" ph="The Occup…on to add." />
-                <marker date="1516290919185" expanded="true" signature="31522:31583" ph="schema: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31548:31583" ph="##/definit…n_schedule" />
-                <marker date="1516290919185" expanded="true" signature="31604:31608" ph="true" />
-                <marker date="1516290919185" expanded="true" signature="31615:31893" ph="responses: &lt;2 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31634:31780" ph="201: &lt;2 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31662:31669" ph="Created" />
-                <marker date="1516290919185" expanded="true" signature="31680:31780" ph="schema: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31746:31780" ph="##/definit…ldResponse" />
-                <marker date="1516290919185" expanded="true" signature="31789:31893" ph="503: &lt;2 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31817:31822" ph="Error" />
-                <marker date="1516290919185" expanded="true" signature="31833:31893" ph="schema: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31859:31893" ph="##/definit…ldResponse" />
-                <marker date="1516290919185" expanded="true" signature="31906:31947" ph="/swagger: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="31936:31947" ph="swagger_raw" />
-                <marker date="1516290919185" expanded="true" signature="31990:45321" ph="definitions: &lt;41 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32005:32106" ph="HelloWorldResponse: &lt;2 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32029:32054" ph="required: &lt;1 item&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32047:32054" ph="message" />
-                <marker date="1516290919185" expanded="true" signature="32059:32106" ph="properties: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32077:32106" ph="message: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32100:32106" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32109:32205" ph="ErrorResponse: &lt;2 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32128:32153" ph="required: &lt;1 item&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32146:32153" ph="message" />
-                <marker date="1516290919185" expanded="true" signature="32158:32205" ph="properties: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32176:32205" ph="message: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32199:32205" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32208:32296" ph="token: &lt;2 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32219:32244" ph="required: &lt;1 item&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32237:32244" ph="message" />
-                <marker date="1516290919185" expanded="true" signature="32249:32296" ph="properties: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32267:32296" ph="message: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32290:32296" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32299:32528" ph="User: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32311:32528" ph="properties: &lt;5 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32331:32360" ph="name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32354:32360" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32369:32405" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32399:32405" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32414:32447" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32441:32447" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32456:32489" ph="password: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32483:32489" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32498:32528" ph="email: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32522:32528" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32531:32644" ph="User_login: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32549:32644" ph="properties: &lt;2 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32569:32602" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32596:32602" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32611:32644" ph="password: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32638:32644" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32647:32839" ph="Area: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32659:32839" ph="properties: &lt;4 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32679:32712" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32706:32712" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32721:32751" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32745:32751" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32760:32794" ph="area_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32788:32794" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32803:32839" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32833:32839" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32842:33214" ph="Area_visit_week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32865:33214" ph="properties: &lt;8 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32885:32918" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32912:32918" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32927:32957" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32951:32957" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="32966:33000" ph="area_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="32994:33000" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33009:33045" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33039:33045" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33054:33098" ph="percent_person_area: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33092:33098" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33107:33136" ph="week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33130:33136" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33146:33176" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33170:33176" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33185:33214" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33208:33214" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33222:33556" ph="Area_visit_month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33246:33556" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33266:33299" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33293:33299" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33308:33338" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33332:33338" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33347:33381" ph="area_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33375:33381" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33390:33426" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33420:33426" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33435:33479" ph="percent_person_area: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33473:33479" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33488:33518" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33512:33518" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33527:33556" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33550:33556" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33569:33863" ph="Area_visit_year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33592:33863" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33612:33645" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33639:33645" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33654:33684" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33678:33684" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33693:33727" ph="area_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33721:33727" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33736:33772" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33766:33772" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33781:33825" ph="percent_person_area: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33819:33825" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33834:33863" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33857:33863" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33876:34290" ph="Area_traffic_week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33901:34290" ph="properties: &lt;9 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33921:33954" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33948:33954" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="33963:33993" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="33987:33993" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34002:34037" ph="area_name1: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34031:34037" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34046:34081" ph="area_name2: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34075:34081" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34092:34128" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34122:34128" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34137:34174" ph="flow_persons: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34168:34174" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34183:34212" ph="week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34206:34212" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34222:34252" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34246:34252" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34261:34290" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34284:34290" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34293:34669" ph="Area_traffic_month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34319:34669" ph="properties: &lt;8 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34339:34372" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34366:34372" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34381:34411" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34405:34411" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34420:34455" ph="area_name1: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34449:34455" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34464:34499" ph="area_name2: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34493:34499" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34510:34546" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34540:34546" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34555:34592" ph="flow_persons: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34586:34592" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34601:34631" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34625:34631" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34640:34669" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34663:34669" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34672:35008" ph="Area_traffic_year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34697:35008" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34759:34789" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34783:34789" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34798:34833" ph="area_name1: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34827:34833" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34842:34877" ph="area_name2: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34871:34877" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34888:34924" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34918:34924" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34933:34970" ph="flow_persons: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="34964:34970" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="34979:35008" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35002:35008" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35011:35340" ph="Area_security: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35032:35340" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35052:35085" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35079:35085" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35094:35124" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35118:35124" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35133:35167" ph="area_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35161:35167" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35176:35212" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35206:35212" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35221:35259" ph="type_incident: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35253:35259" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35268:35301" ph="analyzed: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35295:35301" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35311:35340" ph="date: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35334:35340" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35343:35627" ph="Building: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35357:35627" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35377:35410" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35404:35410" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35419:35449" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35443:35449" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35458:35496" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35490:35496" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35505:35541" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35535:35541" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35550:35585" ph="date_build: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35579:35585" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35594:35627" ph="location: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35621:35627" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35632:36342" ph="Building_…ergy_month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35659:36342" ph="properties: &lt;14 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35679:35712" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35706:35712" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35721:35751" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35745:35751" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35760:35798" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35792:35798" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35807:35843" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35837:35843" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35852:35884" ph="consume: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35878:35884" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35893:35930" ph="consume_cost: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35924:35930" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35939:35979" ph="consume_heating: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="35973:35979" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="35988:36033" ph="consume_heating_cost: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36027:36033" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36042:36086" ph="consume_ilumination: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36080:36086" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36095:36144" ph="consume_i…ation_cost: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36138:36144" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36153:36201" ph="consume_i…nation_ext: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36195:36201" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36210:36263" ph="consume_i…n_ext_cost: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36257:36263" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36274:36304" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36298:36304" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36313:36342" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36336:36342" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36345:37452" ph="Building_energy_year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36371:37452" ph="properties: &lt;21 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36391:36424" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36418:36424" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36433:36463" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36457:36463" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36472:36510" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36504:36510" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36519:36555" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36549:36555" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36564:36596" ph="consume: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36590:36596" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36605:36643" ph="consume_metro: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36637:36643" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36652:36691" ph="consume_person: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36685:36691" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36702:36741" ph="consume_degree: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36735:36741" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36750:36787" ph="consume_cost: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36781:36787" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36798:36838" ph="consume_heating: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36832:36838" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36847:36893" ph="consume_h…ting_metro: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36887:36893" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36902:36949" ph="consume_h…ing_person: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="36943:36949" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="36960:37007" ph="consume_h…ing_degree: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37001:37007" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37016:37061" ph="consume_heating_cost: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37055:37061" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37070:37114" ph="consume_ilumination: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37108:37114" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37123:37173" ph="consume_i…tion_metro: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37167:37173" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37182:37233" ph="consume_i…ion_person: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37227:37233" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37244:37293" ph="consume_i…ation_cost: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37287:37293" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37302:37350" ph="consume_i…nation_ext: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37344:37350" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37361:37414" ph="consume_i…n_ext_cost: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37408:37414" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37423:37452" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37446:37452" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37463:37800" ph="Building_security: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37488:37800" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37508:37541" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37535:37541" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37550:37580" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37574:37580" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37589:37627" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37621:37627" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37636:37672" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37666:37672" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37681:37719" ph="type_incident: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37713:37719" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37728:37761" ph="analyzed: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37755:37761" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37771:37800" ph="date: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37794:37800" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37811:38279" ph="Building_…rsons_week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37849:38279" ph="properties: &lt;10 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37869:37902" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37896:37902" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37911:37941" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37935:37941" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37950:37988" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="37982:37988" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="37997:38032" ph="panel_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38026:38032" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38043:38075" ph="traffic: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38069:38075" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38084:38116" ph="tickets: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38110:38116" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38127:38163" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38157:38163" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38172:38201" ph="week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38195:38201" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38211:38241" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38235:38241" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38250:38279" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38273:38279" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38286:38716" ph="Building_…sons_month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38325:38716" ph="properties: &lt;9 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38345:38378" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38372:38378" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38387:38417" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38411:38417" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38426:38464" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38458:38464" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38473:38508" ph="panel_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38502:38508" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38519:38551" ph="traffic: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38545:38551" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38560:38592" ph="tickets: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38586:38592" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38603:38639" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38633:38639" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38648:38678" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38672:38678" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38687:38716" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38710:38716" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38731:39121" ph="Building_…rsons_year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38769:39121" ph="properties: &lt;8 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38789:38822" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38816:38822" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38831:38861" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38855:38861" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38870:38908" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38902:38908" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38917:38952" ph="panel_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38946:38952" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="38963:38995" ph="traffic: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="38989:38995" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39004:39036" ph="tickets: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39030:39036" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39047:39083" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39077:39083" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39092:39121" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39115:39121" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39136:39423" ph="Building_data_regist: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39162:39423" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39182:39215" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39209:39215" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39224:39254" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39248:39254" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39263:39301" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39295:39301" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39310:39344" ph="data_type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39338:39344" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39355:39385" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39379:39385" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39394:39423" ph="date: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39417:39423" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39428:39762" ph="Building_…gist_month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39460:39762" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39480:39513" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39507:39513" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39522:39552" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39546:39552" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39561:39599" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39593:39599" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39608:39642" ph="data_type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39636:39642" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39653:39683" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39677:39683" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39692:39722" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39716:39722" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39733:39762" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39756:39762" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39765:40057" ph="Building_…egist_year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39796:40057" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39816:39849" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39843:39849" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39858:39888" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39882:39888" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39897:39935" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39929:39935" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39944:39978" ph="data_type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="39972:39978" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="39989:40019" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40013:40019" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40028:40057" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40051:40057" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40062:40428" ph="Building_…ly_persons: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40090:40428" ph="properties: &lt;8 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40112:40145" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40139:40145" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40154:40184" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40178:40184" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40193:40231" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40225:40231" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40240:40270" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40264:40270" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40281:40309" ph="day: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40303:40309" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40318:40347" ph="week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40341:40347" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40358:40388" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40382:40388" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40399:40428" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40422:40428" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40432:40760" ph="Building_…ek_persons: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40459:40760" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40481:40514" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40508:40514" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40523:40553" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40547:40553" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40562:40600" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40594:40600" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40609:40639" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40633:40639" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40650:40679" ph="week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40673:40679" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40690:40720" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40714:40720" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40731:40760" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40754:40760" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40768:41057" ph="Building_…th_persons: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40796:41057" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40818:40851" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40845:40851" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40860:40890" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40884:40890" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40899:40937" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40931:40937" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40946:40976" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="40970:40976" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="40987:41017" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41011:41017" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41028:41057" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41051:41057" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41061:41308" ph="Building_…ar_persons: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41088:41308" ph="properties: &lt;5 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41110:41143" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41137:41143" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41152:41182" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41176:41182" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41191:41229" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41223:41229" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41238:41268" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41262:41268" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41279:41308" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41302:41308" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41311:41553" ph="Data_type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41326:41553" ph="properties: &lt;5 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41348:41381" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41375:41381" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41390:41420" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41414:41420" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41429:41468" ph="data_type_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41462:41468" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41477:41513" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41507:41513" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41524:41553" ph="unit: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41547:41553" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41556:41794" ph="Panel: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41567:41794" ph="properties: &lt;5 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41589:41622" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41616:41622" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41631:41661" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41655:41661" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41670:41705" ph="panel_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41699:41705" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41714:41750" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41744:41750" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41761:41794" ph="location: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41788:41794" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41797:42159" ph="Panel_week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41813:42159" ph="properties: &lt;8 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41835:41868" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41862:41868" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41877:41907" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41901:41907" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41916:41951" ph="panel_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41945:41951" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="41960:41996" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="41990:41996" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42007:42040" ph="visitors: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42034:42040" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42049:42078" ph="week: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42072:42078" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42089:42119" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42113:42119" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42130:42159" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42153:42159" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42162:42485" ph="Panel_month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42179:42485" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42201:42234" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42228:42234" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42243:42273" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42267:42273" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42282:42317" ph="panel_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42311:42317" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42326:42362" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42356:42362" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42373:42406" ph="visitors: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42400:42406" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42415:42445" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42439:42445" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42456:42485" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42479:42485" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42488:42769" ph="Panel_year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42504:42769" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42526:42559" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42553:42559" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42568:42598" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42592:42598" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42607:42642" ph="panel_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42636:42642" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42651:42687" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42681:42687" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42698:42731" ph="visitors: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42725:42731" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42740:42769" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42763:42769" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42774:42966" ph="Gate: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42784:42966" ph="properties: &lt;4 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42806:42839" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42833:42839" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42848:42878" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42872:42878" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42887:42921" ph="gate_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42915:42921" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42930:42966" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42960:42966" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="42971:43251" ph="Gate_affluence: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="42991:43251" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43013:43046" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43040:43046" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43055:43085" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43079:43085" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43094:43128" ph="gate_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43122:43128" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43137:43170" ph="schedule: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43164:43170" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43179:43213" ph="flow_cars: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43207:43213" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43222:43251" ph="date: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43245:43251" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43254:43503" ph="Mobile_node: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43271:43503" ph="properties: &lt;5 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43293:43326" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43320:43326" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43335:43365" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43359:43365" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43374:43415" ph="mobile_node_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43409:43415" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43424:43460" ph="description: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43454:43460" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43470:43503" ph="location: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43497:43503" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43507:43836" ph="Mobile_node_month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43530:43836" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43552:43585" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43579:43585" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43594:43624" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43618:43624" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43633:43674" ph="mobile_node_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43668:43674" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43683:43717" ph="data_type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43711:43717" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43727:43757" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43751:43757" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43766:43796" ph="month: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43790:43796" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43807:43836" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43830:43836" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43839:44126" ph="Mobile_node_year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43861:44126" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43883:43916" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43910:43916" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43925:43955" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43949:43955" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="43964:44005" ph="mobile_node_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="43999:44005" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44014:44048" ph="data_type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44042:44048" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44058:44088" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44082:44088" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44097:44126" ph="year: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44120:44126" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44129:44416" ph="Mobile_node_date: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44151:44416" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44173:44206" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44200:44206" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44215:44245" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44239:44245" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44254:44295" ph="mobile_node_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44304:44338" ph="data_type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44332:44338" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44348:44378" ph="value: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44372:44378" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44387:44416" ph="date: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44410:44416" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44419:44695" ph="Top_visits: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44435:44695" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44457:44490" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44484:44490" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44499:44529" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44523:44529" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44538:44572" ph="area_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44566:44572" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44581:44609" ph="top: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44603:44609" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44619:44657" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44651:44657" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44666:44695" ph="type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44689:44695" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44700:44983" ph="Occupation: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44716:44983" ph="properties: &lt;6 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44738:44771" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44765:44771" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44780:44810" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44804:44810" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44819:44853" ph="area_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44847:44853" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44862:44897" ph="occupation: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44891:44897" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44907:44945" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44939:44945" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44954:44983" ph="type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="44977:44983" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="44986:45321" ph="Occupation_schedule: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45011:45321" ph="properties: &lt;7 keys&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45033:45066" ph="username: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45060:45066" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="45075:45105" ph="token: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45099:45105" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="45114:45148" ph="area_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45142:45148" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="45157:45192" ph="occupation: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45186:45192" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="45201:45234" ph="schedule: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45228:45234" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="45245:45283" ph="building_name: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45277:45283" ph="string" />
-                <marker date="1516290919185" expanded="true" signature="45292:45321" ph="type: &lt;1 key&gt;" />
-                <marker date="1516290919185" expanded="true" signature="45315:45321" ph="string" />
-              </folding>
+            <state relative-caret-position="-1178">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/controllers/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-889">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -786,6 +131,9 @@
       <find>req.swagger.params.</find>
       <find>ana</find>
       <find>anuals</find>
+      <find>res.</find>
+      <find>res.status(403).json(Invalid session)</find>
+      <find>seassion</find>
     </findStrings>
     <replaceStrings>
       <replace>res.json</replace>
@@ -794,9 +142,14 @@
       <replace>req.body.</replace>
       <replace>res.status(503).json(&quot;Area2 does not exist&quot;);</replace>
       <replace>res.status(503).json(&quot;Building does not exist&quot;)</replace>
-      <replace>res.status(503).json(&quot;Data Type does not exist&quot;)</replace>
       <replace>res.status(503).json(&quot;Mobile Node does not exist&quot;)</replace>
       <replace>res.status(503).json(&quot;Invalid session&quot;)</replace>
+      <replace>res.status(504).json(&quot;Building does not exist&quot;)</replace>
+      <replace>session</replace>
+      <replace>res.status(503).json(&quot;Data Type does not exist&quot;)</replace>
+      <replace>res.status(503).json(&quot;Object already created&quot;)</replace>
+      <replace>res.status(403).json(&quot;Invalid session&quot;)</replace>
+      <replace>res.status(503).json(&quot;Panel does not exist&quot;)</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Alex\hello-world\api\database</dir>
@@ -814,16 +167,16 @@
         <option value="$PROJECT_DIR$/api/swagger/swagger.yaml" />
         <option value="$PROJECT_DIR$/api/controllers/users.js" />
         <option value="$PROJECT_DIR$/api/controllers/producers.js" />
-        <option value="$PROJECT_DIR$/api/controllers/areas.js" />
         <option value="$PROJECT_DIR$/api/database/populate.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/api/database/models.js" />
+        <option value="$PROJECT_DIR$/api/controllers/area_and_buildings.js" />
+        <option value="$PROJECT_DIR$/api/controllers/areas.js" />
         <option value="$PROJECT_DIR$/api/controllers/buildings.js" />
         <option value="$PROJECT_DIR$/api/controllers/data_type.js" />
-        <option value="$PROJECT_DIR$/api/controllers/panels.js" />
-        <option value="$PROJECT_DIR$/api/database/models.js" />
         <option value="$PROJECT_DIR$/api/controllers/gates.js" />
         <option value="$PROJECT_DIR$/api/controllers/mobile_nodes.js" />
-        <option value="$PROJECT_DIR$/api/controllers/area_and_buildings.js" />
+        <option value="$PROJECT_DIR$/api/controllers/panels.js" />
       </list>
     </option>
   </component>
@@ -859,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -889,13 +241,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.selected.package.jscs" value="D:\SHCity" />
@@ -937,22 +290,25 @@
       <workItem from="1516216055317" duration="4375000" />
       <workItem from="1516236143366" duration="1088000" />
       <workItem from="1516271174586" duration="10321000" />
+      <workItem from="1516385594157" duration="1131000" />
+      <workItem from="1516563902046" duration="1780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33769000" />
+    <option name="totallyTimeSpent" value="36680000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25036603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -962,7 +318,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32912844" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -978,6 +333,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/buildings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6902">
+          <caret line="406" column="55" lean-forward="true" selection-start-line="406" selection-start-column="55" selection-end-line="406" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/swagger/swagger.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <marker date="1516385574549" expanded="true" signature="115:125" ph="localhost:10010" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js" />
     <entry file="file://$PROJECT_DIR$/api/database/index.js" />
     <entry file="file://$PROJECT_DIR$/test/api/controllers/hello_world.js" />
@@ -1025,9 +406,6 @@
     <entry file="file://$PROJECT_DIR$/config.js" />
     <entry file="file://$PROJECT_DIR$/test/api/controllers/hello_world.js" />
     <entry file="file://$PROJECT_DIR$/api/controllers/hello_world.js" />
-    <entry file="file://$PROJECT_DIR$/api/controllers/users.js" />
-    <entry file="file://$PROJECT_DIR$/api/controllers/producers.js" />
-    <entry file="file://$PROJECT_DIR$/api/controllers/areas.js" />
     <entry file="file://$PROJECT_DIR$/api/database/index.js" />
     <entry file="file://$PROJECT_DIR$/api/schemas/schemas.yaml" />
     <entry file="file://$PROJECT_DIR$/api/database/populate.js">
@@ -1040,727 +418,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/controllers/data_type.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/controllers/buildings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="406" column="55" lean-forward="true" selection-start-line="406" selection-start-column="55" selection-end-line="406" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/controllers/panels.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/database/models.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3774">
-          <caret line="141" column="26" lean-forward="true" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/controllers/mobile_nodes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/controllers/gates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="2" />
+        <state relative-caret-position="680">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/swagger/swagger.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="323">
           <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding>
-            <marker date="1516290919185" expanded="true" signature="421:31947" ph="paths: &lt;42 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="30094:31893" ph="/occupati…hedule_add: &lt;2 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31143:31161" ph="area_and_buildings" />
-            <marker date="1516290919185" expanded="true" signature="31166:31893" ph="post: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31187:31250" ph="Add the o…1 = Area)." />
-            <marker date="1516290919185" expanded="true" signature="31257:31289" ph="tags: &lt;1 item&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31279:31289" ph="occupation" />
-            <marker date="1516290919185" expanded="true" signature="31296:31332" ph="consumes: &lt;1 item&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31316:31332" ph="application/json" />
-            <marker date="1516290919185" expanded="true" signature="31352:31401" ph="areas_and…hedule_add" />
-            <marker date="1516290919185" expanded="true" signature="31408:31608" ph="parameters: &lt;1 item&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31434:31438" ph="body" />
-            <marker date="1516290919185" expanded="true" signature="31455:31465" ph="Occupation" />
-            <marker date="1516290919185" expanded="true" signature="31489:31511" ph="The Occup…on to add." />
-            <marker date="1516290919185" expanded="true" signature="31522:31583" ph="schema: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31548:31583" ph="##/definit…n_schedule" />
-            <marker date="1516290919185" expanded="true" signature="31604:31608" ph="true" />
-            <marker date="1516290919185" expanded="true" signature="31615:31893" ph="responses: &lt;2 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31634:31780" ph="201: &lt;2 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31662:31669" ph="Created" />
-            <marker date="1516290919185" expanded="true" signature="31680:31780" ph="schema: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31746:31780" ph="##/definit…ldResponse" />
-            <marker date="1516290919185" expanded="true" signature="31789:31893" ph="503: &lt;2 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31817:31822" ph="Error" />
-            <marker date="1516290919185" expanded="true" signature="31833:31893" ph="schema: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31859:31893" ph="##/definit…ldResponse" />
-            <marker date="1516290919185" expanded="true" signature="31906:31947" ph="/swagger: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="31936:31947" ph="swagger_raw" />
-            <marker date="1516290919185" expanded="true" signature="31990:45321" ph="definitions: &lt;41 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32005:32106" ph="HelloWorldResponse: &lt;2 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32029:32054" ph="required: &lt;1 item&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32047:32054" ph="message" />
-            <marker date="1516290919185" expanded="true" signature="32059:32106" ph="properties: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32077:32106" ph="message: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32100:32106" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32109:32205" ph="ErrorResponse: &lt;2 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32128:32153" ph="required: &lt;1 item&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32146:32153" ph="message" />
-            <marker date="1516290919185" expanded="true" signature="32158:32205" ph="properties: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32176:32205" ph="message: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32199:32205" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32208:32296" ph="token: &lt;2 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32219:32244" ph="required: &lt;1 item&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32237:32244" ph="message" />
-            <marker date="1516290919185" expanded="true" signature="32249:32296" ph="properties: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32267:32296" ph="message: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32290:32296" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32299:32528" ph="User: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32311:32528" ph="properties: &lt;5 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32331:32360" ph="name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32354:32360" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32369:32405" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32399:32405" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32414:32447" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32441:32447" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32456:32489" ph="password: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32483:32489" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32498:32528" ph="email: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32522:32528" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32531:32644" ph="User_login: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32549:32644" ph="properties: &lt;2 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32569:32602" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32596:32602" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32611:32644" ph="password: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32638:32644" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32647:32839" ph="Area: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32659:32839" ph="properties: &lt;4 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32679:32712" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32706:32712" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32721:32751" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32745:32751" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32760:32794" ph="area_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32788:32794" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32803:32839" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32833:32839" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32842:33214" ph="Area_visit_week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32865:33214" ph="properties: &lt;8 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32885:32918" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32912:32918" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32927:32957" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32951:32957" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="32966:33000" ph="area_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="32994:33000" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33009:33045" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33039:33045" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33054:33098" ph="percent_person_area: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33092:33098" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33107:33136" ph="week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33130:33136" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33146:33176" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33170:33176" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33185:33214" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33208:33214" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33222:33556" ph="Area_visit_month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33246:33556" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33266:33299" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33293:33299" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33308:33338" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33332:33338" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33347:33381" ph="area_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33375:33381" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33390:33426" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33420:33426" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33435:33479" ph="percent_person_area: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33473:33479" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33488:33518" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33512:33518" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33527:33556" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33550:33556" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33569:33863" ph="Area_visit_year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33592:33863" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33612:33645" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33639:33645" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33654:33684" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33678:33684" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33693:33727" ph="area_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33721:33727" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33736:33772" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33766:33772" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33781:33825" ph="percent_person_area: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33819:33825" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33834:33863" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33857:33863" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33876:34290" ph="Area_traffic_week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33901:34290" ph="properties: &lt;9 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33921:33954" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33948:33954" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="33963:33993" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="33987:33993" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34002:34037" ph="area_name1: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34031:34037" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34046:34081" ph="area_name2: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34075:34081" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34092:34128" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34122:34128" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34137:34174" ph="flow_persons: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34168:34174" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34183:34212" ph="week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34206:34212" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34222:34252" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34246:34252" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34261:34290" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34284:34290" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34293:34669" ph="Area_traffic_month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34319:34669" ph="properties: &lt;8 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34339:34372" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34366:34372" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34381:34411" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34405:34411" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34420:34455" ph="area_name1: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34449:34455" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34464:34499" ph="area_name2: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34493:34499" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34510:34546" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34540:34546" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34555:34592" ph="flow_persons: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34586:34592" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34601:34631" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34625:34631" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34640:34669" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34663:34669" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34672:35008" ph="Area_traffic_year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34697:35008" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34759:34789" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34783:34789" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34798:34833" ph="area_name1: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34827:34833" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34842:34877" ph="area_name2: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34871:34877" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34888:34924" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34918:34924" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34933:34970" ph="flow_persons: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="34964:34970" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="34979:35008" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35002:35008" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35011:35340" ph="Area_security: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35032:35340" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35052:35085" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35079:35085" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35094:35124" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35118:35124" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35133:35167" ph="area_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35161:35167" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35176:35212" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35206:35212" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35221:35259" ph="type_incident: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35253:35259" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35268:35301" ph="analyzed: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35295:35301" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35311:35340" ph="date: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35334:35340" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35343:35627" ph="Building: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35357:35627" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35377:35410" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35404:35410" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35419:35449" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35443:35449" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35458:35496" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35490:35496" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35505:35541" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35535:35541" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35550:35585" ph="date_build: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35579:35585" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35594:35627" ph="location: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35621:35627" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35632:36342" ph="Building_…ergy_month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35659:36342" ph="properties: &lt;14 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35679:35712" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35706:35712" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35721:35751" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35745:35751" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35760:35798" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35792:35798" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35807:35843" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35837:35843" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35852:35884" ph="consume: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35878:35884" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35893:35930" ph="consume_cost: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35924:35930" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35939:35979" ph="consume_heating: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="35973:35979" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="35988:36033" ph="consume_heating_cost: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36027:36033" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36042:36086" ph="consume_ilumination: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36080:36086" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36095:36144" ph="consume_i…ation_cost: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36138:36144" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36153:36201" ph="consume_i…nation_ext: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36195:36201" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36210:36263" ph="consume_i…n_ext_cost: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36257:36263" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36274:36304" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36298:36304" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36313:36342" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36336:36342" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36345:37452" ph="Building_energy_year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36371:37452" ph="properties: &lt;21 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36391:36424" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36418:36424" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36433:36463" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36457:36463" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36472:36510" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36504:36510" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36519:36555" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36549:36555" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36564:36596" ph="consume: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36590:36596" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36605:36643" ph="consume_metro: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36637:36643" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36652:36691" ph="consume_person: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36685:36691" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36702:36741" ph="consume_degree: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36735:36741" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36750:36787" ph="consume_cost: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36781:36787" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36798:36838" ph="consume_heating: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36832:36838" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36847:36893" ph="consume_h…ting_metro: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36887:36893" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36902:36949" ph="consume_h…ing_person: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="36943:36949" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="36960:37007" ph="consume_h…ing_degree: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37001:37007" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37016:37061" ph="consume_heating_cost: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37055:37061" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37070:37114" ph="consume_ilumination: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37108:37114" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37123:37173" ph="consume_i…tion_metro: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37167:37173" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37182:37233" ph="consume_i…ion_person: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37227:37233" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37244:37293" ph="consume_i…ation_cost: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37287:37293" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37302:37350" ph="consume_i…nation_ext: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37344:37350" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37361:37414" ph="consume_i…n_ext_cost: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37408:37414" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37423:37452" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37446:37452" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37463:37800" ph="Building_security: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37488:37800" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37508:37541" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37535:37541" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37550:37580" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37574:37580" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37589:37627" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37621:37627" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37636:37672" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37666:37672" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37681:37719" ph="type_incident: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37713:37719" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37728:37761" ph="analyzed: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37755:37761" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37771:37800" ph="date: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37794:37800" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37811:38279" ph="Building_…rsons_week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37849:38279" ph="properties: &lt;10 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37869:37902" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37896:37902" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37911:37941" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37935:37941" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37950:37988" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="37982:37988" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="37997:38032" ph="panel_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38026:38032" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38043:38075" ph="traffic: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38069:38075" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38084:38116" ph="tickets: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38110:38116" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38127:38163" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38157:38163" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38172:38201" ph="week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38195:38201" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38211:38241" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38235:38241" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38250:38279" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38273:38279" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38286:38716" ph="Building_…sons_month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38325:38716" ph="properties: &lt;9 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38345:38378" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38372:38378" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38387:38417" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38411:38417" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38426:38464" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38458:38464" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38473:38508" ph="panel_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38502:38508" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38519:38551" ph="traffic: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38545:38551" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38560:38592" ph="tickets: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38586:38592" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38603:38639" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38633:38639" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38648:38678" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38672:38678" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38687:38716" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38710:38716" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38731:39121" ph="Building_…rsons_year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38769:39121" ph="properties: &lt;8 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38789:38822" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38816:38822" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38831:38861" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38855:38861" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38870:38908" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38902:38908" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38917:38952" ph="panel_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38946:38952" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="38963:38995" ph="traffic: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="38989:38995" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39004:39036" ph="tickets: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39030:39036" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39047:39083" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39077:39083" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39092:39121" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39115:39121" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39136:39423" ph="Building_data_regist: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39162:39423" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39182:39215" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39209:39215" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39224:39254" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39248:39254" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39263:39301" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39295:39301" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39310:39344" ph="data_type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39338:39344" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39355:39385" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39379:39385" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39394:39423" ph="date: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39417:39423" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39428:39762" ph="Building_…gist_month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39460:39762" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39480:39513" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39507:39513" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39522:39552" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39546:39552" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39561:39599" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39593:39599" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39608:39642" ph="data_type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39636:39642" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39653:39683" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39677:39683" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39692:39722" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39716:39722" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39733:39762" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39756:39762" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39765:40057" ph="Building_…egist_year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39796:40057" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39816:39849" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39843:39849" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39858:39888" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39882:39888" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39897:39935" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39929:39935" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39944:39978" ph="data_type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="39972:39978" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="39989:40019" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40013:40019" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40028:40057" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40051:40057" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40062:40428" ph="Building_…ly_persons: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40090:40428" ph="properties: &lt;8 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40112:40145" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40139:40145" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40154:40184" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40178:40184" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40193:40231" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40225:40231" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40240:40270" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40264:40270" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40281:40309" ph="day: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40303:40309" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40318:40347" ph="week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40341:40347" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40358:40388" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40382:40388" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40399:40428" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40422:40428" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40432:40760" ph="Building_…ek_persons: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40459:40760" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40481:40514" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40508:40514" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40523:40553" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40547:40553" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40562:40600" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40594:40600" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40609:40639" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40633:40639" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40650:40679" ph="week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40673:40679" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40690:40720" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40714:40720" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40731:40760" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40754:40760" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40768:41057" ph="Building_…th_persons: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40796:41057" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40818:40851" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40845:40851" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40860:40890" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40884:40890" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40899:40937" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40931:40937" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40946:40976" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="40970:40976" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="40987:41017" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41011:41017" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41028:41057" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41051:41057" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41061:41308" ph="Building_…ar_persons: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41088:41308" ph="properties: &lt;5 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41110:41143" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41137:41143" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41152:41182" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41176:41182" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41191:41229" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41223:41229" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41238:41268" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41262:41268" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41279:41308" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41302:41308" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41311:41553" ph="Data_type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41326:41553" ph="properties: &lt;5 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41348:41381" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41375:41381" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41390:41420" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41414:41420" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41429:41468" ph="data_type_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41462:41468" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41477:41513" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41507:41513" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41524:41553" ph="unit: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41547:41553" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41556:41794" ph="Panel: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41567:41794" ph="properties: &lt;5 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41589:41622" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41616:41622" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41631:41661" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41655:41661" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41670:41705" ph="panel_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41699:41705" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41714:41750" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41744:41750" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41761:41794" ph="location: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41788:41794" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41797:42159" ph="Panel_week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41813:42159" ph="properties: &lt;8 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41835:41868" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41862:41868" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41877:41907" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41901:41907" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41916:41951" ph="panel_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41945:41951" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="41960:41996" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="41990:41996" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42007:42040" ph="visitors: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42034:42040" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42049:42078" ph="week: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42072:42078" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42089:42119" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42113:42119" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42130:42159" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42153:42159" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42162:42485" ph="Panel_month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42179:42485" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42201:42234" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42228:42234" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42243:42273" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42267:42273" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42282:42317" ph="panel_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42311:42317" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42326:42362" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42356:42362" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42373:42406" ph="visitors: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42400:42406" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42415:42445" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42439:42445" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42456:42485" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42479:42485" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42488:42769" ph="Panel_year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42504:42769" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42526:42559" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42553:42559" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42568:42598" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42592:42598" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42607:42642" ph="panel_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42636:42642" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42651:42687" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42681:42687" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42698:42731" ph="visitors: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42725:42731" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42740:42769" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42763:42769" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42774:42966" ph="Gate: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42784:42966" ph="properties: &lt;4 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42806:42839" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42833:42839" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42848:42878" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42872:42878" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42887:42921" ph="gate_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42915:42921" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42930:42966" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42960:42966" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="42971:43251" ph="Gate_affluence: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="42991:43251" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43013:43046" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43040:43046" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43055:43085" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43079:43085" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43094:43128" ph="gate_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43122:43128" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43137:43170" ph="schedule: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43164:43170" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43179:43213" ph="flow_cars: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43207:43213" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43222:43251" ph="date: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43245:43251" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43254:43503" ph="Mobile_node: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43271:43503" ph="properties: &lt;5 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43293:43326" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43320:43326" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43335:43365" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43359:43365" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43374:43415" ph="mobile_node_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43409:43415" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43424:43460" ph="description: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43454:43460" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43470:43503" ph="location: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43497:43503" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43507:43836" ph="Mobile_node_month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43530:43836" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43552:43585" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43579:43585" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43594:43624" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43618:43624" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43633:43674" ph="mobile_node_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43668:43674" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43683:43717" ph="data_type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43711:43717" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43727:43757" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43751:43757" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43766:43796" ph="month: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43790:43796" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43807:43836" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43830:43836" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43839:44126" ph="Mobile_node_year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43861:44126" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43883:43916" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43910:43916" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43925:43955" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43949:43955" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="43964:44005" ph="mobile_node_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="43999:44005" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44014:44048" ph="data_type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44042:44048" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44058:44088" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44082:44088" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44097:44126" ph="year: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44120:44126" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44129:44416" ph="Mobile_node_date: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44151:44416" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44173:44206" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44200:44206" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44215:44245" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44239:44245" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44254:44295" ph="mobile_node_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44304:44338" ph="data_type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44332:44338" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44348:44378" ph="value: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44372:44378" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44387:44416" ph="date: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44410:44416" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44419:44695" ph="Top_visits: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44435:44695" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44457:44490" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44484:44490" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44499:44529" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44523:44529" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44538:44572" ph="area_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44566:44572" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44581:44609" ph="top: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44603:44609" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44619:44657" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44651:44657" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44666:44695" ph="type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44689:44695" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44700:44983" ph="Occupation: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44716:44983" ph="properties: &lt;6 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44738:44771" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44765:44771" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44780:44810" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44804:44810" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44819:44853" ph="area_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44847:44853" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44862:44897" ph="occupation: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44891:44897" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44907:44945" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44939:44945" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44954:44983" ph="type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="44977:44983" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="44986:45321" ph="Occupation_schedule: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45011:45321" ph="properties: &lt;7 keys&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45033:45066" ph="username: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45060:45066" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="45075:45105" ph="token: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45099:45105" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="45114:45148" ph="area_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45142:45148" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="45157:45192" ph="occupation: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45186:45192" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="45201:45234" ph="schedule: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45228:45234" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="45245:45283" ph="building_name: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45277:45283" ph="string" />
-            <marker date="1516290919185" expanded="true" signature="45292:45321" ph="type: &lt;1 key&gt;" />
-            <marker date="1516290919185" expanded="true" signature="45315:45321" ph="string" />
+            <marker date="1516385574549" expanded="true" signature="115:125" ph="localhost:10010" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/controllers/area_and_buildings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        <state relative-caret-position="-606">
+          <caret line="265" column="51" lean-forward="false" selection-start-line="265" selection-start-column="51" selection-end-line="265" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/models.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="277" column="4" lean-forward="false" selection-start-line="277" selection-start-column="4" selection-end-line="277" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/areas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="377" column="50" lean-forward="false" selection-start-line="377" selection-start-column="50" selection-end-line="377" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/buildings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4292">
+          <caret line="479" column="37" lean-forward="false" selection-start-line="479" selection-start-column="37" selection-end-line="479" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/data_type.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/gates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="67" column="52" lean-forward="false" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/mobile_nodes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232">
+          <caret line="178" column="55" lean-forward="true" selection-start-line="178" selection-start-column="55" selection-end-line="178" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/panels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1337">
+          <caret line="86" column="47" lean-forward="true" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/producers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1178">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-889">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

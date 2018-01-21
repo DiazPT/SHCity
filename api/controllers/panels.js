@@ -21,9 +21,7 @@ function panel_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Panel.findOne({Name: req.body.panel_name}, function (err, panel) {
@@ -53,9 +51,7 @@ function panel_add(req, res) {
                     }
                     else {
                         console.log("Panel already registered");
-                        res.json({
-                            message: 'Object already created'
-                        })
+                        res.status(503).json("Object already created")
                     }
                 }
             );
@@ -72,17 +68,13 @@ function panel_panel_visitors_week_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Panel.findOne({Name: req.body.panel_name}, function (err, panel) {
                     if (panel == null) {
                         console.log("Panel does not exist");
-                        res.json({
-                            message: 'Panel does not exist'
-                        })
+                        res.status(503).json("Panel does not exist")
                     }
                     else {
                         var newRecord = new models.Panel_Visitors_Week({
@@ -125,17 +117,13 @@ function panel_panel_visitors_month_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Panel.findOne({Name: req.body.panel_name}, function (err, panel) {
                     if (panel == null) {
                         console.log("Panel does not exist");
-                        res.json({
-                            message: 'Panel does not exist'
-                        })
+                        res.status(503).json("Panel does not exist")
                     }
                     else {
                         var newRecord = new models.Panel_Visitors_Month({
@@ -177,17 +165,13 @@ function panel_panel_visitors_year_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Panel.findOne({Name: req.body.panel_name}, function (err, panel) {
                     if (panel == null) {
                         console.log("Panel does not exist");
-                        res.json({
-                            message: 'Panel does not exist'
-                        })
+                        res.status(503).json("Panel does not exist")
                     }
                     else {
                         var newRecord = new models.Panel_Visitors_Year({

@@ -21,9 +21,7 @@ function mobile_node_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session");
         }
         else {
             models.Mobile_Node.findOne({Name: req.body.mobile_node_name}, function (err, mobile_node) {
@@ -53,9 +51,7 @@ function mobile_node_add(req, res) {
                     }
                     else {
                         console.log("Mobile Node already registered");
-                        res.json({
-                            message: 'Object already created'
-                        })
+                        res.status(503).json("Object already created");
                     }
                 }
             );
@@ -71,7 +67,7 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.status(503).json("Invalid session")
+            res.status(403).json("Invalid session");
         }
         else {
             models.Mobile_Node.findOne({Name: req.body.mobile_node_name}, function (err, mobile_node) {
@@ -85,9 +81,7 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
                         models.Data_Type.findOne({Name: req.body.data_type}, function (err, data_type) {
                             if (data_type == null) {
                                 console.log("Data Type does not exist");
-                                res.json({
-                                    message: 'Data Type does not exist'
-                                })
+                                res.status(503).json("Data Type does not exist")
                             }
 
                             else {
@@ -131,17 +125,13 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session");
         }
         else {
             models.Mobile_Node.findOne({Name: req.body.mobile_node_name}, function (err, mobile_node) {
                     if (mobile_node == null) {
                         console.log("Mobile Node does not exist");
-                        res.json({
-                            message: 'Mobile Node does not exist'
-                        })
+                        res.status(503).json("Mobile Node does not exist")
                     }
                     else {
 
@@ -149,9 +139,7 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
                         models.Data_Type.findOne({Name: req.body.data_type}, function (err, data_type) {
                             if (data_type == null) {
                                 console.log("Data Type does not exist");
-                                res.json({
-                                    message: 'Data Type does not exist'
-                                })
+                                res.status(503).json("Data Type does not exist")
                             }
 
                             else {
@@ -194,17 +182,13 @@ function mobile_node_data_regist_mobile_add(req, res) {
 
         if (User === null) {
             console.log("Invalid session");
-            res.json({
-                message: 'Invalid session'
-            })
+            res.status(403).json("Invalid session")
         }
         else {
             models.Mobile_Node.findOne({Name: req.body.mobile_node_name}, function (err, mobile_node) {
                     if (mobile_node == null) {
                         console.log("Mobile Node does not exist");
-                        res.json({
-                            message: 'Mobile Node does not exist'
-                        })
+                        res.status(503).json("Mobile Node does not exist")
                     }
                     else {
 
@@ -212,9 +196,7 @@ function mobile_node_data_regist_mobile_add(req, res) {
                         models.Data_Type.findOne({Name: req.body.data_type}, function (err, data_type) {
                             if (data_type == null) {
                                 console.log("Data Type does not exist");
-                                res.json({
-                                    message: 'Data Type does not exist'
-                                })
+                                res.status(503).json("Data Type does not exist")
                             }
 
                             else {
