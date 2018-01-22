@@ -353,7 +353,7 @@ paths:
     post:
       summary: Create a new Building.
       tags:
-              - buldings
+              - buildings
       consumes:
         - application/json
       operationId: building_add
@@ -379,7 +379,7 @@ paths:
     post:
       summary: Add the energy values of a building in a month.
       tags:
-              - buldings
+              - buildings
       consumes:
         - application/json
       operationId: building_energy_month_add
@@ -607,7 +607,37 @@ paths:
         503:
           description: Error
           schema:
-            $ref: "#/definitions/HelloWorldResponse"  
+            $ref: "#/definitions/HelloWorldResponse"
+  /buildings/data_regist_building_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a Building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: data_regist_building_get
+        parameters:
+                - in: query
+                  name: name
+                  description: The building to receive the value.
+                  required: true
+                  type: string
+                - in: query
+                  name: data_type
+                  description: (Data type (Temperature, CO2, etc).
+                  required: true
+                  type: string
+        responses:
+          201:
+            description: Created
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/HelloWorldResponse"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
   /buildings/building_daily_persons_add: 
     x-swagger-router-controller: buildings
     post:
@@ -1106,7 +1136,37 @@ paths:
         503:
           description: Error
           schema:
-            $ref: "#/definitions/HelloWorldResponse"          
+            $ref: "#/definitions/HelloWorldResponse"
+  /occupation/areas_and_buildings_level_occupation_schedule_get:
+      x-swagger-router-controller: area_and_buildings
+      get:
+        summary: Get the schedule (Type 0 = Building; Type 1 = Area).
+        tags:
+                - occupation
+        consumes:
+          - application/json
+        operationId: areas_and_buildings_level_occupation_schedule_get
+        parameters:
+          - in: query
+            name: name
+            description: The building or area to receive the value.
+            required: true
+            type: string
+          - in: query
+            name: type
+            description: (Type 0 = Building; Type 1 = Area).
+            required: true
+            type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/HelloWorldResponse"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions

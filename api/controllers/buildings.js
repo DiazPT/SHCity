@@ -18,7 +18,8 @@ module.exports = {
     building_week_persons_add: building_week_persons_add,
     building_month_persons_add: building_month_persons_add,
     building_year_persons_add: building_year_persons_add,
-    building_security_add: building_security_add
+    building_security_add: building_security_add,
+    data_regist_building_get: data_regist_building_get
 };
 
 console.log('[Building API] Ready.');
@@ -577,6 +578,39 @@ function data_regist_building_add(req, res) {
             );
         }
     });
+};
+
+function data_regist_building_get(req, res) {
+    console.log('[Building Node API] Get Data.');
+            models.Building.findOne({Name: req.swagger.params.name.value}, function (err, building) {
+                if (building == null) {
+                    console.log("Building does not exist");
+                    res.status(503).json("Building does not exist")
+                }
+                else {
+                    models.Data_Type.findOne({Name: req.swagger.params.data_type.value}, function (err, data_type) {
+                        if (data_type == null) {
+                            console.log("Data Type does not exist");
+                            res.status(503).json("Data Type does not exist")
+                        }
+
+                        else {
+                            models.Data_Regist_Building.findOne({Building_ID: building._id, Data_Type_ID: data_type._id}, function (err, data_regist) {
+                                if (data_regist == null) {
+                                    console.log("Data_regist does not exist");
+                                    res.status(503).json("Data_regist does not exist");
+                                }
+                                else{
+                                    data_send = data_regist.Value;
+                                    res.json({
+                                        message: data_send
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            });
 };
 
 
