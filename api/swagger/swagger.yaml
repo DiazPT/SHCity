@@ -3,7 +3,7 @@ info:
   version: "0.0.1"
   title: SHCity API
 # during dev, should point to your local machine
-host: 193.136.127.202:80
+host: http://193.136.127.202:80
 # basePath prefixes all resource paths 
 basePath: /
 # 
@@ -629,8 +629,8 @@ paths:
                   required: true
                   type: string
         responses:
-          201:
-            description: Created
+          200:
+            description: Success
             schema:
               # a pointer to a definition
               $ref: "#/definitions/HelloWorldResponse"
