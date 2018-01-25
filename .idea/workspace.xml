@@ -17,8 +17,8 @@
       <file leaf-file-name="models.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/database/models.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="281" column="24" lean-forward="false" selection-start-line="281" selection-start-column="4" selection-end-line="281" selection-end-column="24" />
+            <state relative-caret-position="336">
+              <caret line="285" column="29" lean-forward="false" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="area_and_buildings.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="area_and_buildings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/controllers/area_and_buildings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="370" column="44" lean-forward="true" selection-start-line="370" selection-start-column="44" selection-end-line="370" selection-end-column="44" />
+            <state relative-caret-position="293">
+              <caret line="289" column="35" lean-forward="true" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
               <folding>
                 <element signature="n#!!block;n#areas_and_buildings_level_occupation_get#0" expanded="false" />
               </folding>
@@ -88,13 +88,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swagger.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="swagger.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/swagger/swagger.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="639" column="54" lean-forward="false" selection-start-line="639" selection-start-column="54" selection-end-line="639" selection-end-column="54" />
+            <state relative-caret-position="-1296">
+              <caret line="634" column="41" lean-forward="true" selection-start-line="634" selection-start-column="41" selection-end-line="634" selection-end-column="41" />
               <folding>
-                <marker date="1516879565020" expanded="true" signature="31102:33898" ph="/occupati…hedule_add: &lt;2 keys&gt;" />
+                <marker date="1516879794334" expanded="true" signature="31095:33891" ph="/occupati…hedule_add: &lt;2 keys&gt;" />
               </folding>
             </state>
           </provider>
@@ -126,8 +126,11 @@
       <find>building_data</find>
       <find>data_regis</find>
       <find>get</find>
-      <find>occ</find>
       <find>data_regist</find>
+      <find>occ</find>
+      <find>data_regist_b</find>
+      <find>console.lo</find>
+      <find>wait</find>
     </findStrings>
     <replaceStrings>
       <replace>res.json</replace>
@@ -170,8 +173,8 @@
         <option value="$PROJECT_DIR$/api/controllers/panels.js" />
         <option value="$PROJECT_DIR$/api/controllers/buildings.js" />
         <option value="$PROJECT_DIR$/api/database/models.js" />
-        <option value="$PROJECT_DIR$/api/controllers/area_and_buildings.js" />
         <option value="$PROJECT_DIR$/api/swagger/swagger.yaml" />
+        <option value="$PROJECT_DIR$/api/controllers/area_and_buildings.js" />
       </list>
     </option>
   </component>
@@ -292,12 +295,12 @@
       <workItem from="1516271174586" duration="10321000" />
       <workItem from="1516385594157" duration="1131000" />
       <workItem from="1516563902046" duration="1780000" />
-      <workItem from="1516872086576" duration="2283000" />
+      <workItem from="1516872086576" duration="4437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43282000" />
+    <option name="totallyTimeSpent" value="45436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1384" height="738" extended-state="0" />
@@ -357,7 +360,7 @@
         <state relative-caret-position="323">
           <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding>
-            <marker date="1516879565020" expanded="true" signature="31102:33898" ph="/occupati…hedule_add: &lt;2 keys&gt;" />
+            <marker date="1516879794334" expanded="true" signature="31095:33891" ph="/occupati…hedule_add: &lt;2 keys&gt;" />
           </folding>
         </state>
       </provider>
@@ -484,14 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/database/models.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="281" column="24" lean-forward="false" selection-start-line="281" selection-start-column="4" selection-end-line="281" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/controllers/buildings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -502,22 +497,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/controllers/area_and_buildings.js">
+    <entry file="file://$PROJECT_DIR$/api/swagger/swagger.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="370" column="44" lean-forward="true" selection-start-line="370" selection-start-column="44" selection-end-line="370" selection-end-column="44" />
+        <state relative-caret-position="-1296">
+          <caret line="634" column="41" lean-forward="true" selection-start-line="634" selection-start-column="41" selection-end-line="634" selection-end-column="41" />
           <folding>
-            <element signature="n#!!block;n#areas_and_buildings_level_occupation_get#0" expanded="false" />
+            <marker date="1516879794334" expanded="true" signature="31095:33891" ph="/occupati…hedule_add: &lt;2 keys&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/swagger/swagger.yaml">
+    <entry file="file://$PROJECT_DIR$/api/database/models.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="639" column="54" lean-forward="false" selection-start-line="639" selection-start-column="54" selection-end-line="639" selection-end-column="54" />
+        <state relative-caret-position="336">
+          <caret line="285" column="29" lean-forward="false" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/area_and_buildings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="289" column="35" lean-forward="true" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
           <folding>
-            <marker date="1516879565020" expanded="true" signature="31102:33898" ph="/occupati…hedule_add: &lt;2 keys&gt;" />
+            <element signature="n#!!block;n#areas_and_buildings_level_occupation_get#0" expanded="false" />
           </folding>
         </state>
       </provider>

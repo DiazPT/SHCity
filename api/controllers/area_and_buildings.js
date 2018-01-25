@@ -114,7 +114,7 @@ function areas_and_buildings_level_occupation_schedule_get(req, res) {
                 }
                 else {
 
-                    models.Level_Occupation.findOne({Area_ID: area._id}, function (err, occupation) {
+                    models.Level_Occupation_Schedule.findOne({Area_ID: area._id}, function (err, occupation) {
                         if (occupation == null) {
                             console.log("Building does not exist");
                             res.status(503).json("Building does not exist");
@@ -236,7 +236,7 @@ function areas_and_buildings_level_occupation_get(req, res) {
 };
 
 function areas_and_buildings_waiting_time_get(req, res) {
-    console.log('[Area and Building API] Get Occupation.');
+    console.log('[Area and Building API] Get Waiting time.');
 
     //Building = 0 Area = 1
     console.log(req.swagger.params.type.value);
@@ -254,9 +254,9 @@ function areas_and_buildings_waiting_time_get(req, res) {
                             res.status(503).json("Building does not exist")
                         }
                         else{
-                            occupation_final = occupation.Occupation;
+                            waiting_avg_time = occupation.Average_Waiting_Time;
                             res.json({
-                                message: occupation_final
+                                message: waiting_avg_time
 
                             });
                         }

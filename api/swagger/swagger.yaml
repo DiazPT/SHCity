@@ -3,7 +3,7 @@ info:
   version: "0.0.1"
   title: SHCity API
 # during dev, should point to your local machine
-host: http://193.136.127.202:80
+host: 193.136.127.202:80
 # basePath prefixes all resource paths 
 basePath: /
 # 
