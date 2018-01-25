@@ -11,6 +11,7 @@ module.exports = {
     areas_and_buildings_level_occupation_add: areas_and_buildings_level_occupation_add,
     areas_and_buildings_level_occupation_schedule_add: areas_and_buildings_level_occupation_schedule_add,
     areas_and_buildings_level_occupation_get: areas_and_buildings_level_occupation_get,
+    areas_and_buildings_waiting_time_get: areas_and_buildings_waiting_time_get,
     areas_and_buildings_level_occupation_schedule_get: areas_and_buildings_level_occupation_schedule_get
 };
 
@@ -234,6 +235,73 @@ function areas_and_buildings_level_occupation_get(req, res) {
     }
 };
 
+function areas_and_buildings_waiting_time_get(req, res) {
+    console.log('[Area and Building API] Get Occupation.');
+
+    //Building = 0 Area = 1
+    console.log(req.swagger.params.type.value);
+    if(req.swagger.params.type.value == 1){
+        models.Area.findOne({Area_Name: req.get("area_name")}, function (err, area) {
+                if (area == null) {
+                    console.log("Area does not exist");
+                    res.status(503).json("Area does not exist")
+                }
+                else {
+
+                    models.Level_Occupation.findOne({Area_ID: area._id}, function (err, occupation) {
+                        if (occupation == null) {
+                            console.log("Building does not exist");
+                            res.status(503).json("Building does not exist")
+                        }
+                        else{
+                            occupation_final = occupation.Occupation;
+                            res.json({
+                                message: occupation_final
+
+                            });
+                        }
+                    });
+
+
+
+
+                }
+            }
+        );
+    }
+    else{
+        if(req.swagger.params.type.value == 0){
+            models.Building.findOne({Name: req.swagger.params.name.value}, function (err, building) {
+                    if (building == null) {
+                        console.log("Building does not exist");
+                        res.status(503).json("Building does not exist")
+                    }
+                    else {
+                        models.Level_Occupation.findOne({Building_ID: building._id}, function (err, occupation) {
+                            if (occupation == null) {
+                                console.log("Building does not exist");
+                                res.status(503).json("Building does not exist")
+                            }
+                            else{
+                                waiting_avg_time = occupation.Average_Waiting_Time;
+                                res.json({
+                                    message: waiting_avg_time
+
+                                });
+                            }
+                        });
+
+                    }
+                }
+            );
+        }
+        else{
+            console.log("Type error");
+            res.status(503).json("Type is not valid");
+        }
+    }
+};
+
 function areas_and_buildings_level_occupation_add(req, res) {
     console.log('[Area and Building API] Add Occupation.');
     models.Producer.findOne({Username: req.body.username, Token: req.body.token}, function (err, User) {
@@ -254,6 +322,7 @@ function areas_and_buildings_level_occupation_add(req, res) {
                             var newRecord = new models.Level_Occupation({
                                 Area_ID: area._id,
                                 Occupation: req.body.occupation,
+                                Average_Waiting_Time: req.body.waiting_time,
                                 Date : req.body.date
                             });
                             console.log(newRecord);
@@ -288,6 +357,7 @@ function areas_and_buildings_level_occupation_add(req, res) {
                                 var newRecord = new models.Level_Occupation({
                                     Building_ID: building._id,
                                     Occupation: req.body.occupation,
+                                    Average_Waiting_Time: req.body.waiting_time,
                                     Date : req.body.date
                                 });
                                 console.log(newRecord);

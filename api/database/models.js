@@ -279,6 +279,7 @@ var Level_Occupation = mongoose.model('level_occupation', {
     Building_ID: String,
     Area_ID: String,
     Occupation: String,
+    Average_Waiting_Time: String,
     Date : String
 });
 

@@ -3,7 +3,7 @@ info:
   version: "0.0.1"
   title: SHCity API
 # during dev, should point to your local machine
-host: localhost:80
+host: 193.136.127.202:80
 # basePath prefixes all resource paths 
 basePath: /
 # 
@@ -1066,7 +1066,7 @@ paths:
       parameters:
         - in: body
           name: Occupation
-          description: The Occupation to add.
+          description: The Occupation and waiting time to add.
           schema:
             $ref: "#/definitions/Occupation"
           required: true
@@ -1111,6 +1111,38 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+
+  /occupation/areas_and_buildings_waiting_time_get:
+      x-swagger-router-controller: area_and_buildings
+      get:
+        summary: Get the average waiting time (Type 0 = Building; Type 1 = Area).
+        tags:
+                - occupation
+        consumes:
+          - application/json
+        operationId: areas_and_buildings_waiting_time_get
+        parameters:
+          - in: query
+            name: name
+            description: The building or area to receive the value.
+            required: true
+            type: string
+          - in: query
+            name: type
+            description: (Type 0 = Building; Type 1 = Area).
+            required: true
+            type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/HelloWorldResponse"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+
   /occupation/areas_and_buildings_level_occupation_schedule_add: 
     x-swagger-router-controller: area_and_buildings
     post:
@@ -1778,7 +1810,9 @@ definitions:
         area_name:
           type : string
         occupation:
-          type : string 
+          type : string
+        waiting_time:
+          type : string
         building_name:
           type : string
         type:
