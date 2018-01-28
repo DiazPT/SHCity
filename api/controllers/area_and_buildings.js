@@ -117,7 +117,7 @@ function areas_and_buildings_level_occupation_schedule_get(req, res) {
                     models.Level_Occupation_Schedule.findOne({Area_ID: area._id}, function (err, occupation) {
                         if (occupation == null) {
                             console.log("Building does not exist");
-                            res.status(503).json("Building does not exist");
+                            res.status(503).json("Schedule does not exist");
                         }
                         else{
                             schedule = occupation.Schedule;
@@ -126,7 +126,7 @@ function areas_and_buildings_level_occupation_schedule_get(req, res) {
 
                             });
                         }
-                    });
+                    }).sort({_id:-1}).limit(1);
 
 
 
@@ -143,10 +143,10 @@ function areas_and_buildings_level_occupation_schedule_get(req, res) {
                         res.status(503).json("Building does not exist")
                     }
                     else {
-                        models.Level_Occupation.findOne({Building_ID: building._id}, function (err, occupation) {
+                        models.Level_Occupation_Schedule.findOne({Building_ID: building._id}, function (err, occupation) {
                             if (occupation == null) {
                                 console.log("Building does not exist");
-                                res.status(503).json("Building does not exist")
+                                res.status(503).json("Schedule does not exist")
                             }
                             else{
                                 schedule = occupation.Schedule;
@@ -155,7 +155,7 @@ function areas_and_buildings_level_occupation_schedule_get(req, res) {
 
                                 });
                             }
-                        });
+                        }).sort({_id:-1}).limit(1);
 
                     }
                 }
@@ -181,7 +181,7 @@ function areas_and_buildings_level_occupation_get(req, res) {
                 }
                 else {
 
-                    models.Level_Occupation.findOne({Area_ID: area._id}, function (err, occupation) {
+                    models.Level_Occupation.findOne({Area_ID: area._id}, { sort: { 'created_at' : -1 } }, function (err, occupation) {
                         if (occupation == null) {
                             console.log("Building does not exist");
                             res.status(503).json("Building does not exist")
@@ -193,7 +193,7 @@ function areas_and_buildings_level_occupation_get(req, res) {
 
                             });
                         }
-                    });
+                    }).sort({_id:-1}).limit(1);
 
 
 
@@ -210,7 +210,7 @@ function areas_and_buildings_level_occupation_get(req, res) {
                         res.status(503).json("Building does not exist")
                     }
                     else {
-                        models.Level_Occupation.findOne({Building_ID: building._id}, function (err, occupation) {
+                        models.Level_Occupation.findOne({Building_ID: building._id},  function (err, occupation) {
                             if (occupation == null) {
                                 console.log("Building does not exist");
                                 res.status(503).json("Building does not exist")
@@ -222,7 +222,7 @@ function areas_and_buildings_level_occupation_get(req, res) {
 
                                 });
                             }
-                        });
+                        }).sort({_id:-1}).limit(1);
 
                     }
                 }
@@ -260,7 +260,7 @@ function areas_and_buildings_waiting_time_get(req, res) {
 
                             });
                         }
-                    });
+                    }).sort({_id:-1}).limit(1);
 
 
 
@@ -271,25 +271,28 @@ function areas_and_buildings_waiting_time_get(req, res) {
     }
     else{
         if(req.swagger.params.type.value == 0){
+
             models.Building.findOne({Name: req.swagger.params.name.value}, function (err, building) {
                     if (building == null) {
                         console.log("Building does not exist");
                         res.status(503).json("Building does not exist")
                     }
                     else {
+                        console.log(building);
                         models.Level_Occupation.findOne({Building_ID: building._id}, function (err, occupation) {
                             if (occupation == null) {
                                 console.log("Building does not exist");
-                                res.status(503).json("Building does not exist")
+                                res.status(503).json("No occupation found")
                             }
                             else{
+                                console.log(occupation);
                                 waiting_avg_time = occupation.Average_Waiting_Time;
                                 res.json({
                                     message: waiting_avg_time
 
                                 });
                             }
-                        });
+                        }).sort({_id:-1}).limit(1);
 
                     }
                 }
@@ -409,50 +412,11 @@ function areas_and_buildings_level_occupation_schedule_add(req, res) {
                         }
                         else {
 
-                            models.Level_Occupation_Schedule.findOneAndUpdate({Name: req.body.building_name},{$set: {Schedule: req.body.schedule}}, function (err, Area_schedule){});
+                            models.Level_Occupation_Schedule.findOne({Name: req.body.building_name}, function (err, Area_schedule) {
 
-                            if(Area_schedule == null){
-                                var newRecord = new models.Level_Occupation({
-                                    Area_ID: area._id,
-                                    Occupation: req.body.occupation,
-                                    Schedule : req.body.schedule,
-                                    Date : req.body.date
-                                });
-                                console.log(newRecord);
-
-                                newRecord.save(function (err) {
-                                    if (err) {
-                                        console.error("Error on saving new record");
-                                        console.error(err); // log error to Terminal
-
-
-                                    } else {
-                                        console.log("Created a new record!");
-                                        //recordCreated(newRecord);
-                                        res.json({
-                                            message: 'Object created'
-                                        });
-                                    }
-
-                                });
-                            }
-
-                        }
-                    }
-                );
-            }
-            else{
-                if(req.body.type == 0){
-                    models.Building.findOne({Name: req.body.building_name}, function (err, building) {
-                            if (building == null) {
-                                console.log("Building does not exist");
-                                res.status(503).json("Building does not exist");
-                            }
-                            else {
-                                models.Level_Occupation_Schedule.findOneAndUpdate({Name: req.body.building_name},{$set: {Schedule: req.body.schedule}}, function (err, Building_schedule){});
-                                    if(Building_schedule == null){
-                                    var newRecord = new models.Level_Occupation({
-                                        Building_ID: building._id,
+                                if(Area_schedule == null){
+                                    var newRecord = new models.Level_Occupation_Schedule({
+                                        Area_ID: area._id,
                                         Occupation: req.body.occupation,
                                         Schedule : req.body.schedule,
                                         Date : req.body.date
@@ -475,7 +439,52 @@ function areas_and_buildings_level_occupation_schedule_add(req, res) {
 
                                     });
                                 }
+                                else{
+                                    //eleminar anterior
+                                }
+                            });
+                        }
+                    }
+                );
+            }
+            else{
+                if(req.body.type == 0){
+                    models.Building.findOne({Name: req.body.building_name}, function (err, building) {
+                            if (building == null) {
+                                console.log("Building does not exist");
+                                res.status(503).json("Building does not exist");
+                            }
+                            else {
+                                models.Level_Occupation_Schedule.findOne({Name: req.body.building_name}, function (err, Building_schedule) {
+                                    if(Building_schedule == null){
+                                        var newRecord = new models.Level_Occupation_Schedule({
+                                            Building_ID: building._id,
+                                            Occupation: req.body.occupation,
+                                            Schedule : req.body.schedule,
+                                            Date : req.body.date
+                                        });
+                                        console.log(newRecord);
 
+                                        newRecord.save(function (err) {
+                                            if (err) {
+                                                console.error("Error on saving new record");
+                                                console.error(err); // log error to Terminal
+
+
+                                            } else {
+                                                console.log("Created a new record!");
+                                                //recordCreated(newRecord);
+                                                res.json({
+                                                    message: 'Object created'
+                                                });
+                                            }
+
+                                        });
+                                    }
+                                    else{
+                                        //eleminar anterior
+                                    }
+                                });
                             }
                         }
                     );
