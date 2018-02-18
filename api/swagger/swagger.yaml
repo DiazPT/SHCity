@@ -452,6 +452,32 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /buildings/visiting_time_add: 
+    x-swagger-router-controller: buildings
+    post:
+      summary: Add security events from a Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: visiting_time_add
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to add the value.
+          schema:
+            $ref: "#/definitions/Building_Visiting_Time"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"                       
   /buildings/interested_persons_buildings_week_add: 
     x-swagger-router-controller: buildings
     post:
@@ -1859,4 +1885,7 @@ definitions:
         building_name:
           type : string
         type:
-          type : string        
+          type : string
+  Building_Visiting_Time:
+    properties:
+        visiting_time : string                

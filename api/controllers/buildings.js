@@ -20,7 +20,8 @@ module.exports = {
     building_year_persons_add: building_year_persons_add,
     building_security_add: building_security_add,
     data_regist_building_get: data_regist_building_get,
-    visiting_time_get: visiting_time_get
+    visiting_time_get: visiting_time_get,
+    visiting_time_add: visiting_time_add
 };
 
 console.log('[Building API] Ready.');
@@ -638,7 +639,29 @@ function visiting_time_get(req, res) {
 };
 
 
-
+function visiting_time_add(req, res) {
+    console.log('[Building Node API] Send Data.');
+    models.Building.findOne({ Name: req.swagger.params.name.value }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist");
+        }
+        else {
+            models.building.replaceOne({ Name: building.name }, { Visiting_Time: req.body.visiting_time }, function (err, building) {
+                if (err) {
+                    res.status(503).json("Error in db");
+                }
+                if (building != null) {
+                    console.log("Updated record!");
+                    //recordCreated(newRecord);
+                    res.json({
+                        message: 'Object updated'
+                    })
+                }
+            });
+        }
+    });
+};
 
 
 function building_daily_persons_add(req, res) {
