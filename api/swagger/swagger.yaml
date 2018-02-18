@@ -638,6 +638,31 @@ paths:
             description: Error
             schema:
               $ref: "#/definitions/HelloWorldResponse"
+  /buildings/visiting_time_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a Building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: visiting_time_get
+        parameters:
+                - in: query
+                  name: name
+                  description: The building to receive the value.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/HelloWorldResponse"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"            
   /buildings/building_daily_persons_add: 
     x-swagger-router-controller: buildings
     post:
@@ -1380,7 +1405,9 @@ definitions:
         date_build:
           type : string
         location:
-          type : string  
+          type : string
+        visiting_time:
+          type : string    
   Building_energy_month:
     properties:
         username:

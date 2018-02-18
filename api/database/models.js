@@ -67,7 +67,8 @@ var Building = mongoose.model('building', {
     Name : String,
     Description : String,
     Date_Build : String,
-    Location : String
+    Location : String,
+    Visiting_Time: String
 });
 
 /* MongoDB Building_Energy_Monthly' model */
