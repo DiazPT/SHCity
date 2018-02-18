@@ -1,8 +1,12 @@
 swagger: "2.0"
 info:
   version: "0.2.1"
+  description: "API made for the SHCITY project"
   title: SHCity API
-  developer: "Alexandre Dias"
+  contact: 
+    name: "Alexandre Dias"
+    url: "https://www.linkedin.com/in/alexandredias95/"
+    email: "alex.m.a.dias95@gmail.com" 
 # during dev, should point to your local machine
 host: 193.136.127.202:80
 # basePath prefixes all resource paths 
