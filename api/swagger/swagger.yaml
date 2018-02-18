@@ -1,7 +1,8 @@
 swagger: "2.0"
 info:
-  version: "0.0.1"
+  version: "0.2.1"
   title: SHCity API
+  developer: "Alexandre Dias"
 # during dev, should point to your local machine
 host: 193.136.127.202:80
 # basePath prefixes all resource paths 
@@ -1130,8 +1131,7 @@ paths:
         503:
           description: Error
           schema:
-            $ref: "#/definitions/HelloWorldResponse"
-            
+            $ref: "#/definitions/HelloWorldResponse"         
   /occupation/areas_and_buildings_level_occupation_get: 
     x-swagger-router-controller: area_and_buildings
     get:
@@ -1162,7 +1162,6 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
-
   /occupation/areas_and_buildings_waiting_time_get:
       x-swagger-router-controller: area_and_buildings
       get:
@@ -1193,7 +1192,6 @@ paths:
             description: Error
             schema:
               $ref: "#/definitions/HelloWorldResponse"
-
   /occupation/areas_and_buildings_level_occupation_schedule_add: 
     x-swagger-router-controller: area_and_buildings
     post:
@@ -1887,5 +1885,6 @@ definitions:
         type:
           type : string
   Building_Visiting_Time:
-    properties:
-        visiting_time : string                
+    properties:  
+        visiting_time:
+          type : string               
