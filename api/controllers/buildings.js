@@ -19,6 +19,19 @@ module.exports = {
     building_month_persons_add: building_month_persons_add,
     building_year_persons_add: building_year_persons_add,
     building_security_add: building_security_add,
+    building_get: building_get,
+    building_energy_month_get: building_energy_month_get,
+    building_energy_year_get: building_energy_year_get,
+    interested_persons_buildings_week_get: interested_persons_buildings_week_get,
+    interested_persons_buildings_month_get: interested_persons_buildings_month_get,
+    interested_persons_buildings_year_get: interested_persons_buildings_year_get,
+    data_regist_building_month_get: data_regist_building_month_get,
+    data_regist_building_year_get: data_regist_building_year_get,
+    building_daily_persons_get: building_daily_persons_get,
+    building_week_persons_get: building_week_persons_get,
+    building_month_persons_get: building_month_persons_get,
+    building_year_persons_get: building_year_persons_get,
+    building_security_get: building_security_get,
     data_regist_building_get: data_regist_building_get,
     visiting_time_get: visiting_time_get,
     visiting_time_add: visiting_time_add
@@ -75,6 +88,10 @@ function building_add(req, res) {
 };
 
 
+function building_get(req, res) {
+
+}
+
 function building_energy_month_add(req, res) {
     console.log('[Building API] Add Energy Month.');
     models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
@@ -125,6 +142,10 @@ function building_energy_month_add(req, res) {
             );
         }
     });
+};
+
+function building_energy_month_get(req, res) {
+
 };
 
 
@@ -235,6 +256,10 @@ function building_security_add(req, res) {
     });
 };
 
+function building_security_get(req, res) {
+
+};
+
 
 function interested_persons_buildings_week_add(req, res) {
     console.log('[Area API] Add Building Interest Week.');
@@ -297,6 +322,9 @@ function interested_persons_buildings_week_add(req, res) {
     });
 };
 
+function interested_persons_buildings_week_get(req, res) {
+
+};
 
 function interested_persons_buildings_month_add(req, res) {
     console.log('[Area API] Add Building Interest Month.');
@@ -356,6 +384,9 @@ function interested_persons_buildings_month_add(req, res) {
     });
 };
 
+function interested_persons_buildings_month_get(req, res) {
+
+};
 
 function interested_persons_buildings_year_add(req, res) {
     console.log('[Area API] Add Building Interest Year.');
@@ -412,6 +443,10 @@ function interested_persons_buildings_year_add(req, res) {
             );
         }
     });
+};
+
+function interested_persons_buildings_year_get(req, res) {
+
 };
 
 
@@ -471,6 +506,9 @@ function data_regist_building_month_add(req, res) {
     });
 };
 
+function data_regist_building_month_get(req, res) {
+
+};
 
 function data_regist_building_year_add(req, res) {
     console.log('[Building Node API] Add Data Year.');
@@ -527,6 +565,9 @@ function data_regist_building_year_add(req, res) {
     });
 };
 
+function data_regist_building_year_get(req, res) {
+
+};
 
 function data_regist_building_add(req, res) {
     console.log('[Building Node API] Add Data.');
@@ -582,6 +623,7 @@ function data_regist_building_add(req, res) {
         }
     });
 };
+
 
 function data_regist_building_get(req, res) {
     console.log('[Building Node API] Get Data.');
@@ -712,6 +754,9 @@ function building_daily_persons_add(req, res) {
     });
 };
 
+function building_daily_persons_get(req, res) {
+
+};
 
 function building_week_persons_add(req, res) {
     console.log('[Area API] Add Building Week Persons.');
@@ -758,6 +803,10 @@ function building_week_persons_add(req, res) {
         }
 
     });
+};
+
+function building_week_persons_get(req, res) {
+
 };
 
 
@@ -808,6 +857,10 @@ function building_month_persons_add(req, res) {
     });
 };
 
+function building_month_persons_get(req, res) {
+
+};
+
 
 function building_year_persons_add(req, res) {
     console.log('[Area API] Add Building Year Persons.');
@@ -851,4 +904,8 @@ function building_year_persons_add(req, res) {
             );
         }
     });
+};
+
+function building_year_persons_get(req, res) {
+
 };
