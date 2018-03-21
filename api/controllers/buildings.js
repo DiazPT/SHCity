@@ -208,6 +208,10 @@ function building_energy_year_add(req, res) {
     });
 };
 
+function building_energy_year_add(req, res) {
+
+};
+
 
 function building_security_add(req, res) {
     console.log('[Area API] Add Building Security.');
