@@ -75,6 +75,23 @@ function area_add(req, res) {
 };
 
 function area_get(req, res) {
+    models.Area.find(function (err, areas) {
+        if (areas != null) {
+            res.json({
+                message: areas
+            });
+        }
+        else {
+            if (err) {
+                console.log("No content");
+                res.status(204).json("No content");
+            }
+            else {
+                console.log("DB error");
+                res.status(500).json("DB Error");
+            }
+        }
+    });
 
 };
 

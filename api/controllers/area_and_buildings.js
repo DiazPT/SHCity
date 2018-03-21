@@ -102,7 +102,51 @@ function areas_and_buildings_top_visits_add(req, res) {
 };
 
 function areas_and_buildings_top_visits_get(req, res) {
+    console.log('[Area and Building API] Get Top.');
+    //Building = 0 Area = 1
+    if (req.swagger.params.type.value == 1) {
+        models.Area.find(function (err, areas) {
+            if (areas != null) {
+                models.Top_Visits.find({ Area_ID: { $ne: null } }, function (err, top) {
 
+                });
+            }
+            else {
+                if (err) {
+                    console.log("No content");
+                    res.status(204).json("No content");
+                }
+                else {
+                    console.log("DB error");
+                    res.status(500).json("DB Error");
+                }
+            }
+        });
+
+    }
+    if (req.swagger.params.type.value == 0) {
+        models.Building.find(function (err, buildings) {
+            if (areas != null) {
+                models.Top_Visits.find({ Building_ID: { $ne: null } }, function (err, top) {
+
+                });
+            }
+            else {
+                if (err) {
+                    console.log("No content");
+                    res.status(204).json("No content");
+                }
+                else {
+                    console.log("DB error");
+                    res.status(500).json("DB Error");
+                }
+            }
+        });
+    }
+    if (req.swagger.params.type.value != 1 && req.swagger.params.type.value != 0) {
+        console.log("Type error");
+        res.status(503).json("Type is not valid");
+    }
 };
 
 
@@ -110,7 +154,7 @@ function areas_and_buildings_level_occupation_get(req, res) {
     console.log('[Area and Building API] Get Occupation.');
 
     //Building = 0 Area = 1
-    console.log(req.swagger.params.type.value);
+    //console.log(req.swagger.params.type.value);
     if (req.swagger.params.type.value == 1) {
         models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
             if (area == null) {
@@ -462,10 +506,6 @@ function areas_and_buildings_level_occupation_schedule_get(req, res) {
                         });
                     }
                 }).sort({ _id: -1 }).limit(1);
-
-
-
-
             }
         }
         );
