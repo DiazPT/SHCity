@@ -208,7 +208,7 @@ function building_energy_year_add(req, res) {
     });
 };
 
-function building_energy_year_add(req, res) {
+function building_energy_year_get(req, res) {
 
 };
 
