@@ -353,6 +353,29 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_get:
+      x-swagger-router-controller: areas
+      get:
+        summary: Get all areas.
+        tags:
+                - areas
+        consumes:
+          - application/json
+        operationId: area_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfAreas"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"  
   /buildings/add:
     x-swagger-router-controller: buildings
     post:
@@ -1302,6 +1325,17 @@ definitions:
           type : string
         description:
           type : string
+  ArrayOfAreas:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          area_name:
+            type: string
+          description:
+            type: string
   Area_visit_week:
       properties:
         username:
