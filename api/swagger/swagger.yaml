@@ -1330,11 +1330,11 @@ definitions:
       items:
         type: object
         properties:
-          id:
+          _id:
             type: integer
-          area_name:
+          Area_Name:
             type: string
-          description:
+          Description:
             type: string
   Area_visit_week:
       properties:

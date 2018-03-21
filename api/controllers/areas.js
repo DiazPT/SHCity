@@ -77,9 +77,7 @@ function area_add(req, res) {
 function area_get(req, res) {
     models.Area.find(function (err, areas) {
         if (areas != null) {
-            res.json({
-                message: areas
-            });
+            res.status(200).send(areas);
         }
         else {
             if (err) {
