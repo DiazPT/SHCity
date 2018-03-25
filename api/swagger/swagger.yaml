@@ -375,7 +375,168 @@ paths:
           204:
             description: No content
             schema:
-              $ref: "#/definitions/HelloWorldResponse"  
+              $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_visitors_week_get:
+      x-swagger-router-controller: areas
+      get:
+        summary: Get visitors from an area.
+        tags:
+                - areas
+        consumes:
+          - application/json
+        operationId: area_visitors_week_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_visitors_month_get:
+      x-swagger-router-controller: areas
+      get:
+        summary: Get visitors from an area.
+        tags:
+                - areas
+        consumes:
+          - application/json
+        operationId: area_visitors_month_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_visitors_year_get:
+      x-swagger-router-controller: areas
+      get:
+        summary: Get visitors from an area.
+        tags:
+                - areas
+        consumes:
+          - application/json
+        operationId: area_visitors_year_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_traffic_week_get:
+      x-swagger-router-controller: areas
+      get:
+        summary: Get traffic from an area.
+        tags:
+                - areas
+        consumes:
+          - application/json
+        operationId: area_traffic_week_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_traffic_month_get:
+      x-swagger-router-controller: areas
+      get:
+        summary: Get traffic from an area.
+        tags:
+                - areas
+        consumes:
+          - application/json
+        operationId: area_traffic_month_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_traffic_year_get:
+      x-swagger-router-controller: areas
+      get:
+        summary: Get traffic from an area.
+        tags:
+                - areas
+        consumes:
+          - application/json
+        operationId: area_traffic_year_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /areas/area_security_get:
+      x-swagger-router-controller: areas
+      get:
+        summary: Get security events from an area.
+        tags:
+                - areas
+        consumes:
+          - application/json
+        operationId: area_security_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"                                                                                      
   /buildings/add:
     x-swagger-router-controller: buildings
     post:
@@ -483,7 +644,7 @@ paths:
   /buildings/visiting_time_add: 
     x-swagger-router-controller: buildings
     post:
-      summary: Add security events from a Building.
+      summary: Add visiting times from a Building.
       tags:
               - buildings
       consumes:
@@ -661,62 +822,7 @@ paths:
         503:
           description: Error
           schema:
-            $ref: "#/definitions/HelloWorldResponse"
-  /buildings/data_regist_building_get:
-      x-swagger-router-controller: buildings
-      get:
-        summary: Get data from a Building.
-        tags:
-                - buildings
-        consumes:
-          - application/json
-        operationId: data_regist_building_get
-        parameters:
-                - in: query
-                  name: name
-                  description: The building to receive the value.
-                  required: true
-                  type: string
-                - in: query
-                  name: data_type
-                  description: (Data type (Temperature, CO2, etc).
-                  required: true
-                  type: string
-        responses:
-          200:
-            description: Success
-            schema:
-              # a pointer to a definition
-              $ref: "#/definitions/HelloWorldResponse"
-          503:
-            description: Error
-            schema:
-              $ref: "#/definitions/HelloWorldResponse"
-  /buildings/visiting_time_get:
-      x-swagger-router-controller: buildings
-      get:
-        summary: Get data from a Building.
-        tags:
-                - buildings
-        consumes:
-          - application/json
-        operationId: visiting_time_get
-        parameters:
-                - in: query
-                  name: name
-                  description: The building to receive the value.
-                  required: true
-                  type: string
-        responses:
-          200:
-            description: Success
-            schema:
-              # a pointer to a definition
-              $ref: "#/definitions/HelloWorldResponse"
-          503:
-            description: Error
-            schema:
-              $ref: "#/definitions/HelloWorldResponse"            
+            $ref: "#/definitions/HelloWorldResponse"            
   /buildings/building_daily_persons_add: 
     x-swagger-router-controller: buildings
     post:
@@ -821,6 +927,339 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /buildings/data_regist_building_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a Building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: data_regist_building_get
+        parameters:
+                - in: query
+                  name: name
+                  description: The building to receive the value.
+                  required: true
+                  type: string
+                - in: query
+                  name: data_type
+                  description: (Data type (Temperature, CO2, etc).
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/HelloWorldResponse"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /buildings/data_regist_building_month_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: data_regist_building_month_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"    
+  /buildings/data_regist_building_year_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: data_regist_building_year_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse" 
+  /buildings/building_energy_month_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_energy_month_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse" 
+  /buildings/building_energy_year_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_energy_year_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /buildings/interested_persons_buildings_week_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get interested persons from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: interested_persons_buildings_week_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /buildings/interested_persons_buildings_month_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get interested persons from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: interested_persons_buildings_month_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /buildings/interested_persons_buildings_year_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get interested persons from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: interested_persons_buildings_year_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /buildings/building_daily_persons_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get persons from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_daily_persons_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"  
+  /buildings/building_week_persons_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get persons from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_week_persons_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /buildings/building_month_persons_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get persons from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_month_persons_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /buildings/building_year_persons_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get persons from a building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_year_persons_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"                                                                                                                                       
+  /buildings/visiting_time_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a Building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: visiting_time_get
+        parameters:
+                - in: query
+                  name: name
+                  description: The building to receive the value.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/HelloWorldResponse"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"  
+  /buildings/building_security_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get security events from a Building.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_security_get
+        parameters:
+                - in: query
+                  date: date
+                  description: (Optional) Started date to do the query.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"                    
   /data_type/add: 
     x-swagger-router-controller: data_type
     post:
@@ -846,7 +1285,26 @@ paths:
         503:
           description: Error
           schema:
-            $ref: "#/definitions/HelloWorldResponse"  
+            $ref: "#/definitions/HelloWorldResponse"
+  /data_type/data_type_get:
+      x-swagger-router-controller: data_type
+      get:
+        summary: Get all data types.
+        tags:
+                - data_type
+        consumes:
+          - application/json
+        operationId: data_type_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"            
   /panels/add: 
     x-swagger-router-controller: panels
     post:
@@ -951,6 +1409,25 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /panels/panel_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get all panels.
+        tags:
+                - panels
+        consumes:
+          - application/json
+        operationId: panel_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"          
   /gates/gate_add: 
     x-swagger-router-controller: gates
     post:

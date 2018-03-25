@@ -131,7 +131,7 @@ function building_energy_month_add(req, res) {
         else {
             models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
                 if (building == null) {
-                    console.log("Area does not exist");
+                    console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
                 }
                 else {
