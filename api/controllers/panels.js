@@ -65,7 +65,21 @@ function panel_add(req, res) {
 };
 
 function panel_get(req, res) {
-
+    models.Panel.find(function (err, panels) {
+        if (panels != null) {
+            res.status(200).send(panels);
+        }
+        else {
+            if (err) {
+                console.log("DB error");
+                res.status(500).json("DB Error");
+            }
+            else {
+                console.log("No content");
+                res.status(204).json("No content");
+            }
+        }
+    });
 };
 
 function panel_panel_visitors_week_add(req, res) {
@@ -117,7 +131,36 @@ function panel_panel_visitors_week_add(req, res) {
 };
 
 function panel_panel_visitors_week_get(req, res) {
+    models.Panel.findOne({ Panel_Name: req.get("panel_name") }, function (err, panel) {
+        if (Panel == null) {
+            console.log("Panel does not exist");
+            res.status(503).json("Panel does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Panel_Visitors_Week.find({ Panel_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
+                if (visitors != null) {
+                    res.status(200).send(visitors);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function panel_panel_visitors_month_add(req, res) {
@@ -168,7 +211,36 @@ function panel_panel_visitors_month_add(req, res) {
 };
 
 function panel_panel_visitors_month_get(req, res) {
+    models.Panel.findOne({ Panel_Name: req.get("panel_name") }, function (err, panel) {
+        if (Panel == null) {
+            console.log("Panel does not exist");
+            res.status(503).json("Panel does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Panel_Visitors_Month.find({ Panel_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
+                if (visitors != null) {
+                    res.status(200).send(visitors);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 
@@ -219,5 +291,34 @@ function panel_panel_visitors_year_add(req, res) {
 };
 
 function panel_panel_visitors_year_get(req, res) {
+    models.Panel.findOne({ Panel_Name: req.get("panel_name") }, function (err, panel) {
+        if (Panel == null) {
+            console.log("Panel does not exist");
+            res.status(503).json("Panel does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Panel_Visitors_Year.find({ Panel_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
+                if (visitors != null) {
+                    res.status(200).send(visitors);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };

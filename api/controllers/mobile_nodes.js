@@ -64,8 +64,37 @@ function mobile_node_add(req, res) {
     });
 };
 
-function mobile_node_get(req, res) {
+function objectIdWithTimestamp(timestamp) {
+    // Convert string date to Date object (otherwise assume timestamp is a date)
+    if (typeof (timestamp) == 'string') {
+        timestamp = new Date(timestamp);
+    }
 
+    // Convert date object to hex seconds since Unix epoch
+    var hexSeconds = Math.floor(timestamp / 1000).toString(16);
+
+    // Create an ObjectId with that hex timestamp
+    var constructedObjectId = ObjectId(hexSeconds + "0000000000000000");
+
+    return constructedObjectId
+}
+
+function mobile_node_get(req, res) {
+    models.Mobile_Node.find(function (err, nodes) {
+        if (nodes != null) {
+            res.status(200).send(nodes);
+        }
+        else {
+            if (err) {
+                console.log("No content");
+                res.status(204).json("No content");
+            }
+            else {
+                console.log("DB error");
+                res.status(500).json("DB Error");
+            }
+        }
+    });
 };
 
 function mobile_node_data_regist_mobile_month_add(req, res) {
@@ -125,7 +154,36 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_month_get(req, res) {
+    models.Mobile_Node.findOne({ Name: req.get("gate_name") }, function (err, node) {
+        if (gate == null) {
+            console.log("Gate does not exist");
+            res.status(503).json("Gate does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Data_Regist_Mobile_Month.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                if (data_event != null) {
+                    res.status(200).send(data_event);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function mobile_node_data_regist_mobile_year_add(req, res) {
@@ -184,7 +242,36 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_year_get(req, res) {
+    models.Mobile_Node.findOne({ Name: req.get("gate_name") }, function (err, node) {
+        if (gate == null) {
+            console.log("Gate does not exist");
+            res.status(503).json("Gate does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Data_Regist_Mobile_Year.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                if (data_event != null) {
+                    res.status(200).send(data_event);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function mobile_node_data_regist_mobile_add(req, res) {
@@ -243,5 +330,34 @@ function mobile_node_data_regist_mobile_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_get(req, res) {
+    models.Mobile_Node.findOne({ Name: req.get("gate_name") }, function (err, node) {
+        if (gate == null) {
+            console.log("Gate does not exist");
+            res.status(503).json("Gate does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Data_Regist_Mobile.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                if (data_event != null) {
+                    res.status(200).send(data_event);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };

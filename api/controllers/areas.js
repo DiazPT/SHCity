@@ -81,12 +81,12 @@ function area_get(req, res) {
         }
         else {
             if (err) {
-                console.log("No content");
-                res.status(204).json("No content");
-            }
-            else {
                 console.log("DB error");
                 res.status(500).json("DB Error");
+            }
+            else {
+                console.log("No content");
+                res.status(204).json("No content");
             }
         }
     });
@@ -141,8 +141,53 @@ function area_visitors_week_add(req, res) {
     });
 };
 
-function area_visitors_week_get(req, res) {
+function objectIdWithTimestamp(timestamp) {
+    // Convert string date to Date object (otherwise assume timestamp is a date)
+    if (typeof (timestamp) == 'string') {
+        timestamp = new Date(timestamp);
+    }
 
+    // Convert date object to hex seconds since Unix epoch
+    var hexSeconds = Math.floor(timestamp / 1000).toString(16);
+
+    // Create an ObjectId with that hex timestamp
+    var constructedObjectId = ObjectId(hexSeconds + "0000000000000000");
+
+    return constructedObjectId
+}
+
+
+function area_visitors_week_get(req, res) {
+    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        if (area == null) {
+            console.log("Area does not exist");
+            res.status(503).json("Area does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Area_Visitors_Week.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
+                if (visitors != null) {
+                    res.status(200).send(visitors);
+
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function area_visitors_month_add(req, res) {
@@ -193,7 +238,36 @@ function area_visitors_month_add(req, res) {
 };
 
 function area_visitors_month_get(req, res) {
+    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        if (area == null) {
+            console.log("Area does not exist");
+            res.status(503).json("Area does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Area_Visitors_Month.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
+                if (visitors != null) {
+                    res.status(200).send(visitors);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function area_visitors_year_add(req, res) {
@@ -243,7 +317,36 @@ function area_visitors_year_add(req, res) {
 };
 
 function area_visitors_year_get(req, res) {
+    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        if (area == null) {
+            console.log("Area does not exist");
+            res.status(503).json("Area does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Area_Visitors_Year.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
+                if (visitors != null) {
+                    res.status(200).send(visitors);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function area_traffic_week_add(req, res) {
@@ -301,7 +404,36 @@ function area_traffic_week_add(req, res) {
 };
 
 function area_traffic_week_get(req, res) {
+    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        if (area == null) {
+            console.log("Area does not exist");
+            res.status(503).json("Area does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Area_Traffic_Week.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, traffics) {
+                if (traffics != null) {
+                    res.status(200).send(traffics);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function area_traffic_month_add(req, res) {
@@ -357,7 +489,36 @@ function area_traffic_month_add(req, res) {
 };
 
 function area_traffic_month_get(req, res) {
+    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        if (area == null) {
+            console.log("Area does not exist");
+            res.status(503).json("Area does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Area_Traffic_Month.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, traffics) {
+                if (traffics != null) {
+                    res.status(200).send(traffics);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 }
 
 function area_traffic_year_add(req, res) {
@@ -413,7 +574,36 @@ function area_traffic_year_add(req, res) {
 };
 
 function area_traffic_year_get(req, res) {
+    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        if (area == null) {
+            console.log("Area does not exist");
+            res.status(503).json("Area does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Area_Traffic_Year.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, traffics) {
+                if (traffics != null) {
+                    res.status(200).send(traffics);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 
@@ -465,5 +655,34 @@ function area_security_add(req, res) {
 };
 
 function area_security_get(req, res) {
+    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        if (area == null) {
+            console.log("Area does not exist");
+            res.status(503).json("Area does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Area_Security.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, security_events) {
+                if (security_events != null) {
+                    res.status(200).send(security_events);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };

@@ -101,6 +101,7 @@ function areas_and_buildings_top_visits_add(req, res) {
     });
 };
 
+//Por terminar!
 function areas_and_buildings_top_visits_get(req, res) {
     console.log('[Area and Building API] Get Top.');
     //Building = 0 Area = 1

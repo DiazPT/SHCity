@@ -61,7 +61,21 @@ function gate_add(req, res) {
 };
 
 function gate_get(req, res) {
-
+    models.Gate.find(function (err, gates) {
+        if (gates != null) {
+            res.status(200).send(gates);
+        }
+        else {
+            if (err) {
+                console.log("No content");
+                res.status(204).json("No content");
+            }
+            else {
+                console.log("DB error");
+                res.status(500).json("DB Error");
+            }
+        }
+    });
 };
 
 
@@ -112,5 +126,34 @@ function gate_vehicle_affluence_add(req, res) {
 };
 
 function gate_vehicle_affluence_get(req, res) {
+    models.Gate.findOne({ Name: req.get("gate_name") }, function (err, gate) {
+        if (gate == null) {
+            console.log("Gate does not exist");
+            res.status(503).json("Gate does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Vehicle_Affluence.find({ Gate_ID: gate._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, vehicle_affluence) {
+                if (vehicle_affluence != null) {
+                    res.status(200).send(vehicle_affluence);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };

@@ -59,5 +59,19 @@ function data_type_add(req, res) {
 };
 
 function data_type_get(req, res) {
-
+    models.data_type.find(function (err, data_type) {
+        if (data_type != null) {
+            res.status(200).send(data_type);
+        }
+        else {
+            if (err) {
+                console.log("No content");
+                res.status(204).json("No content");
+            }
+            else {
+                console.log("DB error");
+                res.status(500).json("DB Error");
+            }
+        }
+    });
 };

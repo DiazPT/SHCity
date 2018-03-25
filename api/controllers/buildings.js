@@ -87,9 +87,37 @@ function building_add(req, res) {
     });
 };
 
+function objectIdWithTimestamp(timestamp) {
+    // Convert string date to Date object (otherwise assume timestamp is a date)
+    if (typeof (timestamp) == 'string') {
+        timestamp = new Date(timestamp);
+    }
+
+    // Convert date object to hex seconds since Unix epoch
+    var hexSeconds = Math.floor(timestamp / 1000).toString(16);
+
+    // Create an ObjectId with that hex timestamp
+    var constructedObjectId = ObjectId(hexSeconds + "0000000000000000");
+
+    return constructedObjectId
+}
 
 function building_get(req, res) {
-
+    models.Building.find(function (err, buildings) {
+        if (areas != null) {
+            res.status(200).send(buildings);
+        }
+        else {
+            if (err) {
+                console.log("No content");
+                res.status(204).json("No content");
+            }
+            else {
+                console.log("DB error");
+                res.status(500).json("DB Error");
+            }
+        }
+    });
 }
 
 function building_energy_month_add(req, res) {
@@ -145,7 +173,36 @@ function building_energy_month_add(req, res) {
 };
 
 function building_energy_month_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Building_Energy_Monthly.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, energy_building) {
+                if (energy_building != null) {
+                    res.status(200).send(energy_building);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 
@@ -209,7 +266,36 @@ function building_energy_year_add(req, res) {
 };
 
 function building_energy_year_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Building_Energy_Anual.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, energy_building) {
+                if (energy_building != null) {
+                    res.status(200).send(energy_building);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 
@@ -261,7 +347,36 @@ function building_security_add(req, res) {
 };
 
 function building_security_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Building_Security.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, security_event) {
+                if (security_event != null) {
+                    res.status(200).send(security_event);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 
@@ -327,7 +442,36 @@ function interested_persons_buildings_week_add(req, res) {
 };
 
 function interested_persons_buildings_week_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Interested_Persons_Buildings_Week.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+                if (building_persons != null) {
+                    res.status(200).send(building_persons);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function interested_persons_buildings_month_add(req, res) {
@@ -389,7 +533,36 @@ function interested_persons_buildings_month_add(req, res) {
 };
 
 function interested_persons_buildings_month_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Interested_Persons_Buildings_Month.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+                if (building_persons != null) {
+                    res.status(200).send(building_persons);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function interested_persons_buildings_year_add(req, res) {
@@ -450,7 +623,36 @@ function interested_persons_buildings_year_add(req, res) {
 };
 
 function interested_persons_buildings_year_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Interested_Persons_Buildings_Year.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+                if (building_persons != null) {
+                    res.status(200).send(building_persons);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 
@@ -511,7 +713,36 @@ function data_regist_building_month_add(req, res) {
 };
 
 function data_regist_building_month_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Data_Regist_Building_Month.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
+                if (building_data != null) {
+                    res.status(200).send(building_data);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function data_regist_building_year_add(req, res) {
@@ -570,7 +801,36 @@ function data_regist_building_year_add(req, res) {
 };
 
 function data_regist_building_year_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Data_Regist_Building_Year.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
+                if (building_data != null) {
+                    res.status(200).send(building_data);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function data_regist_building_add(req, res) {
@@ -759,7 +1019,36 @@ function building_daily_persons_add(req, res) {
 };
 
 function building_daily_persons_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Building_Daily_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+                if (building_persons != null) {
+                    res.status(200).send(building_persons);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 function building_week_persons_add(req, res) {
@@ -810,7 +1099,36 @@ function building_week_persons_add(req, res) {
 };
 
 function building_week_persons_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Building_Week_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+                if (building_persons != null) {
+                    res.status(200).send(building_persons);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 
@@ -862,7 +1180,36 @@ function building_month_persons_add(req, res) {
 };
 
 function building_month_persons_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Building_Month_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+                if (building_persons != null) {
+                    res.status(200).send(building_persons);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };
 
 
@@ -911,5 +1258,34 @@ function building_year_persons_add(req, res) {
 };
 
 function building_year_persons_get(req, res) {
+    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+        if (building == null) {
+            console.log("Building does not exist");
+            res.status(503).json("Building does not exist")
+        }
+        else {
+            //ano primeiro, de seguida mes e depois dia
+            if (req.get("date") == null) {
+                date_search = "1980/01/01";
+            }
+            else {
+                date_search = req.get("date");
+            }
+            models.Building_Year_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+                if (building_persons != null) {
+                    res.status(200).send(building_persons);
 
+                }
+                else {
+                    if (err) {
+                        console.log("DB error");
+                        res.status(500).json("DB Error");
+                    } else {
+                        console.log("No content");
+                        res.status(204).json("No content");
+                    }
+                }
+            });
+        }
+    });
 };

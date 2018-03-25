@@ -367,7 +367,7 @@ paths:
             description: Success
             schema:
               # a pointer to a definition
-              $ref: "#/definitions/ArrayOfAreas"
+              $ref: "#/definitions/ArrayOfObjects"
           500:
             description: Error
             schema:
@@ -1325,17 +1325,10 @@ definitions:
           type : string
         description:
           type : string
-  ArrayOfAreas:
+  ArrayOfObjects:
       type: array
       items:
         type: object
-        properties:
-          _id:
-            type: integer
-          Area_Name:
-            type: string
-          Description:
-            type: string
   Area_visit_week:
       properties:
         username:
