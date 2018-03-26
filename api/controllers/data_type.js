@@ -60,7 +60,7 @@ function data_type_add(req, res) {
 };
 
 function data_type_get(req, res) {
-    models.data_type.find(function (err, data_type) {
+    models.Data_Type.find(function (err, data_type) {
         if (data_type != null) {
             res.status(200).send(data_type);
         }
