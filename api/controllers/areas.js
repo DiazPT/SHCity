@@ -173,7 +173,7 @@ function area_visitors_week_get(req, res) {
                 date_search = req.get("date");
             }
             models.Area_Visitors_Week.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
-                if (visitors != null) {
+                if (visitors != null) { 
                     res.status(200).send(visitors);
 
                 }

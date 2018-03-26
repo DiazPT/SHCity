@@ -1004,6 +1004,29 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /buildings/building_get:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get all buildings.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"          
   /buildings/data_regist_building_get:
       x-swagger-router-controller: buildings
       get:
