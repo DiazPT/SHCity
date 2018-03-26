@@ -105,7 +105,7 @@ function objectIdWithTimestamp(timestamp) {
 
 function building_get(req, res) {
     models.Building.find(function (err, buildings) {
-        if (areas != null) {
+        if (buildings != null) {
             res.status(200).send(buildings);
         }
         else {
