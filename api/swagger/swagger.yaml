@@ -394,7 +394,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -428,7 +428,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -462,7 +462,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -496,7 +496,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -530,7 +530,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -564,7 +564,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -598,7 +598,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1056,7 +1056,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1090,7 +1090,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1124,7 +1124,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1158,7 +1158,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1192,7 +1192,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1226,7 +1226,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1260,7 +1260,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1294,7 +1294,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1328,7 +1328,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1362,7 +1362,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1396,7 +1396,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1430,7 +1430,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1460,7 +1460,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1662,7 +1662,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1696,7 +1696,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1730,7 +1730,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1835,7 +1835,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -1992,7 +1992,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -2026,7 +2026,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
@@ -2060,7 +2060,7 @@ paths:
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
-                  required: true
+                  required: false
                   type: string
         responses:
           200:
