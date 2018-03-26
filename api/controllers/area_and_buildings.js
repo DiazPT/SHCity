@@ -182,7 +182,7 @@ function areas_and_buildings_level_occupation_get(req, res) {
     //Building = 0 Area = 1
     //console.log(req.swagger.params.type.value);
     if (req.swagger.params.type.value == 1) {
-        models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
             if (area == null) {
                 console.log("Area does not exist");
                 res.status(503).json("Area does not exist")
@@ -249,7 +249,7 @@ function areas_and_buildings_waiting_time_get(req, res) {
     //Building = 0 Area = 1
     console.log(req.swagger.params.type.value);
     if (req.swagger.params.type.value == 1) {
-        models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
             if (area == null) {
                 console.log("Area does not exist");
                 res.status(503).json("Area does not exist")
@@ -512,7 +512,7 @@ function areas_and_buildings_level_occupation_schedule_get(req, res) {
     //Building = 0 Area = 1
     console.log(req.swagger.params.type.value);
     if (req.swagger.params.type.value == 1) {
-        models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+        models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
             if (area == null) {
                 console.log("Area does not exist");
                 res.status(503).json("Area does not exist");

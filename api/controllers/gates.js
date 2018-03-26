@@ -127,18 +127,18 @@ function gate_vehicle_affluence_add(req, res) {
 };
 
 function gate_vehicle_affluence_get(req, res) {
-    models.Gate.findOne({ Name: req.get("gate_name") }, function (err, gate) {
+    models.Gate.findOne({ Name: req.swagger.params.gate_name.value }, function (err, gate) {
         if (gate == null) {
             console.log("Gate does not exist");
             res.status(503).json("Gate does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Vehicle_Affluence.find({ Gate_ID: gate._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, vehicle_affluence) {
                 if (vehicle_affluence != null) {

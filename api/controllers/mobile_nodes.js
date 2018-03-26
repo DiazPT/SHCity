@@ -155,18 +155,18 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_month_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.get("node_name") }, function (err, node) {
+    models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value }, function (err, node) {
         if (gate == null) {
             console.log("Node does not exist");
             res.status(503).json("Node does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Data_Regist_Mobile_Month.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
                 if (data_event != null) {
@@ -243,18 +243,18 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_year_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.get("node_name") }, function (err, node) {
+    models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value }, function (err, node) {
         if (gate == null) {
             console.log("Node does not exist");
             res.status(503).json("Node does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Data_Regist_Mobile_Year.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
                 if (data_event != null) {
@@ -331,18 +331,18 @@ function mobile_node_data_regist_mobile_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.get("node_name") }, function (err, node) {
+    models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value }, function (err, node) {
         if (gate == null) {
             console.log("Node does not exist");
             res.status(503).json("Node does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Data_Regist_Mobile.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
                 if (data_event != null) {

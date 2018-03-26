@@ -1081,6 +1081,11 @@ paths:
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
                   required: false
                   type: string
+                - in: query
+                  name: data_type
+                  description: (Data type (Temperature, CO2, etc).
+                  required: true
+                  type: string  
         responses:
           200:
             description: Success
@@ -1115,6 +1120,11 @@ paths:
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
                   required: false
                   type: string
+                - in: query
+                  name: data_type
+                  description: (Data type (Temperature, CO2, etc).
+                  required: true
+                  type: string  
         responses:
           200:
             description: Success

@@ -132,18 +132,18 @@ function panel_panel_visitors_week_add(req, res) {
 };
 
 function panel_panel_visitors_week_get(req, res) {
-    models.Panel.findOne({ Panel_Name: req.get("panel_name") }, function (err, panel) {
+    models.Panel.findOne({ Panel_Name: req.swagger.params.panel_name.value }, function (err, panel) {
         if (Panel == null) {
             console.log("Panel does not exist");
             res.status(503).json("Panel does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Panel_Visitors_Week.find({ Panel_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
                 if (visitors != null) {
@@ -212,18 +212,18 @@ function panel_panel_visitors_month_add(req, res) {
 };
 
 function panel_panel_visitors_month_get(req, res) {
-    models.Panel.findOne({ Panel_Name: req.get("panel_name") }, function (err, panel) {
+    models.Panel.findOne({ Panel_Name: req.swagger.params.panel_name.value }, function (err, panel) {
         if (Panel == null) {
             console.log("Panel does not exist");
             res.status(503).json("Panel does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Panel_Visitors_Month.find({ Panel_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
                 if (visitors != null) {
@@ -292,18 +292,18 @@ function panel_panel_visitors_year_add(req, res) {
 };
 
 function panel_panel_visitors_year_get(req, res) {
-    models.Panel.findOne({ Panel_Name: req.get("panel_name") }, function (err, panel) {
+    models.Panel.findOne({ Panel_Name: req.swagger.params.panel_name.value }, function (err, panel) {
         if (Panel == null) {
             console.log("Panel does not exist");
             res.status(503).json("Panel does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Panel_Visitors_Year.find({ Panel_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
                 if (visitors != null) {

@@ -174,18 +174,18 @@ function building_energy_month_add(req, res) {
 };
 
 function building_energy_month_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Building_Energy_Monthly.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, energy_building) {
                 if (energy_building != null) {
@@ -267,18 +267,18 @@ function building_energy_year_add(req, res) {
 };
 
 function building_energy_year_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Building_Energy_Anual.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, energy_building) {
                 if (energy_building != null) {
@@ -348,18 +348,18 @@ function building_security_add(req, res) {
 };
 
 function building_security_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Building_Security.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, security_event) {
                 if (security_event != null) {
@@ -443,18 +443,18 @@ function interested_persons_buildings_week_add(req, res) {
 };
 
 function interested_persons_buildings_week_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Interested_Persons_Buildings_Week.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
                 if (building_persons != null) {
@@ -534,18 +534,18 @@ function interested_persons_buildings_month_add(req, res) {
 };
 
 function interested_persons_buildings_month_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Interested_Persons_Buildings_Month.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
                 if (building_persons != null) {
@@ -624,18 +624,18 @@ function interested_persons_buildings_year_add(req, res) {
 };
 
 function interested_persons_buildings_year_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Interested_Persons_Buildings_Year.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
                 if (building_persons != null) {
@@ -714,33 +714,39 @@ function data_regist_building_month_add(req, res) {
 };
 
 function data_regist_building_month_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
-            models.Data_Regist_Building_Month.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
-                if (building_data != null) {
-                    res.status(200).send(building_data);
+            models.Data_Type.findOne({ Name: req.swagger.params.data_type.value }, function (err, data_type) {
+                if (data_type == null) {
+                    console.log("Data Type does not exist");
+                    res.status(503).json("Data Type does not exist")
+                }
+                models.Data_Regist_Building_Month.find({ Data_Type_ID : data_type._id, Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
+                    if (building_data != null) {
+                        res.status(200).send(building_data);
 
-                }
-                else {
-                    if (err) {
-                        console.log("DB error");
-                        res.status(500).json("DB Error");
-                    } else {
-                        console.log("No content");
-                        res.status(204).json("No content");
                     }
-                }
+                    else {
+                        if (err) {
+                            console.log("DB error");
+                            res.status(500).json("DB Error");
+                        } else {
+                            console.log("No content");
+                            res.status(204).json("No content");
+                        }
+                    }
+                });
             });
         }
     });
@@ -802,33 +808,39 @@ function data_regist_building_year_add(req, res) {
 };
 
 function data_regist_building_year_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
-            models.Data_Regist_Building_Year.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
-                if (building_data != null) {
-                    res.status(200).send(building_data);
+            models.Data_Type.findOne({ Name: req.swagger.params.data_type.value }, function (err, data_type) {
+                if (data_type == null) {
+                    console.log("Data Type does not exist");
+                    res.status(503).json("Data Type does not exist")
+                }
+                models.Data_Regist_Building_Year.find({ Data_Type_ID: data_type._id, Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
+                    if (building_data != null) {
+                        res.status(200).send(building_data);
 
-                }
-                else {
-                    if (err) {
-                        console.log("DB error");
-                        res.status(500).json("DB Error");
-                    } else {
-                        console.log("No content");
-                        res.status(204).json("No content");
                     }
-                }
+                    else {
+                        if (err) {
+                            console.log("DB error");
+                            res.status(500).json("DB Error");
+                        } else {
+                            console.log("No content");
+                            res.status(204).json("No content");
+                        }
+                    }
+                });
             });
         }
     });
@@ -1020,18 +1032,18 @@ function building_daily_persons_add(req, res) {
 };
 
 function building_daily_persons_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Building_Daily_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
                 if (building_persons != null) {
@@ -1100,18 +1112,18 @@ function building_week_persons_add(req, res) {
 };
 
 function building_week_persons_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Building_Week_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
                 if (building_persons != null) {
@@ -1181,18 +1193,18 @@ function building_month_persons_add(req, res) {
 };
 
 function building_month_persons_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Building_Month_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
                 if (building_persons != null) {
@@ -1259,18 +1271,18 @@ function building_year_persons_add(req, res) {
 };
 
 function building_year_persons_get(req, res) {
-    models.Building.findOne({ Name: req.get("building_name") }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Building_Year_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
                 if (building_persons != null) {

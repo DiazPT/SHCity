@@ -159,18 +159,18 @@ function objectIdWithTimestamp(timestamp) {
 
 
 function area_visitors_week_get(req, res) {
-    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+    models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
         if (area == null) {
             console.log("Area does not exist");
             res.status(503).json("Area does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Area_Visitors_Week.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
                 if (visitors != null) { 
@@ -239,18 +239,18 @@ function area_visitors_month_add(req, res) {
 };
 
 function area_visitors_month_get(req, res) {
-    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+    models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
         if (area == null) {
             console.log("Area does not exist");
             res.status(503).json("Area does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Area_Visitors_Month.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
                 if (visitors != null) {
@@ -318,18 +318,18 @@ function area_visitors_year_add(req, res) {
 };
 
 function area_visitors_year_get(req, res) {
-    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+    models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
         if (area == null) {
             console.log("Area does not exist");
             res.status(503).json("Area does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Area_Visitors_Year.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, visitors) {
                 if (visitors != null) {
@@ -405,18 +405,18 @@ function area_traffic_week_add(req, res) {
 };
 
 function area_traffic_week_get(req, res) {
-    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+    models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
         if (area == null) {
             console.log("Area does not exist");
             res.status(503).json("Area does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Area_Traffic_Week.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, traffics) {
                 if (traffics != null) {
@@ -490,18 +490,18 @@ function area_traffic_month_add(req, res) {
 };
 
 function area_traffic_month_get(req, res) {
-    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+    models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
         if (area == null) {
             console.log("Area does not exist");
             res.status(503).json("Area does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Area_Traffic_Month.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, traffics) {
                 if (traffics != null) {
@@ -575,18 +575,18 @@ function area_traffic_year_add(req, res) {
 };
 
 function area_traffic_year_get(req, res) {
-    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+    models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
         if (area == null) {
             console.log("Area does not exist");
             res.status(503).json("Area does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Area_Traffic_Year.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, traffics) {
                 if (traffics != null) {
@@ -656,18 +656,18 @@ function area_security_add(req, res) {
 };
 
 function area_security_get(req, res) {
-    models.Area.findOne({ Area_Name: req.get("area_name") }, function (err, area) {
+    models.Area.findOne({ Area_Name: req.swagger.params.area_name.value }, function (err, area) {
         if (area == null) {
             console.log("Area does not exist");
             res.status(503).json("Area does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
-            if (req.get("date") == null) {
+            if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
             }
             else {
-                date_search = req.get("date");
+                date_search = req.swagger.params.date.value;
             }
             models.Area_Security.find({ Area_ID: area._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, security_events) {
                 if (security_events != null) {
