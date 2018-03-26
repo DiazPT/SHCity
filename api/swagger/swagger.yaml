@@ -385,6 +385,17 @@ paths:
         consumes:
           - application/json
         operationId: area_visitors_week_get
+        parameters:
+                - in: query
+                  name: area_name
+                  description: Area to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -408,6 +419,17 @@ paths:
         consumes:
           - application/json
         operationId: area_visitors_month_get
+        parameters:
+                - in: query
+                  name: area_name
+                  description: Area to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -431,6 +453,17 @@ paths:
         consumes:
           - application/json
         operationId: area_visitors_year_get
+        parameters:
+                - in: query
+                  name: area_name
+                  description: Area to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -454,6 +487,17 @@ paths:
         consumes:
           - application/json
         operationId: area_traffic_week_get
+        parameters:
+                - in: query
+                  name: area_name
+                  description: Area to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -477,6 +521,17 @@ paths:
         consumes:
           - application/json
         operationId: area_traffic_month_get
+        parameters:
+                - in: query
+                  name: area_name
+                  description: Area to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -500,6 +555,17 @@ paths:
         consumes:
           - application/json
         operationId: area_traffic_year_get
+        parameters:
+                - in: query
+                  name: area_name
+                  description: Area to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -523,6 +589,17 @@ paths:
         consumes:
           - application/json
         operationId: area_security_get
+        parameters:
+                - in: query
+                  name: area_name
+                  description: Area to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -952,9 +1029,13 @@ paths:
             description: Success
             schema:
               # a pointer to a definition
-              $ref: "#/definitions/HelloWorldResponse"
-          503:
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
             description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
             schema:
               $ref: "#/definitions/HelloWorldResponse"
   /buildings/data_regist_building_month_get:
@@ -966,6 +1047,17 @@ paths:
         consumes:
           - application/json
         operationId: data_regist_building_month_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -989,6 +1081,17 @@ paths:
         consumes:
           - application/json
         operationId: data_regist_building_year_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1012,6 +1115,17 @@ paths:
         consumes:
           - application/json
         operationId: building_energy_month_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1035,6 +1149,17 @@ paths:
         consumes:
           - application/json
         operationId: building_energy_year_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1058,6 +1183,17 @@ paths:
         consumes:
           - application/json
         operationId: interested_persons_buildings_week_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1081,6 +1217,17 @@ paths:
         consumes:
           - application/json
         operationId: interested_persons_buildings_month_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1104,6 +1251,17 @@ paths:
         consumes:
           - application/json
         operationId: interested_persons_buildings_year_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1127,6 +1285,17 @@ paths:
         consumes:
           - application/json
         operationId: building_daily_persons_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1150,6 +1319,17 @@ paths:
         consumes:
           - application/json
         operationId: building_week_persons_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1173,6 +1353,17 @@ paths:
         consumes:
           - application/json
         operationId: building_month_persons_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1196,6 +1387,17 @@ paths:
         consumes:
           - application/json
         operationId: building_year_persons_get
+        parameters:
+                - in: query
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
         responses:
           200:
             description: Success
@@ -1209,7 +1411,7 @@ paths:
           204:
             description: No content
             schema:
-              $ref: "#/definitions/HelloWorldResponse"                                                                                                                                       
+              $ref: "#/definitions/HelloWorldResponse"                               
   /buildings/visiting_time_get:
       x-swagger-router-controller: buildings
       get:
@@ -1221,8 +1423,13 @@ paths:
         operationId: visiting_time_get
         parameters:
                 - in: query
-                  name: name
-                  description: The building to receive the value.
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
                   required: true
                   type: string
         responses:
@@ -1246,8 +1453,13 @@ paths:
         operationId: building_security_get
         parameters:
                 - in: query
-                  date: date
-                  description: (Optional) Started date to do the query.
+                  name: building_name
+                  description: Building to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
                   required: true
                   type: string
         responses:
@@ -1256,8 +1468,12 @@ paths:
             schema:
               # a pointer to a definition
               $ref: "#/definitions/ArrayOfObjects"
-          503:
+          500:
             description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
             schema:
               $ref: "#/definitions/HelloWorldResponse"                    
   /data_type/add: 
@@ -1410,7 +1626,7 @@ paths:
           schema:
             $ref: "#/definitions/HelloWorldResponse"
   /panels/panel_get:
-      x-swagger-router-controller: buildings
+      x-swagger-router-controller: panels
       get:
         summary: Get all panels.
         tags:
@@ -1427,7 +1643,109 @@ paths:
           503:
             description: Error
             schema:
-              $ref: "#/definitions/HelloWorldResponse"          
+              $ref: "#/definitions/HelloWorldResponse"
+  /panels/panel_panel_visitors_week_get:
+      x-swagger-router-controller: panels
+      get:
+        summary: Get visitors from a panel.
+        tags:
+                - panels
+        consumes:
+          - application/json
+        operationId: panel_panel_visitors_week_get
+        parameters:
+                - in: query
+                  name: panel_name
+                  description: Panel to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /panels/panel_panel_visitors_month_get:
+      x-swagger-router-controller: panels
+      get:
+        summary: Get visitors from a panel.
+        tags:
+                - panels
+        consumes:
+          - application/json
+        operationId: panel_panel_visitors_month_get
+        parameters:
+                - in: query
+                  name: panel_name
+                  description: Panel to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /panels/panel_panel_visitors_year_get:
+      x-swagger-router-controller: panels
+      get:
+        summary: Get visitors from a panel.
+        tags:
+                - panels
+        consumes:
+          - application/json
+        operationId: panel_panel_visitors_year_get
+        parameters:
+                - in: query
+                  name: panel_name
+                  description: Panel to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"            
   /gates/gate_add: 
     x-swagger-router-controller: gates
     post:
@@ -1480,6 +1798,59 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /gates/gate_get:
+      x-swagger-router-controller: gates
+      get:
+        summary: Get all gates.
+        tags:
+                - panels
+        consumes:
+          - application/json
+        operationId: gate_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /gates/gate_vehicle_affluence_get:
+      x-swagger-router-controller: gates
+      get:
+        summary: Get vehicle affluence in a gate.
+        tags:
+                - gates
+        consumes:
+          - application/json
+        operationId: gate_vehicle_affluence_get
+        parameters:
+                - in: query
+                  name: panel_name
+                  description: Gate to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"          
   /mobile_node/mobile_node_add: 
     x-swagger-router-controller: mobile_nodes
     post:
@@ -1584,6 +1955,127 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/mobile_node_get:
+      x-swagger-router-controller: mobile_nodes
+      get:
+        summary: Get all mobile_nodes.
+        tags:
+                - mobile_nodes
+        consumes:
+          - application/json
+        operationId: mobile_node_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/mobile_node_data_regist_mobile_month_get:
+      x-swagger-router-controller: mobile_nodes
+      get:
+        summary: Get data from a mobile_node.
+        tags:
+                - mobile_nodes
+        consumes:
+          - application/json
+        operationId: mobile_node_data_regist_mobile_month_get
+        parameters:
+                - in: query
+                  name: node_name
+                  description: Node to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/mobile_node_data_regist_mobile_year_get:
+      x-swagger-router-controller: mobile_nodes
+      get:
+        summary: Get data from a mobile_node.
+        tags:
+                - mobile_nodes
+        consumes:
+          - application/json
+        operationId: mobile_node_data_regist_mobile_year_get
+        parameters:
+                - in: query
+                  name: node_name
+                  description: Node to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/mobile_node_data_regist_mobile_get:
+      x-swagger-router-controller: mobile_nodes
+      get:
+        summary: Get data from a mobile_node.
+        tags:
+                - mobile_nodes
+        consumes:
+          - application/json
+        operationId: mobile_node_data_regist_mobile_get
+        parameters:
+                - in: query
+                  name: node_name
+                  description: Node to search.
+                  required: true
+                  type: string      
+                - in: query
+                  name: date
+                  description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"            
   /occupation/areas_and_buildings_top_visits_add: 
     x-swagger-router-controller: area_and_buildings
     post:
@@ -1752,6 +2244,35 @@ paths:
             description: Error
             schema:
               $ref: "#/definitions/HelloWorldResponse"
+  /occupation/areas_and_buildings_top_visits_get:
+      x-swagger-router-controller: area_and_buildings
+      get:
+        summary: Get top visits (Type 0 = Building; Type 1 = Area).
+        tags:
+                - area_and_buildings
+        consumes:
+          - application/json
+        operationId: areas_and_buildings_top_visits_get
+        parameters:
+          - in: query
+            name: type
+            description: (Type 0 = Building; Type 1 = Area).
+            required: true
+            type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"            
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions

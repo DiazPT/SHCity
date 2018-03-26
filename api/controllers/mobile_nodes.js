@@ -154,10 +154,10 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_month_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.get("gate_name") }, function (err, node) {
+    models.Mobile_Node.findOne({ Name: req.get("node_name") }, function (err, node) {
         if (gate == null) {
-            console.log("Gate does not exist");
-            res.status(503).json("Gate does not exist")
+            console.log("Node does not exist");
+            res.status(503).json("Node does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
@@ -242,10 +242,10 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_year_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.get("gate_name") }, function (err, node) {
+    models.Mobile_Node.findOne({ Name: req.get("node_name") }, function (err, node) {
         if (gate == null) {
-            console.log("Gate does not exist");
-            res.status(503).json("Gate does not exist")
+            console.log("Node does not exist");
+            res.status(503).json("Node does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia
@@ -330,10 +330,10 @@ function mobile_node_data_regist_mobile_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.get("gate_name") }, function (err, node) {
+    models.Mobile_Node.findOne({ Name: req.get("node_name") }, function (err, node) {
         if (gate == null) {
-            console.log("Gate does not exist");
-            res.status(503).json("Gate does not exist")
+            console.log("Node does not exist");
+            res.status(503).json("Node does not exist")
         }
         else {
             //ano primeiro, de seguida mes e depois dia

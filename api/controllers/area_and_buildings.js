@@ -104,12 +104,26 @@ function areas_and_buildings_top_visits_add(req, res) {
 //Por terminar!
 function areas_and_buildings_top_visits_get(req, res) {
     console.log('[Area and Building API] Get Top.');
+    var i = 0;
+    var area_name = null;
+    var n = 0;
+    var building_name = null;
     //Building = 0 Area = 1
     if (req.swagger.params.type.value == 1) {
         models.Area.find(function (err, areas) {
             if (areas != null) {
                 models.Top_Visits.find({ Area_ID: { $ne: null } }, function (err, top) {
-
+                    for (i = 0; i++; i != top.length()) {
+                        while (area_name == null) {
+                            if (top[i].Area_ID == areas[n]._id) {
+                                area_name == areas[n].Area_Name;
+                            }
+                            n++;
+                        }
+                        top[i].Area_ID = area_name;
+                        area_name = null;
+                        n = 0;
+                    }
                 });
             }
             else {
@@ -129,7 +143,17 @@ function areas_and_buildings_top_visits_get(req, res) {
         models.Building.find(function (err, buildings) {
             if (areas != null) {
                 models.Top_Visits.find({ Building_ID: { $ne: null } }, function (err, top) {
-
+                    for (i = 0; i++; i != top.length()) {
+                        while (building_name == null) {
+                            if (top[i].Building_ID == buildings[n]._id) {
+                                building_name == areas[n].Building_ID;
+                            }
+                            n++;
+                        }
+                        top[i].Building_ID = building_name;
+                        building_name = null;
+                        n = 0;
+                    }
                 });
             }
             else {
