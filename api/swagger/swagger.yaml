@@ -1052,7 +1052,7 @@ paths:
             description: Success
             schema:
               # a pointer to a definition
-              $ref: "#/definitions/ArrayOfObjects"
+              $ref: "#/definitions/HelloWorldResponse"
           500:
             description: Error
             schema:
@@ -1993,7 +1993,7 @@ paths:
       get:
         summary: Get all mobile_nodes.
         tags:
-                - mobile_nodes
+                - mobile_node
         consumes:
           - application/json
         operationId: mobile_node_get
@@ -2012,7 +2012,7 @@ paths:
       get:
         summary: Get data from a mobile_node.
         tags:
-                - mobile_nodes
+                - mobile_node
         consumes:
           - application/json
         operationId: mobile_node_data_regist_mobile_month_get
@@ -2046,7 +2046,7 @@ paths:
       get:
         summary: Get data from a mobile_node.
         tags:
-                - mobile_nodes
+                - mobile_node
         consumes:
           - application/json
         operationId: mobile_node_data_regist_mobile_year_get
@@ -2080,7 +2080,7 @@ paths:
       get:
         summary: Get data from a mobile_node.
         tags:
-                - mobile_nodes
+                - mobile_node
         consumes:
           - application/json
         operationId: mobile_node_data_regist_mobile_get
