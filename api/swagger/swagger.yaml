@@ -1887,7 +1887,7 @@ paths:
   /mobile_node/mobile_node_add: 
     x-swagger-router-controller: mobile_nodes
     post:
-      summary: Add a Mobile_node.
+      summary: Add a Mobile_node (Type 0 = Building; Type 1 = Area).
       tags:
               - mobile_node
       consumes:
@@ -2143,7 +2143,7 @@ paths:
               - area_and_buildings
       consumes:
         - application/json
-      operationId: zone_add
+      operationId: areas_and_buildings_zone_add
       parameters:
         - in: body
           name: Zone
@@ -2169,7 +2169,7 @@ paths:
                 - area_and_buildings
         consumes:
           - application/json
-        operationId: zone_get
+        operationId: areas_and_buildings_zone_get
         responses:
           200:
             description: Success

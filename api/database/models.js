@@ -408,6 +408,7 @@ module.exports.History = History;
 module.exports.Manager = Manager;
 module.exports.Building_Energy_Anual = Building_Energy_Anual;
 module.exports.Building = Building;
+module.exports.Zone = Zone;
 module.exports.Building_Security = Building_Security;
 module.exports.Interested_Persons_Buildings_Week = Interested_Persons_Buildings_Week;
 module.exports.Interested_Persons_Buildings_Month = Interested_Persons_Buildings_Month;

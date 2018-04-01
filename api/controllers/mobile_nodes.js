@@ -69,7 +69,7 @@ function mobile_node_add(req, res) {
                             });
                         }
                         else {
-                            models.Zone.findOne({ Zone_Name: req.body.zone_name }, function (err, zone) {
+                            models.Zone.findOne({ Name: req.body.zone_name }, function (err, zone) {
                                 if (zone == null) {
                                     console.log("Zone does not exist");
                                     res.status(503).json("Zone does not exist")
@@ -152,7 +152,7 @@ function mobile_node_add(req, res) {
                                 });
                             }
                             else {
-                                models.Zone.findOne({ Zone_Name: req.body.zone_name }, function (err, zone) {
+                                models.Zone.findOne({ Name: req.body.zone_name }, function (err, zone) {
                                     if (zone == null) {
                                         console.log("Zone does not exist");
                                         res.status(503).json("Zone does not exist")
