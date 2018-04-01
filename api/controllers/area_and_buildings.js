@@ -102,6 +102,136 @@ function areas_and_buildings_top_visits_add(req, res) {
     });
 };
 
+
+function zone_add(req, res) {
+    console.log('[Area and Building API] Add Zone.');
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+
+        if (User === null) {
+            console.log("Invalid session");
+            res.status(403).json("Invalid session");
+        }
+        else {
+            //Building = 0 Area = 1
+            if (req.body.type == 1) {
+                models.Area.findOne({ Area_Name: req.body.area_name }, function (err, area) {
+                    if (area == null) {
+                        console.log("Area does not exist");
+                        res.status(503).json("Area does not exist")
+                    }
+                    else {
+                        models.Zone.findOne({ Name: req.body.name }, function (err, zone) {
+                            if (zone == null) {
+                                var newRecord = new models.Zone({
+                                    Name: req.body.name,
+                                    Area_ID: area._id,
+                                    Description: req.body.description,
+                                    Location: req.body.location,
+                                });
+                                console.log(newRecord);
+
+                                newRecord.save(function (err) {
+                                    if (err) {
+                                        console.error("Error on saving new record");
+                                        console.error(err); // log error to Terminal
+
+
+                                    } else {
+                                        console.log("Created a new record!");
+                                        //recordCreated(newRecord);
+                                        res.json({
+                                            message: 'Object created'
+                                        });
+                                    }
+
+                                });
+                            }
+                            else {
+                                console.log("Zone already registered");
+                                res.json({
+                                    message: 'Object already created'
+                                });
+                            }
+                        });
+
+
+                    }
+                }
+                );
+            }
+            else {
+                if (req.body.type == 0) {
+                    models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+                        if (building == null) {
+                            console.log("Building does not exist");
+                            res.status(503).json("Building does not exist")
+                        }
+                        else {
+                            models.Zone.findOne({ Name: req.body.name }, function (err, zone) {
+                                if (zone == null) {
+                                    var newRecord = new models.Zone({
+                                        Name: req.body.name,
+                                        Building_ID: building._id,
+                                        Description: req.body.description,
+                                        Location: req.body.location,
+                                    });
+                                    console.log(newRecord);
+
+                                    newRecord.save(function (err) {
+                                        if (err) {
+                                            console.error("Error on saving new record");
+                                            console.error(err); // log error to Terminal
+
+
+                                        } else {
+                                            console.log("Created a new record!");
+                                            //recordCreated(newRecord);
+                                            res.json({
+                                                message: 'Object created'
+                                            });
+                                        }
+
+                                    });
+                                }
+                                else {
+                                    console.log("Zone already registered");
+                                    res.json({
+                                        message: 'Object already created'
+                                    });
+                                }
+                            });
+                        }
+                    }
+                    );
+                }
+                else {
+                    console.log("Type error");
+                    res.status(503).json("Type is not valid")
+                }
+            }
+        }
+    });
+};
+
+function zone_get(req, res) {
+    models.Zone.find(function (err, zones) {
+        if (zones != null) {
+            res.status(200).send(zones);
+        }
+        else {
+            if (err) {
+                console.log("No content");
+                res.status(204).json("No content");
+            }
+            else {
+                console.log("DB error");
+                res.status(500).json("DB Error");
+            }
+        }
+    });
+}
+
+
 //Por terminar!
 function areas_and_buildings_top_visits_get(req, res) {
     console.log('[Area and Building API] Get Top.');

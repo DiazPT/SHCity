@@ -29,39 +29,178 @@ function mobile_node_add(req, res) {
             res.status(403).json("Invalid session");
         }
         else {
-            models.Mobile_Node.findOne({ Name: req.body.mobile_node_name }, function (err, mobile_node) {
-                if (mobile_node == null) {
-                    var newRecord = new models.Mobile_Node({
-                        Name: req.body.mobile_node_name,
-                        Description: req.body.description,
-                        Location: req.body.location
-                    });
-                    console.log(newRecord);
-
-                    newRecord.save(function (err) {
-                        if (err) {
-                            console.error("Error on saving new record");
-                            console.error(err); // log error to Terminal
-
-
-                        } else {
-                            console.log("Created a new record!");
-                            //recordCreated(newRecord);
-                            res.json({
-                                message: 'Object created'
-                            })
+            //Building = 0 Area = 1
+            if (req.body.type == 1) {
+                models.Area.findOne({ Area_Name: req.body.area_name }, function (err, area) {
+                    if (area == null) {
+                        console.log("Area does not exist");
+                        res.status(503).json("Area does not exist")
+                    }
+                    else {
+                        if (req.body.zone_name == null) {
+                            models.Mobile_Node.findOne({ Name: req.body.name }, function (err, node) {
+                                if (node == null) {
+                                    var newRecord = new models.Zone({
+                                        Name: req.body.name,
+                                        Area_ID: area._id,
+                                        Description: req.body.description,
+                                        Location: req.body.location,
+                                    });
+                                    console.log(newRecord);
+                                    newRecord.save(function (err) {
+                                        if (err) {
+                                            console.error("Error on saving new record");
+                                            console.error(err); // log error to Terminal
+                                        } else {
+                                            console.log("Created a new record!");
+                                            //recordCreated(newRecord);
+                                            res.json({
+                                                message: 'Object created'
+                                            });
+                                        }
+                                    });
+                                }
+                                else {
+                                    console.log("Building already registered");
+                                    res.json({
+                                        message: 'Object already created'
+                                    });
+                                }
+                            });
                         }
+                        else {
+                            models.Zone.findOne({ Zone_Name: req.body.zone_name }, function (err, zone) {
+                                if (zone == null) {
+                                    console.log("Zone does not exist");
+                                    res.status(503).json("Zone does not exist")
+                                }
+                                else {
+                                    models.Mobile_Node.findOne({ Name: req.body.name }, function (err, node) {
+                                        if (node == null) {
+                                            var newRecord = new models.Zone({
+                                                Name: req.body.name,
+                                                Area_ID: area._id,
+                                                Zone_ID: zone._id,
+                                                Description: req.body.description,
+                                                Location: req.body.location,
+                                            });
+                                            console.log(newRecord);
+                                            newRecord.save(function (err) {
+                                                if (err) {
+                                                    console.error("Error on saving new record");
+                                                    console.error(err); // log error to Terminal
+                                                } else {
+                                                    console.log("Created a new record!");
+                                                    //recordCreated(newRecord);
+                                                    res.json({
+                                                        message: 'Object created'
+                                                    });
+                                                }
+                                            });
+                                        }
+                                        else {
+                                            console.log("Node already registered");
+                                            res.json({
+                                                message: 'Object already created'
+                                            });
+                                        }
+                                    });
 
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+            else {
+                if (req.body.type == 0) {
+                    models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+                        if (building == null) {
+                            console.log("Building does not exist");
+                            res.status(503).json("Building does not exist")
+                        }
+                        else {
+                            if (req.body.zone_name == null) {
+                                models.Mobile_Node.findOne({ Name: req.body.name }, function (err, node) {
+                                    if (node == null) {
+                                        var newRecord = new models.Zone({
+                                            Name: req.body.name,
+                                            Building_ID: building._id,
+                                            Description: req.body.description,
+                                            Location: req.body.location,
+                                        });
+                                        console.log(newRecord);
+                                        newRecord.save(function (err) {
+                                            if (err) {
+                                                console.error("Error on saving new record");
+                                                console.error(err); // log error to Terminal
+                                            } else {
+                                                console.log("Created a new record!");
+                                                //recordCreated(newRecord);
+                                                res.json({
+                                                    message: 'Object created'
+                                                });
+                                            }
+                                        });
+                                    }
+                                    else {
+                                        console.log("Node already registered");
+                                        res.json({
+                                            message: 'Object already created'
+                                        });
+                                    }
+                                });
+                            }
+                            else {
+                                models.Zone.findOne({ Zone_Name: req.body.zone_name }, function (err, zone) {
+                                    if (zone == null) {
+                                        console.log("Zone does not exist");
+                                        res.status(503).json("Zone does not exist")
+                                    }
+                                    else {
+                                        models.Mobile_Node.findOne({ Name: req.body.name }, function (err, node) {
+                                            if (node == null) {
+                                                var newRecord = new models.Zone({
+                                                    Name: req.body.name,
+                                                    Building_ID: building._id,
+                                                    Zone_ID: zone._id,
+                                                    Description: req.body.description,
+                                                    Location: req.body.location,
+                                                });
+                                                console.log(newRecord);
+                                                newRecord.save(function (err) {
+                                                    if (err) {
+                                                        console.error("Error on saving new record");
+                                                        console.error(err); // log error to Terminal
+                                                    } else {
+                                                        console.log("Created a new record!");
+                                                        //recordCreated(newRecord);
+                                                        res.json({
+                                                            message: 'Object created'
+                                                        });
+                                                    }
+                                                });
+                                            }
+                                            else {
+                                                console.log("Node already registered");
+                                                res.json({
+                                                    message: 'Object already created'
+                                                });
+                                            }
+                                        });
+    
+                                    }
+                                });
+                            }
+                        }
                     });
                 }
                 else {
-                    console.log("Mobile Node already registered");
-                    res.status(503).json("Object already created");
+                    console.log("Type error");
+                    res.status(503).json("Type is not valid")
                 }
             }
-            );
         }
-
     });
 };
 

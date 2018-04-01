@@ -2109,12 +2109,12 @@ paths:
             description: No content
             schema:
               $ref: "#/definitions/HelloWorldResponse"            
-  /occupation/areas_and_buildings_top_visits_add: 
+  /area_and_buildings/areas_and_buildings_top_visits_add: 
     x-swagger-router-controller: area_and_buildings
     post:
       summary: Add the top on visits (Type 0 = Building; Type 1 = Area).
       tags:
-              - occupation
+              - area_and_buildings
       consumes:
         - application/json
       operationId: areas_and_buildings_top_visits_add
@@ -2135,6 +2135,51 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /area_and_buildings/zone_add: 
+    x-swagger-router-controller: area_and_buildings
+    post:
+      summary: Add a zone (Type 0 = Building; Type 1 = Area).
+      tags:
+              - area_and_buildings
+      consumes:
+        - application/json
+      operationId: zone_add
+      parameters:
+        - in: body
+          name: Zone
+          description: The Zone to add.
+          schema:
+            $ref: "#/definitions/Zone"
+          required: true
+      responses:
+        201:
+          description: Created
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+  /area_and_buildings/zone_get:
+      x-swagger-router-controller: area_and_buildings
+      get:
+        summary: Get all zones.
+        tags:
+                - area_and_buildings
+        consumes:
+          - application/json
+        operationId: zone_get
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/ArrayOfObjects"
+          503:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"                    
   /occupation/areas_and_buildings_level_occupation_add: 
     x-swagger-router-controller: area_and_buildings
     post:
@@ -2486,6 +2531,10 @@ definitions:
           type : string
         building_name:
           type : string
+        id_2d:
+          type : string
+        id_3d:
+          type : string   
         description:
           type : string
         date_build:
@@ -2635,7 +2684,7 @@ definitions:
         building_name:
           type : string
         panel_name:
-          type : string  
+          type : string     
         traffic:
           type : string
         tickets:
@@ -2855,7 +2904,15 @@ definitions:
         description:
           type : string 
         location:
-          type : string 
+          type : string
+        type:
+          type : string
+        area_name:
+          type : string
+        building_name:
+          type : string
+        zone_name:
+          type : string      
   Mobile_node_month:
     properties:  
         username:
@@ -2951,4 +3008,22 @@ definitions:
         building_name:
           type : string
         visiting_time:
-          type : string               
+          type : string
+  Zone:
+    properties:  
+        username:
+          type : string
+        token:
+          type : string
+        name:
+          type : string
+        description:
+          type : string
+        location:
+          type : string    
+        area_name:
+          type : string 
+        building_name:
+          type : string
+        type:
+          type : string                        

@@ -56,7 +56,9 @@ function building_add(req, res) {
                         Description: req.body.description,
                         Date_Build: req.body.date_build,
                         Location: req.body.location,
-                        Visiting_Time: req.body.visiting_time
+                        Visiting_Time: req.body.visiting_time,
+                        Id_2D: req.body.id_2d,
+                        Id_3D: req.body.id_3d
                     });
                     console.log(newRecord);
 
@@ -80,13 +82,15 @@ function building_add(req, res) {
                     console.log("Building already registered");
                     res.json({
                         message: 'Object already created'
-                    })
+                    });
                 }
             }
             );
         }
     });
 };
+
+
 
 function objectIdWithTimestamp(timestamp) {
     // Convert string date to Date object (otherwise assume timestamp is a date)
@@ -732,7 +736,7 @@ function data_regist_building_month_get(req, res) {
                     console.log("Data Type does not exist");
                     res.status(503).json("Data Type does not exist")
                 }
-                models.Data_Regist_Building_Month.find({ Data_Type_ID : data_type._id, Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
+                models.Data_Regist_Building_Month.find({ Data_Type_ID: data_type._id, Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
                     if (building_data != null) {
                         res.status(200).send(building_data);
 
