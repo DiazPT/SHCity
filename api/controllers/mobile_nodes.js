@@ -40,8 +40,8 @@ function mobile_node_add(req, res) {
                         if (req.body.zone_name == null) {
                             models.Mobile_Node.findOne({ Name: req.body.name }, function (err, node) {
                                 if (node == null) {
-                                    var newRecord = new models.Zone({
-                                        Name: req.body.name,
+                                    var newRecord = new models.Mobile_Node({
+                                        Name: req.body.mobile_node_name,
                                         Area_ID: area._id,
                                         Description: req.body.description,
                                         Location: req.body.location,
@@ -77,8 +77,8 @@ function mobile_node_add(req, res) {
                                 else {
                                     models.Mobile_Node.findOne({ Name: req.body.name }, function (err, node) {
                                         if (node == null) {
-                                            var newRecord = new models.Zone({
-                                                Name: req.body.name,
+                                            var newRecord = new models.Mobile_Node({
+                                                Name: req.body.mobile_node_name,
                                                 Area_ID: area._id,
                                                 Zone_ID: zone._id,
                                                 Description: req.body.description,
@@ -124,7 +124,7 @@ function mobile_node_add(req, res) {
                                 models.Mobile_Node.findOne({ Name: req.body.name }, function (err, node) {
                                     if (node == null) {
                                         var newRecord = new models.Mobile_Node({
-                                            Name: req.body.name,
+                                            Name: req.body.mobile_node_name,
                                             Building_ID: building._id,
                                             Description: req.body.description,
                                             Location: req.body.location,
@@ -161,7 +161,7 @@ function mobile_node_add(req, res) {
                                         models.Mobile_Node.findOne({ Name: req.body.name }, function (err, node) {
                                             if (node == null) {
                                                 var newRecord = new models.Mobile_Node({
-                                                    Name: req.body.name,
+                                                    Name: req.body.mobile_node_name,
                                                     Building_ID: building._id,
                                                     Zone_ID: zone._id,
                                                     Description: req.body.description,
