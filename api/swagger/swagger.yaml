@@ -1836,7 +1836,7 @@ paths:
       get:
         summary: Get all gates.
         tags:
-                - panels
+                - gates
         consumes:
           - application/json
         operationId: gate_get
