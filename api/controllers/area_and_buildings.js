@@ -14,7 +14,9 @@ module.exports = {
     areas_and_buildings_level_occupation_schedule_add: areas_and_buildings_level_occupation_schedule_add,
     areas_and_buildings_level_occupation_get: areas_and_buildings_level_occupation_get,
     areas_and_buildings_waiting_time_get: areas_and_buildings_waiting_time_get,
-    areas_and_buildings_level_occupation_schedule_get: areas_and_buildings_level_occupation_schedule_get
+    areas_and_buildings_level_occupation_schedule_get: areas_and_buildings_level_occupation_schedule_get,
+    areas_and_buildings_zone_add: areas_and_buildings_zone_add,
+    areas_and_buildings_zone_get: areas_and_buildings_zone_get
 };
 
 
@@ -103,7 +105,7 @@ function areas_and_buildings_top_visits_add(req, res) {
 };
 
 
-function zone_add(req, res) {
+function areas_and_buildings_zone_add(req, res) {
     console.log('[Area and Building API] Add Zone.');
     models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
 
@@ -213,7 +215,7 @@ function zone_add(req, res) {
     });
 };
 
-function zone_get(req, res) {
+function areas_and_buildings_zone_get(req, res) {
     models.Zone.find(function (err, zones) {
         if (zones != null) {
             res.status(200).send(zones);
