@@ -2541,8 +2541,37 @@ definitions:
           type : string
         location:
           type : string
+        street:
+          type : string
+        number:
+          type : string
+        city:
+          type : string
+        postal_code:
+          type : string
+        current_use:
+          type : string
+        class:
+          type : string
+        function:
+          type : string
+        number_of_bu:
+          type : string
+        number_of_dw:
+          type : string
+        gross_floor_area:
+          type : string
+        area:
+          type : string
+        yoc:
+          type : string
+        inhabitants:
+          type : string
+        monument:
+          type : string                    
         visiting_time:
-          type : string    
+          type : string
+
   Building_energy_month:
     properties:
         username:

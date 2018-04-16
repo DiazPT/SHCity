@@ -58,7 +58,21 @@ function building_add(req, res) {
                         Location: req.body.location,
                         Visiting_Time: req.body.visiting_time,
                         Id_2D: req.body.id_2d,
-                        Id_3D: req.body.id_3d
+                        Id_3D: req.body.id_3d,
+                        Street: req.body.street,
+                        Number: req.body.number,
+                        City: req.body.city,
+                        Postal_code: req.body.postal_code,
+                        Current_Use: req.body.current_use,
+                        class: req.body.class,
+                        Function: req.body.function,
+                        Number_of_bu: req.body.number_of_bu,
+                        Number_of_dw: req.body.number_of_dw,
+                        Gross_floor_area: req.body.gross_floor_area,
+                        Area: req.body.area,
+                        Yoc: req.body.yoc,
+                        Inhabitants: req.body.inhabitants,
+                        Monument: req.body.monument
                     });
                     console.log(newRecord);
 
