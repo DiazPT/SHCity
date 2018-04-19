@@ -471,7 +471,7 @@ function mobile_node_data_regist_mobile_add(req, res) {
 
 function mobile_node_data_regist_mobile_get(req, res) {
     models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value }, function (err, node) {
-        if (gate == null) {
+        if (node == null) {
             console.log("Node does not exist");
             res.status(503).json("Node does not exist")
         }

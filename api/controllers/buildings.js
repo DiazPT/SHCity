@@ -64,7 +64,7 @@ function building_add(req, res) {
                         City: req.body.city,
                         Postal_code: req.body.postal_code,
                         Current_Use: req.body.current_use,
-                        class: req.body.class,
+                        Class: req.body.class,
                         Function: req.body.function,
                         Number_of_bu: req.body.number_of_bu,
                         Number_of_dw: req.body.number_of_dw,

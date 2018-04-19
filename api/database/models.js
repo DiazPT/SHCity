@@ -74,7 +74,7 @@ var Building = mongoose.model('building', {
     Postal_code: String,
     Visiting_Time: String,
     Current_Use: String,
-    class: String,
+    Class: String,
     Function: String,
     Number_of_bu: String,
     Number_of_dw: String,
