@@ -42,14 +42,13 @@ console.log('[Building API] Ready.');
 
 function building_add(req, res) {
     console.log('[Building API] Create Building.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     var newRecord = new models.Building({
                         Name: req.body.building_name,
@@ -72,11 +71,16 @@ function building_add(req, res) {
                         Area: req.body.area,
                         Yoc: req.body.yoc,
                         Inhabitants: req.body.inhabitants,
-                        Monument: req.body.monument
+                        Monument: req.body.monument,
+                        app_occupation: req.body.app_occupation,
+                        app_waitingtime: req.body.app_waitingtime,
+                        app_temperature: req.body.app_temperature,
+                        app_visittime: req.body.app_visittime,
+                        app_co2: req.body.app_co2
                     });
                     console.log(newRecord);
 
-                    newRecord.save(function (err) {
+                    newRecord.save(function(err) {
                         if (err) {
                             console.error("Error on saving new record");
                             console.error(err); // log error to Terminal
@@ -91,15 +95,13 @@ function building_add(req, res) {
                         }
 
                     });
-                }
-                else {
+                } else {
                     console.log("Building already registered");
                     res.json({
                         message: 'Object already created'
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
@@ -108,7 +110,7 @@ function building_add(req, res) {
 
 function objectIdWithTimestamp(timestamp) {
     // Convert string date to Date object (otherwise assume timestamp is a date)
-    if (typeof (timestamp) == 'string') {
+    if (typeof(timestamp) == 'string') {
         timestamp = new Date(timestamp);
     }
 
@@ -122,16 +124,14 @@ function objectIdWithTimestamp(timestamp) {
 }
 
 function building_get(req, res) {
-    models.Building.find(function (err, buildings) {
+    models.Building.find(function(err, buildings) {
         if (buildings != null) {
             res.status(200).send(buildings);
-        }
-        else {
+        } else {
             if (err) {
                 console.log("No content");
                 res.status(204).json("No content");
-            }
-            else {
+            } else {
                 console.log("DB error");
                 res.status(500).json("DB Error");
             }
@@ -141,19 +141,17 @@ function building_get(req, res) {
 
 function building_energy_month_add(req, res) {
     console.log('[Building API] Add Energy Month.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
                     var newRecord = new models.Building_Energy_Monthly({
                         Building_ID: building._id,
                         Description: req.body.description,
@@ -170,7 +168,7 @@ function building_energy_month_add(req, res) {
                     });
                     console.log(newRecord);
 
-                    newRecord.save(function (err) {
+                    newRecord.save(function(err) {
                         if (err) {
                             console.error("Error on saving new record");
                             console.error(err); // log error to Terminal
@@ -185,32 +183,28 @@ function building_energy_month_add(req, res) {
                         }
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
 
 function building_energy_month_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Building_Energy_Monthly.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, energy_building) {
+            models.Building_Energy_Monthly.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, energy_building) {
                 if (energy_building != null) {
                     res.status(200).send(energy_building);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -227,19 +221,17 @@ function building_energy_month_get(req, res) {
 
 function building_energy_year_add(req, res) {
     console.log('[Building API] Add Energy Year.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Area does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
                     var newRecord = new models.Building_Energy_Anual({
                         Building_ID: building._id,
                         Description: req.body.description,
@@ -263,7 +255,7 @@ function building_energy_year_add(req, res) {
                     });
                     console.log(newRecord);
 
-                    newRecord.save(function (err) {
+                    newRecord.save(function(err) {
                         if (err) {
                             console.error("Error on saving new record");
                             console.error(err); // log error to Terminal
@@ -278,32 +270,28 @@ function building_energy_year_add(req, res) {
                         }
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
 
 function building_energy_year_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Building_Energy_Anual.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, energy_building) {
+            models.Building_Energy_Anual.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, energy_building) {
                 if (energy_building != null) {
                     res.status(200).send(energy_building);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -320,19 +308,17 @@ function building_energy_year_get(req, res) {
 
 function building_security_add(req, res) {
     console.log('[Area API] Add Building Security.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
                     var newRecord = new models.Building_Security({
                         Building_ID: building._id,
                         Type_Incident: req.body.type_incident,
@@ -342,7 +328,7 @@ function building_security_add(req, res) {
                     });
                     console.log(newRecord);
 
-                    newRecord.save(function (err) {
+                    newRecord.save(function(err) {
                         if (err) {
                             console.error("Error on saving new record");
                             console.error(err); // log error to Terminal
@@ -358,33 +344,29 @@ function building_security_add(req, res) {
 
                     });
                 }
-            }
-            );
+            });
         }
 
     });
 };
 
 function building_security_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Building_Security.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, security_event) {
+            models.Building_Security.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, security_event) {
                 if (security_event != null) {
                     res.status(200).send(security_event);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -401,31 +383,28 @@ function building_security_get(req, res) {
 
 function interested_persons_buildings_week_add(req, res) {
     console.log('[Area API] Add Building Interest Week.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
 
 
 
 
-                    models.Panel.findOne({ Name: req.body.panel_name }, function (err, panel) {
+                    models.Panel.findOne({ Name: req.body.panel_name }, function(err, panel) {
                         if (panel == null) {
                             console.log("Panel does not exist");
                             res.json({
                                 message: 'Panel does not exist'
                             })
-                        }
-                        else {
+                        } else {
                             var newRecord = new models.Interested_Persons_Buildings_Week({
                                 Building_ID: building._id,
                                 Selected_Panel_ID: panel._id,
@@ -437,7 +416,7 @@ function interested_persons_buildings_week_add(req, res) {
                             });
                             console.log(newRecord);
 
-                            newRecord.save(function (err) {
+                            newRecord.save(function(err) {
                                 if (err) {
                                     console.error("Error on saving new record");
                                     console.error(err); // log error to Terminal
@@ -454,32 +433,28 @@ function interested_persons_buildings_week_add(req, res) {
                         }
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
 
 function interested_persons_buildings_week_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Interested_Persons_Buildings_Week.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+            models.Interested_Persons_Buildings_Week.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_persons) {
                 if (building_persons != null) {
                     res.status(200).send(building_persons);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -495,29 +470,26 @@ function interested_persons_buildings_week_get(req, res) {
 
 function interested_persons_buildings_month_add(req, res) {
     console.log('[Area API] Add Building Interest Month.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
 
 
 
 
-                    models.Panel.findOne({ Name: req.body.panel_name }, function (err, panel) {
+                    models.Panel.findOne({ Name: req.body.panel_name }, function(err, panel) {
                         if (panel == null) {
                             console.log("Building does not exist");
                             res.status(503).json("Building does not exist")
-                        }
-                        else {
+                        } else {
                             var newRecord = new models.Interested_Persons_Buildings_Month({
                                 Building_ID: building._id,
                                 Selected_Panel_ID: panel._id,
@@ -528,7 +500,7 @@ function interested_persons_buildings_month_add(req, res) {
                             });
                             console.log(newRecord);
 
-                            newRecord.save(function (err) {
+                            newRecord.save(function(err) {
                                 if (err) {
                                     console.error("Error on saving new record");
                                     console.error(err); // log error to Terminal
@@ -545,32 +517,28 @@ function interested_persons_buildings_month_add(req, res) {
                         }
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
 
 function interested_persons_buildings_month_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Interested_Persons_Buildings_Month.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+            models.Interested_Persons_Buildings_Month.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_persons) {
                 if (building_persons != null) {
                     res.status(200).send(building_persons);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -586,29 +554,26 @@ function interested_persons_buildings_month_get(req, res) {
 
 function interested_persons_buildings_year_add(req, res) {
     console.log('[Area API] Add Building Interest Year.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
 
 
 
 
-                    models.Panel.findOne({ Name: req.body.panel_name }, function (err, panel) {
+                    models.Panel.findOne({ Name: req.body.panel_name }, function(err, panel) {
                         if (panel == null) {
                             console.log("Building does not exist");
                             res.status(503).json("Building does not exist")
-                        }
-                        else {
+                        } else {
                             var newRecord = new models.Interested_Persons_Buildings_Year({
                                 Building_ID: building._id,
                                 Selected_Panel_ID: panel._id,
@@ -618,7 +583,7 @@ function interested_persons_buildings_year_add(req, res) {
                             });
                             console.log(newRecord);
 
-                            newRecord.save(function (err) {
+                            newRecord.save(function(err) {
                                 if (err) {
                                     console.error("Error on saving new record");
                                     console.error(err); // log error to Terminal
@@ -635,32 +600,28 @@ function interested_persons_buildings_year_add(req, res) {
                         }
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
 
 function interested_persons_buildings_year_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Interested_Persons_Buildings_Year.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+            models.Interested_Persons_Buildings_Year.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_persons) {
                 if (building_persons != null) {
                     res.status(200).send(building_persons);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -677,28 +638,24 @@ function interested_persons_buildings_year_get(req, res) {
 
 function data_regist_building_month_add(req, res) {
     console.log('[Building Node API] Add Data Month.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Mobile Node does not exist");
                     res.status(503).json("Mobile Node does not exist")
-                }
-                else {
+                } else {
 
 
-                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                    models.Data_Type.findOne({ Name: req.body.data_type }, function(err, data_type) {
                         if (data_type == null) {
                             console.log("Data Type does not exist");
                             res.status(503).json("Data Type does not exist")
-                        }
-
-                        else {
+                        } else {
                             var newRecord = new models.Data_Regist_Building_Month({
                                 Data_Type_ID: data_type._id,
                                 Building_ID: building._id,
@@ -708,7 +665,7 @@ function data_regist_building_month_add(req, res) {
                             });
                             console.log(newRecord);
 
-                            newRecord.save(function (err) {
+                            newRecord.save(function(err) {
                                 if (err) {
                                     console.error("Error on saving new record");
                                     console.error(err); // log error to Terminal
@@ -725,37 +682,33 @@ function data_regist_building_month_add(req, res) {
                         }
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
 
 function data_regist_building_month_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Data_Type.findOne({ Name: req.swagger.params.data_type.value }, function (err, data_type) {
+            models.Data_Type.findOne({ Name: req.swagger.params.data_type.value }, function(err, data_type) {
                 if (data_type == null) {
                     console.log("Data Type does not exist");
                     res.status(503).json("Data Type does not exist")
                 }
-                models.Data_Regist_Building_Month.find({ Data_Type_ID: data_type._id, Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
+                models.Data_Regist_Building_Month.find({ Data_Type_ID: data_type._id, Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_data) {
                     if (building_data != null) {
                         res.status(200).send(building_data);
 
-                    }
-                    else {
+                    } else {
                         if (err) {
                             console.log("DB error");
                             res.status(500).json("DB Error");
@@ -772,28 +725,24 @@ function data_regist_building_month_get(req, res) {
 
 function data_regist_building_year_add(req, res) {
     console.log('[Building Node API] Add Data Year.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Mobile Node does not exist");
                     res.status(503).json("Mobile Node does not exist")
-                }
-                else {
+                } else {
 
 
-                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                    models.Data_Type.findOne({ Name: req.body.data_type }, function(err, data_type) {
                         if (data_type == null) {
                             console.log("Data Type does not exist");
                             res.status(503).json("Data Type does not exist")
-                        }
-
-                        else {
+                        } else {
                             var newRecord = new models.Data_Regist_Building_Year({
                                 Data_Type_ID: data_type._id,
                                 Building_ID: building._id,
@@ -802,7 +751,7 @@ function data_regist_building_year_add(req, res) {
                             });
                             console.log(newRecord);
 
-                            newRecord.save(function (err) {
+                            newRecord.save(function(err) {
                                 if (err) {
                                     console.error("Error on saving new record");
                                     console.error(err); // log error to Terminal
@@ -819,37 +768,33 @@ function data_regist_building_year_add(req, res) {
                         }
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
 
 function data_regist_building_year_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Data_Type.findOne({ Name: req.swagger.params.data_type.value }, function (err, data_type) {
+            models.Data_Type.findOne({ Name: req.swagger.params.data_type.value }, function(err, data_type) {
                 if (data_type == null) {
                     console.log("Data Type does not exist");
                     res.status(503).json("Data Type does not exist")
                 }
-                models.Data_Regist_Building_Year.find({ Data_Type_ID: data_type._id, Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_data) {
+                models.Data_Regist_Building_Year.find({ Data_Type_ID: data_type._id, Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_data) {
                     if (building_data != null) {
                         res.status(200).send(building_data);
 
-                    }
-                    else {
+                    } else {
                         if (err) {
                             console.log("DB error");
                             res.status(500).json("DB Error");
@@ -866,28 +811,24 @@ function data_regist_building_year_get(req, res) {
 
 function data_regist_building_add(req, res) {
     console.log('[Building Node API] Add Data.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Mobile Node does not exist");
                     res.status(503).json("Mobile Node does not exist")
-                }
-                else {
+                } else {
 
 
-                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                    models.Data_Type.findOne({ Name: req.body.data_type }, function(err, data_type) {
                         if (data_type == null) {
                             console.log("Data Type does not exist");
                             res.status(503).json("Data Type does not exist")
-                        }
-
-                        else {
+                        } else {
                             var newRecord = new models.Data_Regist_Building({
                                 Data_Type_ID: data_type._id,
                                 Building_ID: building._id,
@@ -896,7 +837,7 @@ function data_regist_building_add(req, res) {
                             });
                             console.log(newRecord);
 
-                            newRecord.save(function (err) {
+                            newRecord.save(function(err) {
                                 if (err) {
                                     console.error("Error on saving new record");
                                     console.error(err); // log error to Terminal
@@ -913,8 +854,7 @@ function data_regist_building_add(req, res) {
                         }
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
@@ -922,25 +862,21 @@ function data_regist_building_add(req, res) {
 
 function data_regist_building_get(req, res) {
     console.log('[Building Node API] Get Data.');
-    models.Building.findOne({ Name: req.swagger.params.name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
-            models.Data_Type.findOne({ Name: req.swagger.params.data_type.value }, function (err, data_type) {
+        } else {
+            models.Data_Type.findOne({ Name: req.swagger.params.data_type.value }, function(err, data_type) {
                 if (data_type == null) {
                     console.log("Data Type does not exist");
                     res.status(503).json("Data Type does not exist")
-                }
-
-                else {
-                    models.Data_Regist_Building.findOne({ Building_ID: building._id, Data_Type_ID: data_type._id }, function (err, data_regist) {
+                } else {
+                    models.Data_Regist_Building.findOne({ Building_ID: building._id, Data_Type_ID: data_type._id }, function(err, data_regist) {
                         if (data_regist == null) {
                             console.log("Data_regist does not exist");
                             res.status(503).json("Data_regist does not exist");
-                        }
-                        else {
+                        } else {
                             data_send = data_regist.Value;
                             res.json({
                                 message: data_send
@@ -956,16 +892,14 @@ function data_regist_building_get(req, res) {
 
 function visiting_time_get(req, res) {
     console.log('[Building Node API] Get Data.');
-    models.Building.findOne({ Name: req.swagger.params.name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             if (building.Visiting_Time == null) {
                 res.status(503).json("Visiting time does not exist")
-            }
-            else {
+            } else {
                 data_send = building.Visiting_Time;
                 res.json({
                     message: data_send
@@ -978,13 +912,12 @@ function visiting_time_get(req, res) {
 
 function visiting_time_add(req, res) {
     console.log('[Building Node API] Send Data.');
-    models.Building.findOne({ Name: req.swagger.params.name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist");
-        }
-        else {
-            models.building.replaceOne({ Name: building.name }, { Visiting_Time: req.body.visiting_time }, function (err, building) {
+        } else {
+            models.building.replaceOne({ Name: building.name }, { Visiting_Time: req.body.visiting_time }, function(err, building) {
                 if (err) {
                     res.status(503).json("Error in db");
                 }
@@ -1003,19 +936,17 @@ function visiting_time_add(req, res) {
 
 function building_daily_persons_add(req, res) {
     console.log('[Area API] Add Building Daily Persons.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
                     var newRecord = new models.Building_Daily_Persons({
                         Building_ID: building._id,
                         Value: req.body.value,
@@ -1026,7 +957,7 @@ function building_daily_persons_add(req, res) {
                     });
                     console.log(newRecord);
 
-                    newRecord.save(function (err) {
+                    newRecord.save(function(err) {
                         if (err) {
                             console.error("Error on saving new record");
                             console.error(err); // log error to Terminal
@@ -1042,33 +973,29 @@ function building_daily_persons_add(req, res) {
 
                     });
                 }
-            }
-            );
+            });
         }
 
     });
 };
 
 function building_daily_persons_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Building_Daily_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+            models.Building_Daily_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_persons) {
                 if (building_persons != null) {
                     res.status(200).send(building_persons);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -1084,19 +1011,17 @@ function building_daily_persons_get(req, res) {
 
 function building_week_persons_add(req, res) {
     console.log('[Area API] Add Building Week Persons.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
                     var newRecord = new models.Building_Week_Persons({
                         Building_ID: building._id,
                         Value: req.body.value,
@@ -1106,7 +1031,7 @@ function building_week_persons_add(req, res) {
                     });
                     console.log(newRecord);
 
-                    newRecord.save(function (err) {
+                    newRecord.save(function(err) {
                         if (err) {
                             console.error("Error on saving new record");
                             console.error(err); // log error to Terminal
@@ -1122,33 +1047,29 @@ function building_week_persons_add(req, res) {
 
                     });
                 }
-            }
-            );
+            });
         }
 
     });
 };
 
 function building_week_persons_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Building_Week_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+            models.Building_Week_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_persons) {
                 if (building_persons != null) {
                     res.status(200).send(building_persons);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -1166,19 +1087,17 @@ function building_week_persons_get(req, res) {
 function building_month_persons_add(req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log('[Area API] Add Building Month Persons.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
                     var newRecord = new models.Building_Month_Persons({
                         Building_ID: building._id,
                         Value: req.body.value,
@@ -1187,7 +1106,7 @@ function building_month_persons_add(req, res) {
                     });
                     console.log(newRecord);
 
-                    newRecord.save(function (err) {
+                    newRecord.save(function(err) {
                         if (err) {
                             console.error("Error on saving new record");
                             console.error(err); // log error to Terminal
@@ -1203,33 +1122,29 @@ function building_month_persons_add(req, res) {
 
                     });
                 }
-            }
-            );
+            });
         }
 
     });
 };
 
 function building_month_persons_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Building_Month_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+            models.Building_Month_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_persons) {
                 if (building_persons != null) {
                     res.status(200).send(building_persons);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");
@@ -1246,19 +1161,17 @@ function building_month_persons_get(req, res) {
 
 function building_year_persons_add(req, res) {
     console.log('[Area API] Add Building Year Persons.');
-    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function(err, User) {
 
         if (User === null) {
             console.log("Invalid session");
             res.status(403).json("Invalid session")
-        }
-        else {
-            models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+        } else {
+            models.Building.findOne({ Name: req.body.building_name }, function(err, building) {
                 if (building == null) {
                     console.log("Building does not exist");
                     res.status(503).json("Building does not exist")
-                }
-                else {
+                } else {
                     var newRecord = new models.Building_Year_Persons({
                         Building_ID: building._id,
                         Value: req.body.value,
@@ -1266,7 +1179,7 @@ function building_year_persons_add(req, res) {
                     });
                     console.log(newRecord);
 
-                    newRecord.save(function (err) {
+                    newRecord.save(function(err) {
                         if (err) {
                             console.error("Error on saving new record");
                             console.error(err); // log error to Terminal
@@ -1282,32 +1195,28 @@ function building_year_persons_add(req, res) {
 
                     });
                 }
-            }
-            );
+            });
         }
     });
 };
 
 function building_year_persons_get(req, res) {
-    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name.value }, function(err, building) {
         if (building == null) {
             console.log("Building does not exist");
             res.status(503).json("Building does not exist")
-        }
-        else {
+        } else {
             //ano primeiro, de seguida mes e depois dia
             if (req.swagger.params.date.value == null) {
                 date_search = "1980/01/01";
-            }
-            else {
+            } else {
                 date_search = req.swagger.params.date.value;
             }
-            models.Building_Year_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, building_persons) {
+            models.Building_Year_Persons.find({ Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function(err, building_persons) {
                 if (building_persons != null) {
                     res.status(200).send(building_persons);
 
-                }
-                else {
+                } else {
                     if (err) {
                         console.log("DB error");
                         res.status(500).json("DB Error");

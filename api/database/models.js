@@ -84,7 +84,13 @@ var Building = mongoose.model('building', {
     Inhabitants: String,
     Monument: String,
     Id_2D: String,
-    Id_3D: String
+    Id_3D: String,
+    app_occupation: String,
+    app_waitingtime: String,
+    app_temperature: String,
+    app_visittime: String,
+    app_co2: String
+
 });
 
 var Zone = mongoose.model('zone', {
@@ -412,6 +418,8 @@ var Vehicle_Affluence = mongoose.model('vehicle_affluence', {
     Flow_Cars: String,
     Date: String
 });
+
+
 
 module.exports.State = State;
 module.exports.SystemError = SystemError;
