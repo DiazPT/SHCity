@@ -2928,6 +2928,8 @@ definitions:
           type : string
         token:
           type : string
+        id_node:
+          type : string  
         mobile_node_name:
           type : string
         description:
