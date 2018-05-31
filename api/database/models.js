@@ -367,6 +367,7 @@ var Mobile_Node = mongoose.model('mobile_node', {
     ID_node: String,
     Name: String,
     Description: String,
+    Type_Sensor: String,
     Location: String,
     Building_ID: String,
     Building_ID_2D: String,

@@ -80,6 +80,8 @@ function mobile_node_add(req, res) {
                                         if (node == null) {
                                             var newRecord = new models.Mobile_Node({
                                                 Name: req.body.mobile_node_name,
+                                                Type_Sensor: req.body.type_sensor,
+                                                ID_node: req.body.id_node,
                                                 Area_ID: area._id,
                                                 Zone_ID: zone._id,
                                                 Description: req.body.description,

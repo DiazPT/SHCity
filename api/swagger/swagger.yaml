@@ -2929,7 +2929,9 @@ definitions:
         token:
           type : string
         id_node:
-          type : string  
+          type : string
+        type_sensor:
+          type : string    
         mobile_node_name:
           type : string
         description:
