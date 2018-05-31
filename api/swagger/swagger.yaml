@@ -2940,6 +2940,10 @@ definitions:
           type : string
         building_name:
           type : string
+        building_id_2d:
+          type : string
+        building_id_3d:
+          type : string    
         zone_name:
           type : string      
   Mobile_node_month:

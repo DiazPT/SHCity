@@ -42,6 +42,7 @@ function mobile_node_add(req, res) {
                                 if (node == null) {
                                     var newRecord = new models.Mobile_Node({
                                         Name: req.body.mobile_node_name,
+                                        ID_node: req.body.id_node,
                                         Area_ID: area._id,
                                         Description: req.body.description,
                                         Location: req.body.location,
@@ -126,6 +127,8 @@ function mobile_node_add(req, res) {
                                         var newRecord = new models.Mobile_Node({
                                             Name: req.body.mobile_node_name,
                                             Building_ID: building._id,
+                                            Building_ID_2D: req.body.building_id_2d,
+                                            Building_ID_3D: req.body.building_id_3d,
                                             Description: req.body.description,
                                             Location: req.body.location,
                                         });

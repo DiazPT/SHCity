@@ -364,12 +364,15 @@ MOBILE NODES
 
 /* MongoDB Mobile_Node' model */
 var Mobile_Node = mongoose.model('mobile_node', {
+    ID_node: String,
     Name: String,
     Description: String,
     Location: String,
     Building_ID: String,
+    Building_ID_2D: String,
+    Building_ID_3D: String,
     Area_ID: String,
-    Zone_ID: String
+    Zone_ID: String,
 });
 
 /* MongoDB Data_Type' model */
