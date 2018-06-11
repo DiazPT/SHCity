@@ -2956,7 +2956,7 @@ definitions:
           type : string
         token:
           type : string
-        mobile_node_name:
+        id_node:
           type : string
         data_type:
           type : string 
@@ -2972,7 +2972,7 @@ definitions:
           type : string
         token:
           type : string
-        mobile_node_name:
+        id_node:
           type : string
         data_type:
           type : string 
@@ -2986,7 +2986,7 @@ definitions:
           type : string
         token:
           type : string
-        mobile_node_name:
+        id_node:
           type : string
         data_type:
           type : string 

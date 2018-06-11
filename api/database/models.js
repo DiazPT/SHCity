@@ -386,6 +386,7 @@ var Data_Type = mongoose.model('data_type', {
 /* MongoDB Data_Regist_Mobile_Month' model */
 var Data_Regist_Mobile_Month = mongoose.model('data_regist_mobile_month', {
     Data_Type_ID: String,
+    Mobile_Node_ID_internal: String,
     Mobile_Node_ID: String,
     Value: String,
     Month: String,
@@ -395,6 +396,7 @@ var Data_Regist_Mobile_Month = mongoose.model('data_regist_mobile_month', {
 /* MongoDB Data_Regist_Mobile_Year' model */
 var Data_Regist_Mobile_Year = mongoose.model('data_regist_mobile_year', {
     Data_Type_ID: String,
+    Mobile_Node_ID_internal: String,
     Mobile_Node_ID: String,
     Value: String,
     Year: String
@@ -402,6 +404,7 @@ var Data_Regist_Mobile_Year = mongoose.model('data_regist_mobile_year', {
 
 var Data_Regist_Mobile = mongoose.model('data_regist_mobile', {
     Data_Type_ID: String,
+    Mobile_Node_ID_internal: String,
     Mobile_Node_ID: String,
     Value: String,
     Date: String

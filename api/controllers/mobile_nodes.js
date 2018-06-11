@@ -258,7 +258,7 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
             res.status(403).json("Invalid session");
         }
         else {
-            models.Mobile_Node.findOne({ Name: req.body.mobile_node_name }, function (err, mobile_node) {
+            models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, mobile_node) {
                 if (mobile_node == null) {
                     console.log("Mobile Node does not exist");
                     res.status(503).json("Mobile Node does not exist")
@@ -275,7 +275,8 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
                         else {
                             var newRecord = new models.Data_Regist_Mobile_Month({
                                 Data_Type_ID: data_type._id,
-                                Mobile_Node_ID: mobile_node._id,
+                                Mobile_Node_ID_internal: mobile_node._id,
+                                Mobile_Node_ID: req.body.id_node,
                                 Value: req.body.value,
                                 Month: req.body.month,
                                 Year: req.body.year
@@ -306,7 +307,7 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_month_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value }, function (err, node) {
+    models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, node) {
         if (gate == null) {
             console.log("Node does not exist");
             res.status(503).json("Node does not exist")
@@ -347,7 +348,7 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
             res.status(403).json("Invalid session");
         }
         else {
-            models.Mobile_Node.findOne({ Name: req.body.mobile_node_name }, function (err, mobile_node) {
+            models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, mobile_node) {
                 if (mobile_node == null) {
                     console.log("Mobile Node does not exist");
                     res.status(503).json("Mobile Node does not exist")
@@ -364,7 +365,8 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
                         else {
                             var newRecord = new models.Data_Regist_Mobile_Year({
                                 Data_Type_ID: data_type._id,
-                                Mobile_Node_ID: mobile_node._id,
+                                Mobile_Node_ID_internal: mobile_node._id,
+                                Mobile_Node_ID: req.body.id_node,
                                 Value: req.body.value,
                                 Year: req.body.year
                             });
@@ -394,7 +396,7 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_year_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value }, function (err, node) {
+    models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, node) {
         if (gate == null) {
             console.log("Node does not exist");
             res.status(503).json("Node does not exist")
@@ -435,7 +437,7 @@ function mobile_node_data_regist_mobile_add(req, res) {
             res.status(403).json("Invalid session")
         }
         else {
-            models.Mobile_Node.findOne({ Name: req.body.mobile_node_name }, function (err, mobile_node) {
+            models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, mobile_node) {
                 if (mobile_node == null) {
                     console.log("Mobile Node does not exist");
                     res.status(503).json("Mobile Node does not exist")
@@ -452,7 +454,8 @@ function mobile_node_data_regist_mobile_add(req, res) {
                         else {
                             var newRecord = new models.Data_Regist_Mobile({
                                 Data_Type_ID: data_type._id,
-                                Mobile_Node_ID: mobile_node._id,
+                                Mobile_Node_ID_internal: mobile_node._id,
+                                Mobile_Node_ID: req.body.id_node,
                                 Value: req.body.value,
                                 Date: req.body.date
                             });
@@ -482,7 +485,7 @@ function mobile_node_data_regist_mobile_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_get(req, res) {
-    models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value }, function (err, node) {
+    models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, node) {
         if (node == null) {
             console.log("Node does not exist");
             res.status(503).json("Node does not exist")
