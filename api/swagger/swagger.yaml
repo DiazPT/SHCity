@@ -2541,6 +2541,10 @@ definitions:
           type : string
         location:
           type : string
+        latitude:
+          type : string
+        longitude:
+          type : string    
         street:
           type : string
         number:

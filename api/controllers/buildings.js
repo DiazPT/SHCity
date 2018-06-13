@@ -55,6 +55,8 @@ function building_add(req, res) {
                         Description: req.body.description,
                         Date_Build: req.body.date_build,
                         Location: req.body.location,
+                        Latitude: req.body.latitude,
+                        Longitude: req.body.longitude,
                         Visiting_Time: req.body.visiting_time,
                         Id_2D: req.body.id_2d,
                         Id_3D: req.body.id_3d,

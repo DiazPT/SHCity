@@ -68,6 +68,8 @@ var Building = mongoose.model('building', {
     Description: String,
     Date_Build: String,
     Location: String,
+    Latitude: String,
+    Longitude: String,
     Street: String,
     Number: String,
     City: String,
