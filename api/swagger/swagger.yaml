@@ -640,6 +640,32 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /buildings/update:
+    x-swagger-router-controller: buildings
+    post:
+      summary: Update a new Building.
+      tags:
+              - buildings
+      consumes:
+        - application/json
+      operationId: building_update
+      parameters:
+        - in: body
+          name: Building
+          description: The Building to update.
+          schema:
+            $ref: "#/definitions/Building"
+          required: true
+      responses:
+        201:
+          description: Update
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"          
   /buildings/building_energy_month_add:
     x-swagger-router-controller: buildings
     post:
@@ -1138,7 +1164,41 @@ paths:
           204:
             description: No content
             schema:
-              $ref: "#/definitions/HelloWorldResponse" 
+              $ref: "#/definitions/HelloWorldResponse"
+  /buildings/building_daily_regist:
+      x-swagger-router-controller: buildings
+      get:
+        summary: Get data from a Building in a specific date.
+        tags:
+                - buildings
+        consumes:
+          - application/json
+        operationId: building_daily_regist
+        parameters:
+                - in: query
+                  name: building_name
+                  description: The building to receive the data.
+                  required: true
+                  type: string
+                - in: query
+                  name: date
+                  description: Date to receive the data.
+                  required: true
+                  type: string
+        responses:
+          200:
+            description: Success
+            schema:
+              # a pointer to a definition
+              $ref: "#/definitions/HelloWorldResponse"
+          500:
+            description: Error
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"
+          204:
+            description: No content
+            schema:
+              $ref: "#/definitions/HelloWorldResponse"             
   /buildings/building_energy_month_get:
       x-swagger-router-controller: buildings
       get:
@@ -2018,10 +2078,25 @@ paths:
         operationId: mobile_node_data_regist_mobile_month_get
         parameters:
                 - in: query
-                  name: node_name
+                  name: id_node
                   description: Node to search.
                   required: true
-                  type: string      
+                  type: string
+                - in: query
+                  name: building_id_2d
+                  description: Building to search.
+                  required: true
+                  type: string
+                - in: query
+                  name: building_id_3d
+                  description: Building to search.
+                  required: true
+                  type: string
+                - in: query
+                  name: area_name
+                  description: Area to search.
+                  required: true
+                  type: string             
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
@@ -2575,6 +2650,16 @@ definitions:
           type : string                    
         visiting_time:
           type : string
+        app_occupation: 
+          type : string
+        app_waitingtime: 
+          type : string
+        app_temperature:
+          type : string
+        app_visittime:
+          type : string
+        app_co2:
+          type : string
 
   Building_energy_month:
     properties:
@@ -2962,6 +3047,12 @@ definitions:
           type : string
         id_node:
           type : string
+        building_id_2d:
+          type : string
+        building_id_3d:
+          type : string
+        area_name:
+          type : string   
         data_type:
           type : string 
         value:
@@ -2978,6 +3069,12 @@ definitions:
           type : string
         id_node:
           type : string
+        building_id_2d:
+          type : string
+        building_id_3d:
+          type : string
+        area_name:
+          type : string   
         data_type:
           type : string 
         value:
@@ -2992,6 +3089,12 @@ definitions:
           type : string
         id_node:
           type : string
+        building_id_2d:
+          type : string
+        building_id_3d:
+          type : string
+        area_name:
+          type : string      
         data_type:
           type : string 
         value:

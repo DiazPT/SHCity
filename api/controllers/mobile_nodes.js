@@ -231,6 +231,9 @@ function objectIdWithTimestamp(timestamp) {
     return constructedObjectId
 }
 
+
+
+
 function mobile_node_get(req, res) {
     models.Mobile_Node.find(function (err, nodes) {
         if (nodes != null) {
@@ -258,85 +261,262 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
             res.status(403).json("Invalid session");
         }
         else {
-            models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, mobile_node) {
-                if (mobile_node == null) {
-                    console.log("Mobile Node does not exist");
-                    res.status(503).json("Mobile Node does not exist")
-                }
-                else {
-
-
-                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
-                        if (data_type == null) {
-                            console.log("Data Type does not exist");
-                            res.status(503).json("Data Type does not exist")
+            if (req.body.building_id_2d != null) {
+                models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_2D: req.body.building_id_2d }, function (err, mobile_node) {
+                    if (mobile_node == null) {
+                        console.log("Mobile Node does not exist");
+                        res.status(503).json("Mobile Node does not exist")
+                    }
+                    else {
+    
+    
+                        models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                            if (data_type == null) {
+                                console.log("Data Type does not exist");
+                                res.status(503).json("Data Type does not exist")
+                            }
+    
+                            else {
+                                var newRecord = new models.Data_Regist_Mobile_Month({
+                                    Data_Type_ID: data_type._id,
+                                    Mobile_Node_ID_internal: mobile_node._id,
+                                    Mobile_Node_ID: req.body.id_node,
+                                    Value: req.body.value,
+                                    Date: req.body.date
+                                });
+                                console.log(newRecord);
+    
+                                newRecord.save(function (err) {
+                                    if (err) {
+                                        console.error("Error on saving new record");
+                                        console.error(err); // log error to Terminal
+    
+    
+                                    } else {
+                                        console.log("Created a new record!");
+                                        //recordCreated(newRecord);
+                                        res.json({
+                                            message: 'Object created'
+                                        })
+                                    }
+                                });
+                            }
+                        });
+                    }
+    
+                });
+            }
+            else {
+                if (req.body.building_id_3d != null) {
+                    models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_3D: req.body.building_id_3d }, function (err, mobile_node) {
+                        if (mobile_node == null) {
+                            console.log("Mobile Node does not exist");
+                            res.status(503).json("Mobile Node does not exist")
                         }
-
                         else {
-                            var newRecord = new models.Data_Regist_Mobile_Month({
-                                Data_Type_ID: data_type._id,
-                                Mobile_Node_ID_internal: mobile_node._id,
-                                Mobile_Node_ID: req.body.id_node,
-                                Value: req.body.value,
-                                Month: req.body.month,
-                                Year: req.body.year
-                            });
-                            console.log(newRecord);
-
-                            newRecord.save(function (err) {
-                                if (err) {
-                                    console.error("Error on saving new record");
-                                    console.error(err); // log error to Terminal
-
-
-                                } else {
-                                    console.log("Created a new record!");
-                                    //recordCreated(newRecord);
-                                    res.json({
-                                        message: 'Object created'
-                                    })
+        
+        
+                            models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                                if (data_type == null) {
+                                    console.log("Data Type does not exist");
+                                    res.status(503).json("Data Type does not exist")
+                                }
+        
+                                else {
+                                    var newRecord = new models.Data_Regist_Mobile_Month({
+                                        Data_Type_ID: data_type._id,
+                                        Mobile_Node_ID_internal: mobile_node._id,
+                                        Mobile_Node_ID: req.body.id_node,
+                                        Value: req.body.value,
+                                        Date: req.body.date
+                                    });
+                                    console.log(newRecord);
+        
+                                    newRecord.save(function (err) {
+                                        if (err) {
+                                            console.error("Error on saving new record");
+                                            console.error(err); // log error to Terminal
+        
+        
+                                        } else {
+                                            console.log("Created a new record!");
+                                            //recordCreated(newRecord);
+                                            res.json({
+                                                message: 'Object created'
+                                            })
+                                        }
+                                    });
                                 }
                             });
                         }
+        
                     });
                 }
+                else {
+                    if (req.body.area_name != null) {
+                        models.Area.findOne({ Area_Name: req.body.area_name }, function (err, area) {
+                            models.Mobile_Node.findOne({ ID_node: req.body.id_node, Area_ID: area._id }, function (err, mobile_node) {
+                                if (mobile_node == null) {
+                                    console.log("Mobile Node does not exist");
+                                    res.status(503).json("Mobile Node does not exist")
+                                }
+                                else {
+                
+                
+                                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                                        if (data_type == null) {
+                                            console.log("Data Type does not exist");
+                                            res.status(503).json("Data Type does not exist")
+                                        }
+                
+                                        else {
+                                            var newRecord = new models.Data_Regist_Mobile_Month({
+                                                Data_Type_ID: data_type._id,
+                                                Mobile_Node_ID_internal: mobile_node._id,
+                                                Mobile_Node_ID: req.body.id_node,
+                                                Value: req.body.value,
+                                                Date: req.body.date
+                                            });
+                                            console.log(newRecord);
+                
+                                            newRecord.save(function (err) {
+                                                if (err) {
+                                                    console.error("Error on saving new record");
+                                                    console.error(err); // log error to Terminal
+                
+                
+                                                } else {
+                                                    console.log("Created a new record!");
+                                                    //recordCreated(newRecord);
+                                                    res.json({
+                                                        message: 'Object created'
+                                                    })
+                                                }
+                                            });
+                                        }
+                                    });
+                                }
+                
+                            });
+                        });
+                    }
+                    else {
+
+                    }
+                }
             }
-            );
+
+
+            
         }
     });
 };
 
 function mobile_node_data_regist_mobile_month_get(req, res) {
-    models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, node) {
-        if (gate == null) {
-            console.log("Node does not exist");
-            res.status(503).json("Node does not exist")
-        }
-        else {
-            //ano primeiro, de seguida mes e depois dia
-            if (req.swagger.params.date.value == null) {
-                date_search = "1980/01/01";
+    if (req.swagger.params.building_id_2d.value != null) {
+        models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
+            if (node == null) {
+                console.log("Node does not exist");
+                res.status(503).json("Node does not exist")
             }
             else {
-                date_search = req.swagger.params.date.value;
-            }
-            models.Data_Regist_Mobile_Month.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
-                if (data_event != null) {
-                    res.status(200).send(data_event);
-
+                //ano primeiro, de seguida mes e depois dia
+                if (req.swagger.params.date.value == null) {
+                    date_search = "1980/01/01";
                 }
                 else {
-                    if (err) {
-                        console.log("DB error");
-                        res.status(500).json("DB Error");
-                    } else {
-                        console.log("No content");
-                        res.status(204).json("No content");
+                    date_search = req.swagger.params.date.value;
+                }
+                models.Data_Regist_Mobile_Month.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                    if (data_event != null) {
+                        res.status(200).send(data_event);
+
                     }
+                    else {
+                        if (err) {
+                            console.log("DB error");
+                            res.status(500).json("DB Error");
+                        } else {
+                            console.log("No content");
+                            res.status(204).json("No content");
+                        }
+                    }
+                });
+            }
+        });
+    } else {
+        if (req.swagger.params.building_id_3d.value != null) {
+            models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
+                if (node == null) {
+                    console.log("Node does not exist");
+                    res.status(503).json("Node does not exist")
+                }
+                else {
+                    //ano primeiro, de seguida mes e depois dia
+                    if (req.swagger.params.date.value == null) {
+                        date_search = "1980/01/01";
+                    }
+                    else {
+                        date_search = req.swagger.params.date.value;
+                    }
+                    models.Data_Regist_Mobile_Month.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                        if (data_event != null) {
+                            res.status(200).send(data_event);
+
+                        }
+                        else {
+                            if (err) {
+                                console.log("DB error");
+                                res.status(500).json("DB Error");
+                            } else {
+                                console.log("No content");
+                                res.status(204).json("No content");
+                            }
+                        }
+                    });
                 }
             });
+        } else {
+            if (req.swagger.params.area_name.value != null) {
+                models.Area.findOne({ Area_Name: req.swagger.params.area_name }, function (err, area) {
+                    models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Area_ID: area._id }, function (err, node) {
+                        if (node == null) {
+                            console.log("Node does not exist");
+                            res.status(503).json("Node does not exist")
+                        }
+                        else {
+                            //ano primeiro, de seguida mes e depois dia
+                            if (req.swagger.params.date.value == null) {
+                                date_search = "1980/01/01";
+                            }
+                            else {
+                                date_search = req.swagger.params.date.value;
+                            }
+                            models.Data_Regist_Mobile_Month.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                                if (data_event != null) {
+                                    res.status(200).send(data_event);
+
+                                }
+                                else {
+                                    if (err) {
+                                        console.log("DB error");
+                                        res.status(500).json("DB Error");
+                                    } else {
+                                        console.log("No content");
+                                        res.status(204).json("No content");
+                                    }
+                                }
+                            });
+                        }
+                    });
+                });
+
+            } else {
+                console.log("Request error");
+                res.status(500).json("Request error");
+            }
         }
-    });
+    }
 };
 
 function mobile_node_data_regist_mobile_year_add(req, res) {
@@ -348,88 +528,266 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
             res.status(403).json("Invalid session");
         }
         else {
-            models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, mobile_node) {
-                if (mobile_node == null) {
-                    console.log("Mobile Node does not exist");
-                    res.status(503).json("Mobile Node does not exist")
-                }
-                else {
-
-
-                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
-                        if (data_type == null) {
-                            console.log("Data Type does not exist");
-                            res.status(503).json("Data Type does not exist")
+            if (req.body.building_id_2d != null) {
+                models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_2D: req.body.building_id_2d }, function (err, mobile_node) {
+                    if (mobile_node == null) {
+                        console.log("Mobile Node does not exist");
+                        res.status(503).json("Mobile Node does not exist")
+                    }
+                    else {
+    
+    
+                        models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                            if (data_type == null) {
+                                console.log("Data Type does not exist");
+                                res.status(503).json("Data Type does not exist")
+                            }
+    
+                            else {
+                                var newRecord = new models.Data_Regist_Mobile_Year({
+                                    Data_Type_ID: data_type._id,
+                                    Mobile_Node_ID_internal: mobile_node._id,
+                                    Mobile_Node_ID: req.body.id_node,
+                                    Value: req.body.value,
+                                    Date: req.body.date
+                                });
+                                console.log(newRecord);
+    
+                                newRecord.save(function (err) {
+                                    if (err) {
+                                        console.error("Error on saving new record");
+                                        console.error(err); // log error to Terminal
+    
+    
+                                    } else {
+                                        console.log("Created a new record!");
+                                        //recordCreated(newRecord);
+                                        res.json({
+                                            message: 'Object created'
+                                        })
+                                    }
+                                });
+                            }
+                        });
+                    }
+    
+                });
+            }
+            else {
+                if (req.body.building_id_3d != null) {
+                    models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_3D: req.body.building_id_3d }, function (err, mobile_node) {
+                        if (mobile_node == null) {
+                            console.log("Mobile Node does not exist");
+                            res.status(503).json("Mobile Node does not exist")
                         }
-
                         else {
-                            var newRecord = new models.Data_Regist_Mobile_Year({
-                                Data_Type_ID: data_type._id,
-                                Mobile_Node_ID_internal: mobile_node._id,
-                                Mobile_Node_ID: req.body.id_node,
-                                Value: req.body.value,
-                                Year: req.body.year
-                            });
-                            console.log(newRecord);
-
-                            newRecord.save(function (err) {
-                                if (err) {
-                                    console.error("Error on saving new record");
-                                    console.error(err); // log error to Terminal
-
-
-                                } else {
-                                    console.log("Created a new record!");
-                                    //recordCreated(newRecord);
-                                    res.json({
-                                        message: 'Object created'
-                                    })
+        
+        
+                            models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                                if (data_type == null) {
+                                    console.log("Data Type does not exist");
+                                    res.status(503).json("Data Type does not exist")
+                                }
+        
+                                else {
+                                    var newRecord = new models.Data_Regist_Mobile_Year({
+                                        Data_Type_ID: data_type._id,
+                                        Mobile_Node_ID_internal: mobile_node._id,
+                                        Mobile_Node_ID: req.body.id_node,
+                                        Value: req.body.value,
+                                        Date: req.body.date
+                                    });
+                                    console.log(newRecord);
+        
+                                    newRecord.save(function (err) {
+                                        if (err) {
+                                            console.error("Error on saving new record");
+                                            console.error(err); // log error to Terminal
+        
+        
+                                        } else {
+                                            console.log("Created a new record!");
+                                            //recordCreated(newRecord);
+                                            res.json({
+                                                message: 'Object created'
+                                            })
+                                        }
+                                    });
                                 }
                             });
                         }
+        
                     });
                 }
+                else {
+                    if (req.body.area_name != null) {
+                        models.Area.findOne({ Area_Name: req.body.area_name }, function (err, area) {
+                            models.Mobile_Node.findOne({ ID_node: req.body.id_node, Area_ID: area._id }, function (err, mobile_node) {
+                                if (mobile_node == null) {
+                                    console.log("Mobile Node does not exist");
+                                    res.status(503).json("Mobile Node does not exist")
+                                }
+                                else {
+                
+                
+                                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                                        if (data_type == null) {
+                                            console.log("Data Type does not exist");
+                                            res.status(503).json("Data Type does not exist")
+                                        }
+                
+                                        else {
+                                            var newRecord = new models.Data_Regist_Mobile_Year({
+                                                Data_Type_ID: data_type._id,
+                                                Mobile_Node_ID_internal: mobile_node._id,
+                                                Mobile_Node_ID: req.body.id_node,
+                                                Value: req.body.value,
+                                                Date: req.body.date
+                                            });
+                                            console.log(newRecord);
+                
+                                            newRecord.save(function (err) {
+                                                if (err) {
+                                                    console.error("Error on saving new record");
+                                                    console.error(err); // log error to Terminal
+                
+                
+                                                } else {
+                                                    console.log("Created a new record!");
+                                                    //recordCreated(newRecord);
+                                                    res.json({
+                                                        message: 'Object created'
+                                                    })
+                                                }
+                                            });
+                                        }
+                                    });
+                                }
+                
+                            });
+                        });
+                    }
+                    else {
+
+                    }
+                }
             }
-            );
+
+
+            
         }
     });
 };
 
 function mobile_node_data_regist_mobile_year_get(req, res) {
-    models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, node) {
-        if (gate == null) {
-            console.log("Node does not exist");
-            res.status(503).json("Node does not exist")
-        }
-        else {
-            //ano primeiro, de seguida mes e depois dia
-            if (req.swagger.params.date.value == null) {
-                date_search = "1980/01/01";
+    if (req.swagger.params.building_id_2d.value != null) {
+        models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
+            if (node == null) {
+                console.log("Node does not exist");
+                res.status(503).json("Node does not exist")
             }
             else {
-                date_search = req.swagger.params.date.value;
-            }
-            models.Data_Regist_Mobile_Year.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
-                if (data_event != null) {
-                    res.status(200).send(data_event);
-
+                //ano primeiro, de seguida mes e depois dia
+                if (req.swagger.params.date.value == null) {
+                    date_search = "1980/01/01";
                 }
                 else {
-                    if (err) {
-                        console.log("DB error");
-                        res.status(500).json("DB Error");
-                    } else {
-                        console.log("No content");
-                        res.status(204).json("No content");
+                    date_search = req.swagger.params.date.value;
+                }
+                models.Data_Regist_Mobile_Year.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                    if (data_event != null) {
+                        res.status(200).send(data_event);
+
                     }
+                    else {
+                        if (err) {
+                            console.log("DB error");
+                            res.status(500).json("DB Error");
+                        } else {
+                            console.log("No content");
+                            res.status(204).json("No content");
+                        }
+                    }
+                });
+            }
+        });
+    } else {
+        if (req.swagger.params.building_id_3d.value != null) {
+            models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
+                if (node == null) {
+                    console.log("Node does not exist");
+                    res.status(503).json("Node does not exist")
+                }
+                else {
+                    //ano primeiro, de seguida mes e depois dia
+                    if (req.swagger.params.date.value == null) {
+                        date_search = "1980/01/01";
+                    }
+                    else {
+                        date_search = req.swagger.params.date.value;
+                    }
+                    models.Data_Regist_Mobile_Year.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                        if (data_event != null) {
+                            res.status(200).send(data_event);
+
+                        }
+                        else {
+                            if (err) {
+                                console.log("DB error");
+                                res.status(500).json("DB Error");
+                            } else {
+                                console.log("No content");
+                                res.status(204).json("No content");
+                            }
+                        }
+                    });
                 }
             });
+        } else {
+            if (req.swagger.params.area_name.value != null) {
+                models.Area.findOne({ Area_Name: req.swagger.params.area_name }, function (err, area) {
+                    models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Area_ID: area._id }, function (err, node) {
+                        if (node == null) {
+                            console.log("Node does not exist");
+                            res.status(503).json("Node does not exist")
+                        }
+                        else {
+                            //ano primeiro, de seguida mes e depois dia
+                            if (req.swagger.params.date.value == null) {
+                                date_search = "1980/01/01";
+                            }
+                            else {
+                                date_search = req.swagger.params.date.value;
+                            }
+                            models.Data_Regist_Mobile_Year.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                                if (data_event != null) {
+                                    res.status(200).send(data_event);
+
+                                }
+                                else {
+                                    if (err) {
+                                        console.log("DB error");
+                                        res.status(500).json("DB Error");
+                                    } else {
+                                        console.log("No content");
+                                        res.status(204).json("No content");
+                                    }
+                                }
+                            });
+                        }
+                    });
+                });
+
+            } else {
+                console.log("Request error");
+                res.status(500).json("Request error");
+            }
         }
-    });
+    }
 };
 
 function mobile_node_data_regist_mobile_add(req, res) {
-    console.log('[Mobile Node API] Add Data Year.');
+    console.log('[Mobile Node API] Add Data.');
     models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
 
         if (User === null) {
@@ -437,82 +795,262 @@ function mobile_node_data_regist_mobile_add(req, res) {
             res.status(403).json("Invalid session")
         }
         else {
-            models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, mobile_node) {
-                if (mobile_node == null) {
-                    console.log("Mobile Node does not exist");
-                    res.status(503).json("Mobile Node does not exist")
-                }
-                else {
-
-
-                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
-                        if (data_type == null) {
-                            console.log("Data Type does not exist");
-                            res.status(503).json("Data Type does not exist")
+            if (req.body.building_id_2d != null) {
+                models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_2D: req.body.building_id_2d }, function (err, mobile_node) {
+                    if (mobile_node == null) {
+                        console.log("Mobile Node does not exist");
+                        res.status(503).json("Mobile Node does not exist")
+                    }
+                    else {
+    
+    
+                        models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                            if (data_type == null) {
+                                console.log("Data Type does not exist");
+                                res.status(503).json("Data Type does not exist")
+                            }
+    
+                            else {
+                                var newRecord = new models.Data_Regist_Mobile({
+                                    Data_Type_ID: data_type._id,
+                                    Mobile_Node_ID_internal: mobile_node._id,
+                                    Mobile_Node_ID: req.body.id_node,
+                                    Value: req.body.value,
+                                    Date: req.body.date
+                                });
+                                console.log(newRecord);
+    
+                                newRecord.save(function (err) {
+                                    if (err) {
+                                        console.error("Error on saving new record");
+                                        console.error(err); // log error to Terminal
+    
+    
+                                    } else {
+                                        console.log("Created a new record!");
+                                        //recordCreated(newRecord);
+                                        res.json({
+                                            message: 'Object created'
+                                        })
+                                    }
+                                });
+                            }
+                        });
+                    }
+    
+                });
+            }
+            else {
+                if (req.body.building_id_3d != null) {
+                    models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_3D: req.body.building_id_3d }, function (err, mobile_node) {
+                        if (mobile_node == null) {
+                            console.log("Mobile Node does not exist");
+                            res.status(503).json("Mobile Node does not exist")
                         }
-
                         else {
-                            var newRecord = new models.Data_Regist_Mobile({
-                                Data_Type_ID: data_type._id,
-                                Mobile_Node_ID_internal: mobile_node._id,
-                                Mobile_Node_ID: req.body.id_node,
-                                Value: req.body.value,
-                                Date: req.body.date
-                            });
-                            console.log(newRecord);
-
-                            newRecord.save(function (err) {
-                                if (err) {
-                                    console.error("Error on saving new record");
-                                    console.error(err); // log error to Terminal
-
-
-                                } else {
-                                    console.log("Created a new record!");
-                                    //recordCreated(newRecord);
-                                    res.json({
-                                        message: 'Object created'
-                                    })
+        
+        
+                            models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                                if (data_type == null) {
+                                    console.log("Data Type does not exist");
+                                    res.status(503).json("Data Type does not exist")
+                                }
+        
+                                else {
+                                    var newRecord = new models.Data_Regist_Mobile({
+                                        Data_Type_ID: data_type._id,
+                                        Mobile_Node_ID_internal: mobile_node._id,
+                                        Mobile_Node_ID: req.body.id_node,
+                                        Value: req.body.value,
+                                        Date: req.body.date
+                                    });
+                                    console.log(newRecord);
+        
+                                    newRecord.save(function (err) {
+                                        if (err) {
+                                            console.error("Error on saving new record");
+                                            console.error(err); // log error to Terminal
+        
+        
+                                        } else {
+                                            console.log("Created a new record!");
+                                            //recordCreated(newRecord);
+                                            res.json({
+                                                message: 'Object created'
+                                            })
+                                        }
+                                    });
                                 }
                             });
                         }
+        
                     });
                 }
+                else {
+                    if (req.body.area_name != null) {
+                        models.Area.findOne({ Area_Name: req.body.area_name }, function (err, area) {
+                            models.Mobile_Node.findOne({ ID_node: req.body.id_node, Area_ID: area._id }, function (err, mobile_node) {
+                                if (mobile_node == null) {
+                                    console.log("Mobile Node does not exist");
+                                    res.status(503).json("Mobile Node does not exist")
+                                }
+                                else {
+                
+                
+                                    models.Data_Type.findOne({ Name: req.body.data_type }, function (err, data_type) {
+                                        if (data_type == null) {
+                                            console.log("Data Type does not exist");
+                                            res.status(503).json("Data Type does not exist")
+                                        }
+                
+                                        else {
+                                            var newRecord = new models.Data_Regist_Mobile({
+                                                Data_Type_ID: data_type._id,
+                                                Mobile_Node_ID_internal: mobile_node._id,
+                                                Mobile_Node_ID: req.body.id_node,
+                                                Value: req.body.value,
+                                                Date: req.body.date
+                                            });
+                                            console.log(newRecord);
+                
+                                            newRecord.save(function (err) {
+                                                if (err) {
+                                                    console.error("Error on saving new record");
+                                                    console.error(err); // log error to Terminal
+                
+                
+                                                } else {
+                                                    console.log("Created a new record!");
+                                                    //recordCreated(newRecord);
+                                                    res.json({
+                                                        message: 'Object created'
+                                                    })
+                                                }
+                                            });
+                                        }
+                                    });
+                                }
+                
+                            });
+                        });
+                    }
+                    else {
+
+                    }
+                }
             }
-            );
+
+
+            
         }
     });
 };
 
 function mobile_node_data_regist_mobile_get(req, res) {
-    models.Mobile_Node.findOne({ ID_node: req.body.id_node }, function (err, node) {
-        if (node == null) {
-            console.log("Node does not exist");
-            res.status(503).json("Node does not exist")
-        }
-        else {
-            //ano primeiro, de seguida mes e depois dia
-            if (req.swagger.params.date.value == null) {
-                date_search = "1980/01/01";
+    if (req.swagger.params.building_id_2d.value != null) {
+        models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
+            if (node == null) {
+                console.log("Node does not exist");
+                res.status(503).json("Node does not exist")
             }
             else {
-                date_search = req.swagger.params.date.value;
-            }
-            models.Data_Regist_Mobile.find({ Mobile_Node_ID: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
-                if (data_event != null) {
-                    res.status(200).send(data_event);
-
+                //ano primeiro, de seguida mes e depois dia
+                if (req.swagger.params.date.value == null) {
+                    date_search = "1980/01/01";
                 }
                 else {
-                    if (err) {
-                        console.log("DB error");
-                        res.status(500).json("DB Error");
-                    } else {
-                        console.log("No content");
-                        res.status(204).json("No content");
+                    date_search = req.swagger.params.date.value;
+                }
+                models.Data_Regist_Mobile.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                    if (data_event != null) {
+                        res.status(200).send(data_event);
+
                     }
+                    else {
+                        if (err) {
+                            console.log("DB error");
+                            res.status(500).json("DB Error");
+                        } else {
+                            console.log("No content");
+                            res.status(204).json("No content");
+                        }
+                    }
+                });
+            }
+        });
+    } else {
+        if (req.swagger.params.building_id_3d.value != null) {
+            models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
+                if (node == null) {
+                    console.log("Node does not exist");
+                    res.status(503).json("Node does not exist")
+                }
+                else {
+                    //ano primeiro, de seguida mes e depois dia
+                    if (req.swagger.params.date.value == null) {
+                        date_search = "1980/01/01";
+                    }
+                    else {
+                        date_search = req.swagger.params.date.value;
+                    }
+                    models.Data_Regist_Mobile.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                        if (data_event != null) {
+                            res.status(200).send(data_event);
+
+                        }
+                        else {
+                            if (err) {
+                                console.log("DB error");
+                                res.status(500).json("DB Error");
+                            } else {
+                                console.log("No content");
+                                res.status(204).json("No content");
+                            }
+                        }
+                    });
                 }
             });
+        } else {
+            if (req.swagger.params.area_name.value != null) {
+                models.Area.findOne({ Area_Name: req.swagger.params.area_name }, function (err, area) {
+                    models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Area_ID: area._id }, function (err, node) {
+                        if (node == null) {
+                            console.log("Node does not exist");
+                            res.status(503).json("Node does not exist")
+                        }
+                        else {
+                            //ano primeiro, de seguida mes e depois dia
+                            if (req.swagger.params.date.value == null) {
+                                date_search = "1980/01/01";
+                            }
+                            else {
+                                date_search = req.swagger.params.date.value;
+                            }
+                            models.Data_Regist_Mobile.find({ Mobile_Node_ID_internal: node._id, _id: { $gt: objectIdWithTimestamp(date_search) } }, function (err, data_event) {
+                                if (data_event != null) {
+                                    res.status(200).send(data_event);
+
+                                }
+                                else {
+                                    if (err) {
+                                        console.log("DB error");
+                                        res.status(500).json("DB Error");
+                                    } else {
+                                        console.log("No content");
+                                        res.status(204).json("No content");
+                                    }
+                                }
+                            });
+                        }
+                    });
+                });
+
+            } else {
+                console.log("Request error");
+                res.status(500).json("Request error");
+            }
         }
-    });
+    }
+
+
 };
