@@ -113,39 +113,39 @@ function building_add(req, res) {
 function building_update(req, res) {
     var objForUpdate = {};
 
-    if (req.body.building_name) objForUpdate.nome = req.body.Name;
-    if (req.body.id_2d) objForUpdate.cognome = req.body.id_2d;
-    if (req.body.id_3d) objForUpdate.indirizzo = req.body.id_3d;
-    if (req.body.description) objForUpdate.nome = req.body.description;
-    if (req.body.date_build) objForUpdate.cognome = req.body.date_build;
-    if (req.body.location) objForUpdate.indirizzo = req.body.location;
-    if (req.body.latitude) objForUpdate.nome = req.body.latitude;
-    if (req.body.longitude) objForUpdate.cognome = req.body.longitude;
-    if (req.body.street) objForUpdate.indirizzo = req.body.street;
-    if (req.body.number) objForUpdate.nome = req.body.number;
-    if (req.body.city) objForUpdate.cognome = req.body.city;
-    if (req.body.postal_code) objForUpdate.indirizzo = req.body.postal_code;
-    if (req.body.current_use) objForUpdate.nome = req.body.current_Use;
-    if (req.body.class) objForUpdate.cognome = req.body.class;
-    if (req.body.function) objForUpdate.indirizzo = req.body.function;
-    if (req.body.number_of_bu) objForUpdate.nome = req.body.number_of_bu;
-    if (req.body.number_of_dw) objForUpdate.cognome = req.body.number_of_dw;
-    if (req.body.gross_floor_area) objForUpdate.indirizzo = req.body.gross_floor_area;
-    if (req.body.area) objForUpdate.nome = req.body.area;
-    if (req.body.yoc) objForUpdate.cognome = req.body.yoc;
-    if (req.body.inhabitants) objForUpdate.indirizzo = req.body.inhabitants;
-    if (req.body.monument) objForUpdate.cognome = req.body.monument;
-    if (req.body.visiting_time) objForUpdate.indirizzo = req.body.visiting_Time;
-    if (req.body.app_occupation) objForUpdate.nome = req.body.app_occupation;
-    if (req.body.app_waitingtime) objForUpdate.cognome = req.body.app_waitingtime;
-    if (req.body.app_temperature) objForUpdate.indirizzo = req.body.app_temperature;
-    if (req.body.app_visittime) objForUpdate.nome = req.body.app_visittime;
-    if (req.body.app_co2) objForUpdate.cognome = req.body.app_co2;
+    if (req.body.building_name) objForUpdate.Name = req.body.building_name;
+    if (req.body.id_2d) objForUpdate.Id_2D = req.body.id_2d;
+    if (req.body.id_3d) objForUpdate.Id_3D = req.body.id_3d;
+    if (req.body.description) objForUpdate.Description = req.body.description;
+    if (req.body.date_build) objForUpdate.Date_Build = req.body.date_build;
+    if (req.body.location) objForUpdate.Location = req.body.location;
+    if (req.body.latitude) objForUpdate.Latitude = req.body.latitude;
+    if (req.body.longitude) objForUpdate.Longitude = req.body.longitude;
+    if (req.body.street) objForUpdate.Street = req.body.street;
+    if (req.body.number) objForUpdate.Number = req.body.number;
+    if (req.body.city) objForUpdate.City = req.body.city;
+    if (req.body.postal_code) objForUpdate.Postal_code = req.body.postal_code;
+    if (req.body.current_use) objForUpdate.Current_Use = req.body.current_Use;
+    if (req.body.class) objForUpdate.Class = req.body.class;
+    if (req.body.function) objForUpdate.Function = req.body.function;
+    if (req.body.number_of_bu) objForUpdate.Number_of_bu = req.body.number_of_bu;
+    if (req.body.number_of_dw) objForUpdate.Number_of_dw = req.body.number_of_dw;
+    if (req.body.gross_floor_area) objForUpdate.Gross_floor_area = req.body.gross_floor_area;
+    if (req.body.area) objForUpdate.Area = req.body.area;
+    if (req.body.yoc) objForUpdate.Yoc = req.body.yoc;
+    if (req.body.inhabitants) objForUpdate.Inhabitants = req.body.inhabitants;
+    if (req.body.monument) objForUpdate.Monument = req.body.monument;
+    if (req.body.visiting_time) objForUpdate.Visiting_Time = req.body.visiting_Time;
+    if (req.body.app_occupation) objForUpdate.app_occupation = req.body.app_occupation;
+    if (req.body.app_waitingtime) objForUpdate.app_waitingtime = req.body.app_waitingtime;
+    if (req.body.app_temperature) objForUpdate.app_temperature = req.body.app_temperature;
+    if (req.body.app_visittime) objForUpdate.app_visittime = req.body.app_visittime;
+    if (req.body.app_co2) objForUpdate.app_co2 = req.body.app_co2;
 
-
+    console.log()
     var setObj = { $set: objForUpdate };
 
-    models.Building.update({ Name: req.body.building_name }, setObj, function (err, result) {
+    models.Building.update({ Name: req.body.building_name }, false, true, setObj, function (err, result) {
         if (err) { console.log("database error" + err); res.status(500).json("DB Error"); }
         else {
             res.json({
