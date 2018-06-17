@@ -145,7 +145,7 @@ function building_update(req, res) {
     console.log()
     var setObj = { $set: objForUpdate };
 
-    models.Building.update({ Name: req.body.building_name }, false, true, setObj, function (err, result) {
+    models.Building.update({ Name: req.body.building_name }, false, true, {$set: objForUpdate}, function (err, result) {
         if (err) { console.log("database error" + err); res.status(500).json("DB Error"); }
         else {
             res.json({
