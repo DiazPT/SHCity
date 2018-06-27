@@ -2273,20 +2273,11 @@ paths:
       operationId: api_delete_objects
       parameters:
         - in: body
-          name: type_remove
-          description: The type of the object to delete.
-          required: true
-          type: string
-        - in: body
-          name: id
-          description: The id of the object to delete.
-          required: true
-          type: string
-        - in: body
-          name: area_name
-          description: The name of the area to delete.
-          required: true
-          type: string      
+          name: Delete_Object
+          description: The Object to delete.
+          schema:
+            $ref: "#/definitions/Delete_objects"
+          required: true      
       responses:
         201:
           description: Deleted
@@ -3247,6 +3238,18 @@ definitions:
         building_name:
           type : string
         type:
+          type : string
+  Delete_objects:
+    properties:
+        username:
+          type : string
+        token:
+          type : string
+        area_name:
+          type : string
+        id:
+          type : string  
+        type_remove:
           type : string
   Building_Visiting_Time:
     properties:
