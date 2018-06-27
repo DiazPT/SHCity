@@ -2001,7 +2001,7 @@ paths:
     post:
       summary: Update a new Mobile_Node.
       tags:
-              - mobile_nodes
+              - mobile_node
       consumes:
         - application/json
       operationId: mobile_node_update
