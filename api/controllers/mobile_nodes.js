@@ -17,8 +17,39 @@ module.exports = {
     mobile_node_get: mobile_node_get,
     mobile_node_data_regist_mobile_month_get: mobile_node_data_regist_mobile_month_get,
     mobile_node_data_regist_mobile_year_get: mobile_node_data_regist_mobile_year_get,
-    mobile_node_data_regist_mobile_get: mobile_node_data_regist_mobile_get
+    mobile_node_data_regist_mobile_get: mobile_node_data_regist_mobile_get,
+    mobile_node_update: mobile_node_update
 };
+
+
+
+
+
+function mobile_node_update(req, res) {
+    var objForUpdate = {};
+
+    if (req.body.id_node) objForUpdate.ID_node = req.body.id_node;
+    if (req.body.description) objForUpdate.Description = req.body.description;
+    if (req.body.mobile_node_name) objForUpdate.Name = req.body.mobile_node_name;
+    if (req.body.type_sensor) objForUpdate.Type_Sensor = req.body.type_sensor;
+    if (req.body.location) objForUpdate.Location = req.body.location;
+    if (req.body.building_id_2d) objForUpdate.Building_ID_2D = req.body.building_id_2d;
+    if (req.body.building_id_3d) objForUpdate.Building_ID_3D = req.body.building_id_3d;
+
+    var setObj = { $set: objForUpdate };
+
+    models.Mobile_Node.update({ ID_node: req.body.id_node }, {$set: objForUpdate}, function (err, result) {
+        if (err) { console.log("database error" + err); res.status(500).json("DB Error"); }
+        else {
+            res.json({
+                message: 'Object Updated'
+            })
+        }
+    });
+
+};
+
+
 
 function mobile_node_add(req, res) {
     console.log('[Mobile Node API] Create Mobile Node.');

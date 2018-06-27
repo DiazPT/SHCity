@@ -22,11 +22,40 @@ module.exports = {
     area_traffic_week_get: area_traffic_week_get,
     area_traffic_month_get: area_traffic_month_get,
     area_traffic_year_get: area_traffic_year_get,
-    area_security_get: area_security_get
+    area_security_get: area_security_get,
+    area_update: area_update
 };
 
 
 console.log('[Area API] Ready.');
+
+function area_update(req, res) {
+    var objForUpdate = {};
+
+    if (req.body.area_name) objForUpdate.Area_Name = req.body.area_name;
+    if (req.body.description) objForUpdate.Description = req.body.description;
+    if (req.body.app_occupation) objForUpdate.app_occupation = req.body.app_occupation;
+    if (req.body.app_waitingtime) objForUpdate.app_waitingtime = req.body.app_waitingtime;
+    if (req.body.app_temperature) objForUpdate.app_temperature = req.body.app_temperature;
+    if (req.body.app_visittime) objForUpdate.app_visittime = req.body.app_visittime;
+    if (req.body.app_co2) objForUpdate.app_co2 = req.body.app_co2;
+    if (req.body.app_humidity) objForUpdate.app_humidity = req.body.app_humidity;
+
+    console.log()
+    var setObj = { $set: objForUpdate };
+
+    models.Area.update({ Name: req.body.area_name }, {$set: objForUpdate}, function (err, result) {
+        if (err) { console.log("database error" + err); res.status(500).json("DB Error"); }
+        else {
+            res.json({
+                message: 'Object Updated'
+            })
+        }
+    });
+
+};
+
+
 
 /* Logs a area creation */
 function area_add(req, res) {

@@ -80,7 +80,8 @@ function building_add(req, res) {
                         app_waitingtime: req.body.app_waitingtime,
                         app_temperature: req.body.app_temperature,
                         app_visittime: req.body.app_visittime,
-                        app_co2: req.body.app_co2
+                        app_co2: req.body.app_co2,
+                        app_humidity: req.body.app_humidity
                     });
                     console.log(newRecord);
 
@@ -141,6 +142,7 @@ function building_update(req, res) {
     if (req.body.app_temperature) objForUpdate.app_temperature = req.body.app_temperature;
     if (req.body.app_visittime) objForUpdate.app_visittime = req.body.app_visittime;
     if (req.body.app_co2) objForUpdate.app_co2 = req.body.app_co2;
+    if (req.body.app_humidity) objForUpdate.app_humidity = req.body.app_humidity;
 
     console.log()
     var setObj = { $set: objForUpdate };

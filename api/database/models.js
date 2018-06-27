@@ -91,7 +91,8 @@ var Building = mongoose.model('building', {
     app_waitingtime: String,
     app_temperature: String,
     app_visittime: String,
-    app_co2: String
+    app_co2: String,
+    app_humidity: String
 
 });
 
@@ -239,7 +240,13 @@ AREAS
 
 var Area = mongoose.model('area', {
     Area_Name: String,
-    Description: String
+    Description: String,
+    app_occupation: String,
+    app_waitingtime: String,
+    app_temperature: String,
+    app_visittime: String,
+    app_co2: String,
+    app_humidity: String
 });
 
 

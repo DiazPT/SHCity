@@ -16,7 +16,63 @@ module.exports = {
     areas_and_buildings_waiting_time_get: areas_and_buildings_waiting_time_get,
     areas_and_buildings_level_occupation_schedule_get: areas_and_buildings_level_occupation_schedule_get,
     areas_and_buildings_zone_add: areas_and_buildings_zone_add,
-    areas_and_buildings_zone_get: areas_and_buildings_zone_get
+    areas_and_buildings_zone_get: areas_and_buildings_zone_get,
+    api_delete_objects: api_delete_objects
+};
+
+
+function api_delete_objects(req, res) {
+    console.log('[Area and Building API] Remove Object.');
+    models.Producer.findOne({ Username: req.body.username, Token: req.body.token }, function (err, User) {
+        if (User === null) {
+            console.log("Invalid session");
+            res.status(403).json("Invalid session");
+        }
+        else {
+            if (req.body.type_remove == "building") {
+                models.Building.deleteOne({ "Id_2D": req.body.id } || { "Id_3D": req.body.id }, function (err, building) {
+                    if (err) {
+                        console.error(err);
+                    }
+                    else {
+                        res.json({
+                            message: 'Object deleted'
+                        });
+                    }
+                });
+            }
+            if (req.body.type_remove == "area") {
+                models.Area.deleteOne({ "Area_Name": req.body.area_name }, function (err, area) {
+                    if (err) {
+                        console.error(err);
+                    }
+                    else {
+                        res.json({
+                            message: 'Object deleted'
+                        });
+                    }
+                });
+            }
+
+            if (req.body.type_remove == "mobile_node") {
+                models.Area.deleteOne({ "ID_node": req.body.id }, function (err, mobile_node) {
+                    if (err) {
+                        console.error(err);
+                    }
+                    else {
+                        res.json({
+                            message: 'Object deleted'
+                        });
+                    }
+                });
+            }
+
+            else {
+                console.log("Bad request");
+            }
+        }
+
+    });
 };
 
 

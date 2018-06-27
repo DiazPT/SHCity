@@ -170,7 +170,33 @@ paths:
         503:
           description: Error
           schema:
-            $ref: "#/definitions/HelloWorldResponse"   
+            $ref: "#/definitions/HelloWorldResponse"
+  /areas/update:
+    x-swagger-router-controller: buildings
+    post:
+      summary: Update a new Building.
+      tags:
+              - areas
+      consumes:
+        - application/json
+      operationId: area_update
+      parameters:
+        - in: body
+          name: Area
+          description: The Area to update.
+          schema:
+            $ref: "#/definitions/Area"
+          required: true
+      responses:
+        201:
+          description: Updated
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"               
   /areas/area_visitors_week_add:
     x-swagger-router-controller: areas
     post:
@@ -658,7 +684,7 @@ paths:
           required: true
       responses:
         201:
-          description: Update
+          description: Updated
           schema:
             # a pointer to a definition
             $ref: "#/definitions/HelloWorldResponse"
@@ -1970,6 +1996,32 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /mobile_node/update:
+    x-swagger-router-controller: buildings
+    post:
+      summary: Update a new Mobile_Node.
+      tags:
+              - mobile_nodes
+      consumes:
+        - application/json
+      operationId: mobile_node_update
+      parameters:
+        - in: body
+          name: Mobile_Node
+          description: The Mobile_Node to update.
+          schema:
+            $ref: "#/definitions/Mobile_node"
+          required: true
+      responses:
+        201:
+          description: Updated
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"             
   /mobile_node/mobile_node_data_regist_mobile_month_add: 
     x-swagger-router-controller: mobile_nodes
     post:
@@ -2210,6 +2262,41 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/HelloWorldResponse"
+  /area_and_buildings/api_delete_objects: 
+    x-swagger-router-controller: area_and_buildings
+    post:
+      summary: Delete object (Types = building, area, mobile_node ).
+      tags:
+              - area_and_buildings
+      consumes:
+        - application/json
+      operationId: api_delete_objects
+      parameters:
+        - in: body
+          name: type_remove
+          description: The type of the object to delete.
+          required: true
+          type: string
+        - in: body
+          name: id
+          description: The id of the object to delete.
+          required: true
+          type: string
+        - in: body
+          name: area_name
+          description: The name of the area to delete.
+          required: true
+          type: string      
+      responses:
+        201:
+          description: Deleted
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        503:
+          description: Error
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"          
   /area_and_buildings/zone_add: 
     x-swagger-router-controller: area_and_buildings
     post:
@@ -2476,6 +2563,18 @@ definitions:
           type : string
         description:
           type : string
+        app_occupation: 
+          type : string
+        app_waitingtime: 
+          type : string
+        app_temperature:
+          type : string
+        app_visittime:
+          type : string
+        app_co2:
+          type : string
+        app_humidity:
+          type : string  
   ArrayOfObjects:
       type: array
       items:
@@ -2660,6 +2759,8 @@ definitions:
           type : string
         app_co2:
           type : string
+        app_humidity:
+          type : string  
 
   Building_energy_month:
     properties:
