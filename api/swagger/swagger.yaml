@@ -1997,7 +1997,7 @@ paths:
           schema:
             $ref: "#/definitions/HelloWorldResponse"
   /mobile_node/update:
-    x-swagger-router-controller: buildings
+    x-swagger-router-controller: mobile_nodes
     post:
       summary: Update a new Mobile_Node.
       tags:
