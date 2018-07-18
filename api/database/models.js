@@ -198,7 +198,8 @@ var Data_Regist_Building = mongoose.model('data_regist_building', {
     Building_ID: String,
     Data_Type_ID: String,
     Value: String,
-    Date: String
+    Date: String,
+    Hours: String
 });
 
 var Building_Daily_Persons = mongoose.model('building_daily_persons', {

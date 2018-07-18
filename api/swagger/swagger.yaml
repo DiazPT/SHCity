@@ -2921,7 +2921,9 @@ definitions:
         value:
           type : string
         date:
-          type : string  
+          type : string
+        hours:
+          type : string    
   Building_data_regist_month:
     properties:
         username:
