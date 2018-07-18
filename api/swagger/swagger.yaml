@@ -1194,7 +1194,7 @@ paths:
   /buildings/building_daily_regist:
       x-swagger-router-controller: buildings
       get:
-        summary: Get data from a Building in a specific date.
+        summary: Get data from a Building in a specific date (YYYY/MM/DD).
         tags:
                 - buildings
         consumes:

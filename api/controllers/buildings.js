@@ -168,7 +168,7 @@ function building_daily_regist(req, res) {
     date_final = date_search_after.getFullYear() + "/" + month + "/" +date_search_after.getDate() + "/"
 
 
-    models.Building.findOne({ Name: req.body.building_name }, function (err, building) {
+    models.Building.findOne({ Name: req.swagger.params.building_name }, function (err, building) {
         models.Data_Regist_Mobile.find({
             Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(req.swagger.params.date.value), $lt: objectIdWithTimestamp(date_final) }, function(err, data) {
                 var temperature;
