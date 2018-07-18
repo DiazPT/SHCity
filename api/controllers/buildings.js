@@ -169,35 +169,42 @@ function building_daily_regist(req, res) {
 
 
     models.Building.findOne({ Name: req.swagger.params.building_name }, function (err, building) {
-        models.Data_Regist_Mobile.find({
-            Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(req.swagger.params.date.value), $lt: objectIdWithTimestamp(date_final) }, function(err, data) {
-                var temperature;
-                var co2;
-                var visiting_time;
-                var i = 0;
-                while(i < data.lenght){
-                    if(data[i].Data_Type_ID == "5a69b4247151bc0a04cfe8de"){
-                        co2 = data[i].Value;
+        if(building == null){
+            console.log("DB error");
+            res.status(500).json("DB Error")
+        }
+        else{
+            models.Data_Regist_Mobile.find({
+                Building_ID: building._id, _id: { $gt: objectIdWithTimestamp(req.swagger.params.date.value), $lt: objectIdWithTimestamp(date_final) }, function(err, data) {
+                    var temperature;
+                    var co2;
+                    var visiting_time;
+                    var i = 0;
+                    while(i < data.lenght){
+                        if(data[i].Data_Type_ID == "5a69b4247151bc0a04cfe8de"){
+                            co2 = data[i].Value;
+                        }
+                        if(data[i].Data_Type_ID == "5a69c18b99508406c03b789e"){
+                            temperature = data[i].Value;
+                        }
+                        if(data[i].Data_Type_ID == "5a88302d1a9ebb1c803e1fca"){
+                            visiting_time = data[i].Value;
+                        }
+                        i++;
                     }
-                    if(data[i].Data_Type_ID == "5a69c18b99508406c03b789e"){
-                        temperature = data[i].Value;
-                    }
-                    if(data[i].Data_Type_ID == "5a88302d1a9ebb1c803e1fca"){
-                        visiting_time = data[i].Value;
-                    }
-                    i++;
+                    var data_to_send;
+                    data_to_send.id_2d = building.Id_2D;
+                    data_to_send.building_name = building.Name;
+                    data_to_send.date = req.swagger.params.date.value;
+                    data_to_send.temperature = temperature;
+                    data_to_send.co2 = co2;
+                    data_to_send.visiting_time = visiting_time;
+                    res.send(data_to_send);
                 }
-                var data_to_send;
-                data_to_send.id_2d = building.Id_2D;
-                data_to_send.building_name = building.Name;
-                data_to_send.date = req.swagger.params.date.value;
-                data_to_send.temperature = temperature;
-                data_to_send.co2 = co2;
-                data_to_send.visiting_time = visiting_time;
-                res.send(data_to_send);
-            }
-
-        });
+    
+            });
+        }
+        
     });
 
 
