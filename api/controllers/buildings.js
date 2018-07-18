@@ -192,9 +192,11 @@ function building_daily_regist(req, res) {
 					var data_to_send = {}
 					console.log(Object.keys(data).length)
                     while(i < Object.keys(data).length){
-                        date_see = data[i].Date;
-                        if(date_see.getTime()>= date_search && date_see.getTime()<= date_search_after){
-
+                        date_see = new Date(data[i].Date);
+						console.log(date_see.getTime()>= date_search.getTime());
+						console.log(date_see.getTime()<= date_search_after.getTime());
+                        if(date_see.getTime()>= date_search.getTime()){
+						data_to_send = {}
                         
                         if(data[i].Data_Type_ID == "5a69b4247151bc0a04cfe8de"){
                             co2 = data[i].Value;
@@ -210,17 +212,20 @@ function building_daily_regist(req, res) {
                         }
                         
 						
-					console.log(JSON.stringify(data[i]));
+					//console.log(JSON.stringify(data[i]));
                     data_to_send.building_name = building.Name;
-					console.log(JSON.stringify(data[i]));
+					//console.log(JSON.stringify(data_to_send));
                     data_to_send.date = data[i].Date;
-					i++;
+					
                     
                     
                     
-                    data_to_send_final[i] = data_to_send;
+                    data_to_send_final.push(data_to_send);
+					console.log(JSON.stringify(data_to_send_final)+'\n\n\n\n\n\n');
                         }
+						i++;
                     }
+					console.log(JSON.stringify(data_to_send_final));
 					res.send(data_to_send_final);
                 }
 				}
