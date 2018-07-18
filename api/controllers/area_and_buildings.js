@@ -55,7 +55,7 @@ function api_delete_objects(req, res) {
             }
 
             if (req.body.type_remove == "mobile_node") {
-                models.Area.deleteOne({ "ID_node": req.body.id }, function (err, mobile_node) {
+                models.Mobile_Node.deleteOne({ "_id": req.body.id }, function (err, mobile_node) {
                     if (err) {
                         console.error(err);
                     }
