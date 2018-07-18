@@ -163,6 +163,7 @@ function building_daily_regist(req, res) {
 
     var date_search = new Date(req.swagger.params.initial_date.value);
     var date_search_after = new Date(req.swagger.params.initial_date.value);
+    var date_see;
     date_search_after.setTime(date_search.getTime() + 86400000);
     var month = parseInt(date_search_after.getMonth())+1;
     date_final = date_search_after.getFullYear() + "/" + month + "/" +date_search_after.getDate() + "/"
@@ -175,7 +176,7 @@ function building_daily_regist(req, res) {
         }
         else{
 			console.log(objectIdWithTimestamp(date_search));
-            models.Data_Regist_Building.find( {Building_ID : building._id, _id : {$lt: objectIdWithTimestamp(date_search), $gt: objectIdWithTimestamp(date_search_after)}}, function(err, data) {
+            models.Data_Regist_Building.find( {Building_ID : building._id}, function(err, data) {
 					console.log("here!!!!");
 					
 					if(data == null){
@@ -191,6 +192,10 @@ function building_daily_regist(req, res) {
 					var data_to_send = {}
 					console.log(Object.keys(data).length)
                     while(i < Object.keys(data).length){
+                        date_see = data[i].Date;
+                        if(date_see.getTime()>= date_search && date_see.getTime()<= date_search_after){
+
+                        
                         if(data[i].Data_Type_ID == "5a69b4247151bc0a04cfe8de"){
                             co2 = data[i].Value;
 							data_to_send.co2 = co2;
@@ -214,6 +219,7 @@ function building_daily_regist(req, res) {
                     
                     
                     data_to_send_final[i] = data_to_send;
+                        }
                     }
 					res.send(data_to_send_final);
                 }
