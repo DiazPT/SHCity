@@ -1207,10 +1207,15 @@ paths:
                   required: true
                   type: string
                 - in: query
-                  name: date
-                  description: Date to receive the data.
+                  name: initial_date
+                  description: First date to receive the data.
                   required: true
                   type: string
+                - in: query
+                  name: last_date
+                  description: Last date to receive the data.
+                  required: true
+                  type: string  
         responses:
           200:
             description: Success

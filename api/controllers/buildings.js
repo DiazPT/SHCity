@@ -161,8 +161,8 @@ function building_update(req, res) {
 function building_daily_regist(req, res) {
 
 
-    var date_search = new Date(req.swagger.params.date.value);
-    var date_search_after = new Date();
+    var date_search = new Date(req.swagger.params.initial_date.value);
+    var date_search_after = new Date(req.swagger.params.initial_date.value);
     date_search_after.setTime(date_search.getTime() + 86400000);
     var month = parseInt(date_search_after.getMonth())+1;
     date_final = date_search_after.getFullYear() + "/" + month + "/" +date_search_after.getDate() + "/"
