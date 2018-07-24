@@ -445,7 +445,7 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
 
 function mobile_node_data_regist_mobile_month_get(req, res) {
     if (req.swagger.params.building_id_2d.value != null) {
-        models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
+        models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
             if (node == null) {
                 console.log("Node does not exist");
                 res.status(503).json("Node does not exist")
@@ -477,7 +477,7 @@ function mobile_node_data_regist_mobile_month_get(req, res) {
         });
     } else {
         if (req.swagger.params.building_id_3d.value != null) {
-            models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
+            models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
                 if (node == null) {
                     console.log("Node does not exist");
                     res.status(503).json("Node does not exist")
@@ -560,7 +560,7 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
         }
         else {
             if (req.body.building_id_2d != null) {
-                models.Mobile_Node.findOne({ Name: req.body.node_name, Building_ID_2D: req.body.building_id_2d }, function (err, mobile_node) {
+                models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_2D: req.body.building_id_2d }, function (err, mobile_node) {
                     if (mobile_node == null) {
                         console.log("Mobile Node does not exist");
                         res.status(503).json("Mobile Node does not exist")
@@ -606,7 +606,7 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
             }
             else {
                 if (req.body.building_id_3d != null) {
-                    models.Mobile_Node.findOne({ Name: req.body.node_name, Building_ID_3D: req.body.building_id_3d }, function (err, mobile_node) {
+                    models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_3D: req.body.building_id_3d }, function (err, mobile_node) {
                         if (mobile_node == null) {
                             console.log("Mobile Node does not exist");
                             res.status(503).json("Mobile Node does not exist")
