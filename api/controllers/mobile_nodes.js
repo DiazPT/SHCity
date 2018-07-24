@@ -36,7 +36,7 @@ function mobile_node_update(req, res) {
     if (req.body.building_id_2d) objForUpdate.Building_ID_2D = req.body.building_id_2d;
     if (req.body.building_id_3d) objForUpdate.Building_ID_3D = req.body.building_id_3d;
 
-    var setObj = { $set: objForUpdate };
+    //var setObj = { $set: objForUpdate };
 
     models.Mobile_Node.update({ ID_node: req.body.id_node }, {$set: objForUpdate}, function (err, result) {
         if (err) { console.log("database error" + err); res.status(500).json("DB Error"); }
@@ -560,7 +560,7 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
         }
         else {
             if (req.body.building_id_2d != null) {
-                models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_2D: req.body.building_id_2d }, function (err, mobile_node) {
+                models.Mobile_Node.findOne({ Name: req.body.node_name, Building_ID_2D: req.body.building_id_2d }, function (err, mobile_node) {
                     if (mobile_node == null) {
                         console.log("Mobile Node does not exist");
                         res.status(503).json("Mobile Node does not exist")
@@ -606,7 +606,7 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
             }
             else {
                 if (req.body.building_id_3d != null) {
-                    models.Mobile_Node.findOne({ ID_node: req.body.id_node, Building_ID_3D: req.body.building_id_3d }, function (err, mobile_node) {
+                    models.Mobile_Node.findOne({ Name: req.body.node_name, Building_ID_3D: req.body.building_id_3d }, function (err, mobile_node) {
                         if (mobile_node == null) {
                             console.log("Mobile Node does not exist");
                             res.status(503).json("Mobile Node does not exist")
@@ -712,7 +712,7 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
 
 function mobile_node_data_regist_mobile_year_get(req, res) {
     if (req.swagger.params.building_id_2d.value != null) {
-        models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
+        models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
             if (node == null) {
                 console.log("Node does not exist");
                 res.status(503).json("Node does not exist")
@@ -744,7 +744,7 @@ function mobile_node_data_regist_mobile_year_get(req, res) {
         });
     } else {
         if (req.swagger.params.building_id_3d.value != null) {
-            models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
+            models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
                 if (node == null) {
                     console.log("Node does not exist");
                     res.status(503).json("Node does not exist")
@@ -979,15 +979,17 @@ function mobile_node_data_regist_mobile_add(req, res) {
 
 function mobile_node_data_regist_mobile_get(req, res) {
     if (req.swagger.params.building_id_2d.value != null) {
-        models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
+        models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value, Building_ID_2D: req.swagger.params.building_id_2d.value }, function (err, node) {
             if (node == null) {
                 console.log("Node does not exist");
                 res.status(503).json("Node does not exist")
             }
             else {
+                console.log("we are here")
                 //ano primeiro, de seguida mes e depois dia
                 if (req.swagger.params.date.value == null) {
                     date_search = "1980/01/01";
+                    console.log("time is null!")
                 }
                 else {
                     date_search = req.swagger.params.date.value;
@@ -1011,7 +1013,7 @@ function mobile_node_data_regist_mobile_get(req, res) {
         });
     } else {
         if (req.swagger.params.building_id_3d.value != null) {
-            models.Mobile_Node.findOne({ ID_node: req.swagger.params.id_node.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
+            models.Mobile_Node.findOne({ Name: req.swagger.params.node_name.value, Building_ID_3D: req.swagger.params.building_id_3d.value }, function (err, node) {
                 if (node == null) {
                     console.log("Node does not exist");
                     res.status(503).json("Node does not exist")

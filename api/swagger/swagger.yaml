@@ -2135,19 +2135,19 @@ paths:
         operationId: mobile_node_data_regist_mobile_month_get
         parameters:
                 - in: query
-                  name: id_node
+                  name: node_name
                   description: Node to search.
                   required: true
                   type: string
                 - in: query
                   name: building_id_2d
                   description: Building to search.
-                  required: true
+                  required: false
                   type: string
                 - in: query
                   name: building_id_3d
                   description: Building to search.
-                  required: true
+                  required: false
                   type: string
                 - in: query
                   name: area_name
@@ -2187,7 +2187,17 @@ paths:
                   name: node_name
                   description: Node to search.
                   required: true
-                  type: string      
+                  type: string
+                - in: query
+                  name: building_id_2d
+                  description: Building to search.
+                  required: false
+                  type: string
+                - in: query
+                  name: building_id_3d
+                  description: Building to search.
+                  required: false
+                  type: string     
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
@@ -2221,7 +2231,17 @@ paths:
                   name: node_name
                   description: Node to search.
                   required: true
-                  type: string      
+                  type: string
+                - in: query
+                  name: building_id_2d
+                  description: Building to search.
+                  required: false
+                  type: string
+                - in: query
+                  name: building_id_3d
+                  description: Building to search.
+                  required: false
+                  type: string     
                 - in: query
                   name: date
                   description: (Optional) Started date to do the query - yyyy/mm/dd example = '1980/01/30'.
