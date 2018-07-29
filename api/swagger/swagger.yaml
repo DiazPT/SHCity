@@ -2152,7 +2152,7 @@ paths:
                 - in: query
                   name: area_name
                   description: Area to search.
-                  required: true
+                  required: false
                   type: string             
                 - in: query
                   name: date
