@@ -444,10 +444,12 @@ function mobile_node_data_regist_mobile_month_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_month_get(req, res) {
-    models.Data_Type.find(function (err, data_type) {
-        if (data_type != null) {
+    var data_type
+    models.Data_Type.find(function (err, data_types) {
+        if (data_types != null) {
             //res.status(200).send(data_type);
             console.log("Working")
+            data_type = data_types;
         }
         else {
             if (err) {
@@ -479,13 +481,18 @@ function mobile_node_data_regist_mobile_month_get(req, res) {
                         var n = 0;
                         var i = 0;
                         while (Object.keys(data_event).length != n) {
-                            while (Object.keys(data_type).length != i) {
+                            while (Object.keys(data_type).length > i) {
+                                console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                 if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                    data_event[n].Data_Type_Name == data_type[i].Name;
-                                    i == Object.keys(data_type).length;
+                                    var teste = data_event[n].toJSON();
+                                    teste.Data_Type_Name = data_type[i].Name;
+                                    data_event[n] = teste;
+                                    i = Object.keys(data_type).length;
                                 }
-                                i = 0;
+                                i++;
                             }
+                            n++;
+                            i = 0;
                         }
                         res.status(200).send(data_event);
 
@@ -522,13 +529,18 @@ function mobile_node_data_regist_mobile_month_get(req, res) {
                             var n = 0;
                             var i = 0;
                             while (Object.keys(data_event).length != n) {
-                                while (Object.keys(data_type).length != i) {
+                                while (Object.keys(data_type).length > i) {
+                                    console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                     if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                        data_event[n].Data_Type_Name == data_type[i].Name;
-                                        i == Object.keys(data_type).length;
+                                        var teste = data_event[n].toJSON();
+                                        teste.Data_Type_Name = data_type[i].Name;
+                                        data_event[n] = teste;
+                                        i = Object.keys(data_type).length;
                                     }
-                                    i = 0;
+                                    i++;
                                 }
+                                n++;
+                                i = 0;
                             }
                             res.status(200).send(data_event);
 
@@ -566,13 +578,18 @@ function mobile_node_data_regist_mobile_month_get(req, res) {
                                     var n = 0;
                                     var i = 0;
                                     while (Object.keys(data_event).length != n) {
-                                        while (Object.keys(data_type).length != i) {
+                                        while (Object.keys(data_type).length > i) {
+                                            console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                             if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                                data_event[n].Data_Type_Name == data_type[i].Name;
-                                                i == Object.keys(data_type).length;
+                                                var teste = data_event[n].toJSON();
+                                                teste.Data_Type_Name = data_type[i].Name;
+                                                data_event[n] = teste;
+                                                i = Object.keys(data_type).length;
                                             }
-                                            i = 0;
+                                            i++;
                                         }
+                                        n++;
+                                        i = 0;
                                     }
                                     res.status(200).send(data_event);
 
@@ -760,10 +777,12 @@ function mobile_node_data_regist_mobile_year_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_year_get(req, res) {
-    models.Data_Type.find(function (err, data_type) {
-        if (data_type != null) {
+    var data_type
+    models.Data_Type.find(function (err, data_types) {
+        if (data_types != null) {
             //res.status(200).send(data_type);
             console.log("Working")
+            data_type = data_types;
         }
         else {
             if (err) {
@@ -795,13 +814,18 @@ function mobile_node_data_regist_mobile_year_get(req, res) {
                         var n = 0;
                         var i = 0;
                         while (Object.keys(data_event).length != n) {
-                            while (Object.keys(data_type).length != i) {
+                            while (Object.keys(data_type).length > i) {
+                                console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                 if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                    data_event[n].Data_Type_Name == data_type[i].Name;
-                                    i == Object.keys(data_type).length;
+                                    var teste = data_event[n].toJSON();
+                                    teste.Data_Type_Name = data_type[i].Name;
+                                    data_event[n] = teste;
+                                    i = Object.keys(data_type).length;
                                 }
-                                i = 0;
+                                i++;
                             }
+                            n++;
+                            i = 0;
                         }
                         res.status(200).send(data_event);
 
@@ -838,13 +862,18 @@ function mobile_node_data_regist_mobile_year_get(req, res) {
                             var n = 0;
                             var i = 0;
                             while (Object.keys(data_event).length != n) {
-                                while (Object.keys(data_type).length != i) {
+                                while (Object.keys(data_type).length > i) {
+                                    console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                     if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                        data_event[n].Data_Type_Name == data_type[i].Name;
-                                        i == Object.keys(data_type).length;
+                                        var teste = data_event[n].toJSON();
+                                        teste.Data_Type_Name = data_type[i].Name;
+                                        data_event[n] = teste;
+                                        i = Object.keys(data_type).length;
                                     }
-                                    i = 0;
+                                    i++;
                                 }
+                                n++;
+                                i = 0;
                             }
                             res.status(200).send(data_event);
 
@@ -882,13 +911,18 @@ function mobile_node_data_regist_mobile_year_get(req, res) {
                                     var n = 0;
                                     var i = 0;
                                     while (Object.keys(data_event).length != n) {
-                                        while (Object.keys(data_type).length != i) {
+                                        while (Object.keys(data_type).length > i) {
+                                            console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                             if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                                data_event[n].Data_Type_Name == data_type[i].Name;
-                                                i == Object.keys(data_type).length;
+                                                var teste = data_event[n].toJSON();
+                                                teste.Data_Type_Name = data_type[i].Name;
+                                                data_event[n] = teste;
+                                                i = Object.keys(data_type).length;
                                             }
-                                            i = 0;
+                                            i++;
                                         }
+                                        n++;
+                                        i = 0;
                                     }
                                     res.status(200).send(data_event);
 
@@ -1076,19 +1110,22 @@ function mobile_node_data_regist_mobile_add(req, res) {
 };
 
 function mobile_node_data_regist_mobile_get(req, res) {
-    models.Data_Type.find(function (err, data_type) {
-        if (data_type != null) {
+    var data_type;
+    models.Data_Type.find(function (err, data_types) {
+        if (data_types != null) {
             //res.status(200).send(data_type);
             console.log("Working")
+            data_type = data_types;
         }
         else {
             if (err) {
-                console.log("No content");
-                res.status(204).json("No content");
-            }
-            else {
                 console.log("DB error");
                 res.status(500).json("DB Error");
+            }
+            else {
+                console.log("No content");
+                res.status(204).json("No content");
+
             }
         }
     });
@@ -1113,13 +1150,18 @@ function mobile_node_data_regist_mobile_get(req, res) {
                         var n = 0;
                         var i = 0;
                         while (Object.keys(data_event).length != n) {
-                            while (Object.keys(data_type).length != i) {
+                            while (Object.keys(data_type).length > i) {
+                                console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                 if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                    data_event[n].Data_Type_Name == data_type[i].Name;
-                                    i == Object.keys(data_type).length;
+                                    var teste = data_event[n].toJSON();
+                                    teste.Data_Type_Name = data_type[i].Name;
+                                    data_event[n] = teste;
+                                    i = Object.keys(data_type).length;
                                 }
-                                i = 0;
+                                i++;
                             }
+                            n++;
+                            i = 0;
                         }
                         res.status(200).send(data_event);
 
@@ -1156,13 +1198,18 @@ function mobile_node_data_regist_mobile_get(req, res) {
                             var n = 0;
                             var i = 0;
                             while (Object.keys(data_event).length != n) {
-                                while (Object.keys(data_type).length != i) {
+                                while (Object.keys(data_type).length > i) {
+                                    console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                     if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                        data_event[n].Data_Type_Name == data_type[i].Name;
-                                        i == Object.keys(data_type).length;
+                                        var teste = data_event[n].toJSON();
+                                        teste.Data_Type_Name = data_type[i].Name;
+                                        data_event[n] = teste;
+                                        i = Object.keys(data_type).length;
                                     }
-                                    i = 0;
+                                    i++;
                                 }
+                                n++;
+                                i = 0;
                             }
                             res.status(200).send(data_event);
 
@@ -1200,13 +1247,18 @@ function mobile_node_data_regist_mobile_get(req, res) {
                                     var n = 0;
                                     var i = 0;
                                     while (Object.keys(data_event).length != n) {
-                                        while (Object.keys(data_type).length != i) {
+                                        while (Object.keys(data_type).length > i) {
+                                            console.log(data_event[n].Data_Type_ID + "   teste     " + data_type[i]._id)
                                             if (data_event[n].Data_Type_ID == data_type[i]._id) {
-                                                data_event[n].Data_Type_Name == data_type[i].Name;
-                                                i == Object.keys(data_type).length;
+                                                var teste = data_event[n].toJSON();
+                                                teste.Data_Type_Name = data_type[i].Name;
+                                                data_event[n] = teste;
+                                                i = Object.keys(data_type).length;
                                             }
-                                            i = 0;
+                                            i++;
                                         }
+                                        n++;
+                                        i = 0;
                                     }
                                     res.status(200).send(data_event);
 
